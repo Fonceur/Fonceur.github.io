@@ -1,7 +1,9 @@
-# AdMob (Google) + Google Open Bidding exchanges, as shown in AdMob > Apps > app-ads.txt
+# AdMob, from AdMob > Apps > app-ads.txt > Set up (2026-09-05)
 google.com, pub-1086212638194755, DIRECT, f08c47fec0942fa0
+
+# Google exchange-bidding seats for this account (verified in each exchange's sellers.json, 2026-09-05:
+# Index and OpenX list "Patrick Roy via Google OB/EB", Rubicon and PubMatic list Google)
 indexexchange.com, 195528, DIRECT, 50b1c356f2c5c8fc
-media.net, 8CU5X8XB8, DIRECT
 openx.com, 545589102, DIRECT, 6a698e2ec38604c6
 pubmatic.com, 159856, DIRECT, 5d62403b186f2ace
 rubiconproject.com, 22884, DIRECT, 0bfd66d529a55807
