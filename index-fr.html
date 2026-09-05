@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +9,7 @@
   // Choix explicite (bouton) conserve dans localStorage ; sinon, langue du navigateur.
   try {
     var c = localStorage.getItem("lang");
-    if (c === "fr" || (!c && /^fr\b/i.test(navigator.language || ""))) location.replace("index-fr.html");
+    if (c === "en") location.replace("index.html");
   } catch (e) {}
 </script>
 <style>
@@ -37,30 +37,30 @@
   <img src="images/romi-icone.png" alt="">
   <div>
     <h1>Romi</h1>
-    <div class="lang"><a href="index-fr.html" lang="fr" onclick="try{localStorage.setItem('lang','fr')}catch(e){}">Français</a></div>
+    <div class="lang"><a href="index.html" lang="en" onclick="try{localStorage.setItem('lang','en')}catch(e){}">English</a></div>
   </div>
 </header>
-<p class="lead">A Rummy tile game (Rummikub, RummyCube, Rami) for Android: play against the computer at three levels, pass-and-play with friends, or online and nearby with other players.</p>
+<p class="lead">Un jeu de Rami (Rummikub, Rummy Tile) pour Android : contre l'ordinateur à trois niveaux, à plusieurs sur un même appareil, ou en ligne et à proximité avec d'autres joueurs.</p>
 
 <figure>
-  <img src="images/romi-table.jpg" width="1400" height="876" alt="Romi game table: runs and sets on the board, the player's rack below, with the timer, score and action buttons.">
-  <figcaption>A game in progress: the board on top, your rack below.</figcaption>
+  <img src="images/romi-table.jpg" width="1400" height="876" alt="Table de jeu de Romi : suites et séries sur le plateau, le chevalet du joueur en dessous, avec le chronomètre, le pointage et les boutons d'action.">
+  <figcaption>Une partie en cours : le plateau en haut, votre chevalet en bas.</figcaption>
 </figure>
 
-<h2>Get the app</h2>
+<h2>Obtenir l'application</h2>
 <ul>
-  <li>Google Play:
+  <li>Google Play :
     <a href="https://play.google.com/store/apps/details?id=ca.romi.lite">Romi Lite</a> ·
     <a href="https://play.google.com/store/apps/details?id=ca.romi.express">Romi Express</a> ·
     <a href="https://play.google.com/store/apps/details?id=ca.romi.maxi">Romi Maxi</a> ·
-    <a href="https://play.google.com/store/apps/details?id=ca.romi">Romi</a> (ad-free)</li>
-  <li>Amazon Appstore:
+    <a href="https://play.google.com/store/apps/details?id=ca.romi">Romi</a> (sans publicité)</li>
+  <li>Amazon Appstore :
     <a href="https://www.amazon.com/gp/mas/dl/android?p=ca.romi.lite">Romi Lite</a> ·
-    <a href="https://www.amazon.com/gp/mas/dl/android?p=ca.romi">Romi</a> (ad-free)</li>
-  <li>Mac, iOS and Windows versions: <a href="https://romi.ca">romi.ca</a></li>
+    <a href="https://www.amazon.com/gp/mas/dl/android?p=ca.romi">Romi</a> (sans publicité)</li>
+  <li>Versions Mac, iOS et Windows : <a href="https://romi.ca">romi.ca</a></li>
 </ul>
 
-<h2>Rules of the game</h2>
+<h2>Règles du jeu</h2>
 <ul class="langs">
   <li><a href="doc/doc.html" lang="en">English</a></li>
   <li><a href="doc/doc-fr.html" lang="fr">Français</a></li>
@@ -82,11 +82,11 @@
   <li><a href="doc/doc-id.html" lang="id">Bahasa Indonesia</a></li>
 </ul>
 
-<h2>Privacy</h2>
-<p><a href="romi-privacy.html">Privacy policy</a></p>
+<h2>Confidentialité</h2>
+<p><a href="romi-privacy-fr.html">Politique de confidentialité</a></p>
 
-<h2>Support</h2>
-<p>Questions or problems? Use the contact link on the app's store listing.</p>
+<h2>Soutien</h2>
+<p>Une question ou un problème? Utilisez le lien de contact de la fiche de l'application sur la boutique.</p>
 
 <footer>© Patrick Roy</footer>
 </body>
