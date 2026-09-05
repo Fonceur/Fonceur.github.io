@@ -1,0 +1,262 @@
+<HTML>
+<HEAD>
+    <TITLE>Romi (Rummy, RummyCube, Rummikub, Rami)</TITLE>
+</HEAD>
+<BODY style="margin:2%">
+<CENTER>
+    <H2><FONT COLOR=BLUE>
+        Dokumentacja Romi.
+    </FONT></H2>
+</CENTER>
+<p style="margin:2%">
+    <B>Romi</B> pozwala grać w <B>Rummy Tile (RummyCube, Rummikub, Rami)</B> przeciwko
+    komputerowi na 3 różnych poziomach trudności. Gra wykorzystuje dwa zestawy po 52 karty
+    oraz dwa <img src="iconeFrime.gif"> jokery. Dwa jokery to domyślne ustawienie <B>Joker</B> (<B>Normalnie</B>, <B>Brak</B> lub <B>Dla wszystkich</B>) w <B>Ustawienia</B> &rarr; <B>Gra</B>. Celem gry jest tworzenie grup składających
+    się z 3 lub więcej kart, które zawierają kolejne karty tego samego koloru lub karty
+    o tej samej wartości liczbowej, ale w różnych kolorach.
+</p>
+<p style="margin:2%" class="demo-intro">
+    Chcesz najpierw zobaczyć, jak się gra? Dotknij przycisku <B>Demo</B> w prawym górnym rogu, aby obejrzeć grę Romi przeciwko Romi. Dotknij paska demo w dowolnym momencie, aby je zatrzymać i wrócić do własnej gry.
+</p>
+<H3><FONT COLOR=BLUE>
+    Ogólne zasady gry:
+</FONT></H3>
+<UL>
+    <li><p>
+        Gdy rozpoczynasz nową grę, 14 kart jest losowo rozdawanych dla Romi i 14 dla gracza.
+        Te ostatnie są umieszczane na półce w kolejności.
+    </p></li>
+    <li><p>
+        Gracz otwiera grę, kładąc co najmniej jedną grupę 3 lub więcej kart,
+        używając tylko kart ze swojej półki. Suma wartości tych kart musi wynosić
+        (25, 30 lub 50) lub więcej.
+    </p></li>
+    <li><p>
+        Po otwarciu gry gracz może używać kart na stole do uzupełniania grup kartami
+        ze swojej półki. Gracz może przenosić lub reorganizować wszystkie karty na stole,
+        ale nowe grupy muszą być prawidłowe i składać się z 3 lub więcej kart.
+    </p></li>
+</UL>
+<H3><FONT COLOR=BLUE>
+    Szczegółowe zasady Romi:
+</FONT></H3>
+<UL>
+    <li><p>
+        Okno Romi jest podzielone na dwa główne elementy: stół z 8 rzędami po 23 komórki (o jedną kolumnę więcej przy zasadzie Romi 12–13–1),
+        gdzie umieszczasz karty, którymi grasz, oraz półkę, gdzie przechowywane są karty
+        gracza. Grupy kart umieszczone na stole muszą być oddzielone jedną lub więcej
+        pustymi komórkami. Karty gracza mogą być umieszczone w dowolnym miejscu na półce.
+    </p></li>
+    <li><p>
+        Romi nie pozwala umieścić karty przed lub za kartą na stole, jeśli grupa
+        utworzona z tą kartą nie jest prawidłowa.
+    </p></li>
+    <li><p>
+        Jeśli nie możesz lub nie chcesz zagrać karty, musisz dobrać jedną, klikając
+        ikonę <img src="pige.gif">.
+    </p></li>
+    <li><p>
+        Po zakończeniu swojej tury klikasz klepsydrę <img src="sablier.gif">. Romi sprawdza,
+        czy gra jest prawidłowa, a następnie Romi gra swoją turę. Gdy Romi gra, ikona
+        klepsydry jest zastępowana ikoną komputera.
+    </p></li>
+    <li><p>
+        Pamiętaj, że nie możesz przenosić kart (które nie są twoje) na stole, dopóki
+        nie otworzysz gry własnymi grupami kart o wartości (25, 30 lub 50) punktów lub więcej.
+    </p></li>
+    <li><p>
+        Aby umieścić kartę na stole, możesz kliknąć kartę, a zostanie ona automatycznie
+        przeniesiona na stół. Jeśli chcesz położyć sekwencję kart, kliknij każdą kartę
+        w kolejności, aby utworzyć sekwencję. Możesz również położyć grupę kart
+        (o identycznych numerach), klikając każdą kartę z grupy.
+    </p></li>
+    <li><p>
+        Możesz również wybrać kartę i ręcznie przenieść ją do wybranego miejsca. Jeśli
+        przeniesiesz kartę na sekwencję 5 lub więcej kart (która zawiera taką samą kartę),
+        sekwencja zostanie podzielona na dwie sekwencje.
+    </p></li>
+    <li><p>
+        Możesz przywrócić stół do stanu sprzed rozpoczęcia swojej tury, klikając ikonę
+        klepsydry, a otrzymasz opcję przywrócenia stołu.
+    </p></li>
+    <li><p>
+        Możesz zobaczyć swoje wyniki Romi i/lub zresetować wyniki do zera, klikając
+        przycisk <img src="baseline_menu_black_18.png"> i wybierając <B>Statystyki</B>.
+    </p></li>
+</UL>
+<H3><FONT COLOR=BLUE>
+    Skróty
+</FONT></H3>
+
+<UL>
+    <li><p>
+        Możesz dodać kartę na końcu lub na początku grupy kart, przeciągając kartę
+        odpowiednio na pierwszą lub ostatnią kartę grupy. Jeśli miejsce przed lub za
+        grupą jest niewystarczające, Romi przeniesie nową grupę kart tam, gdzie jest
+        wystarczająco dużo miejsca.
+    </p></li>
+    <li><p>
+        Romi pozwala również utworzyć dwie grupy kart z jednej grupy 5 lub więcej kart
+        i innej karty, która jest identyczna z jedną z tej grupy. Dwie nowe grupy muszą
+        składać się z 3 lub więcej kart każda. Na przykład, jeśli istnieje grupa kart
+        (4,5,6,7,8,9) i masz inną 6, możesz utworzyć następujące dwie grupy (4,5,6)
+        i (6,7,8,9). Skrót działa poprzez wybranie swojej 6 i przeciągnięcie jej na
+        dowolną kartę z grupy (4,5,6,7,8,9).
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Podaj i Graj
+</FONT></H3>
+<UL>
+    <li><p>
+        Jedno urządzenie może być używane przez wielu graczy, przekazując urządzenie następnemu graczowi po zakończeniu swojej tury.
+    </p></li>
+    <li><p>
+        Na ekranie <B>Ustawienia</B> <img src="roue.gif"> &rarr; <B>Gracze</B> wystarczy odznaczyć pola wyboru obok nazwy gracza, który ma być grany przez człowieka.
+    </p></li>
+    <li><p>
+        Zmienione pole wyboru zacznie obowiązywać, gdy rozpocznie się następna gra.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Przyciski narzędzi
+</FONT></H3>
+<UL>
+    <li><p>
+        <B>Dobierz kartę: </B><img src="pige.gif"> Dobiera losową kartę i pozwala Romi
+        zagrać swoją turę.
+    </p></li>
+    <li><p>
+        <B>Sortuj według koloru: </B><img src="suites.gif"> Przestawia karty gracza na
+        półce według koloru.
+    </p></li>
+    <li><p>
+        <B>Ustawienia: </B><img src="roue.gif"> Pozwala zmienić i zapisać ustawienia Romi.
+    </p></li>
+    <li><p>
+        <B>Zagrane karty: </B><img src="cartesJ.gif"> Pokazuje karty zagrane przez Romi
+        w ostatniej turze lub karty zagrane przez ciebie podczas twojej tury.
+    </p></li>
+    <li><p>
+        <B>Sprawdź: </B><img src="valider.gif"> Sprawdza, czy grupy kart zagranych na
+        stole są prawidłowe.
+    </p></li>
+    <li><p>
+        <B>Informacje: </B><img src="baseline_menu_black_18.png"> Możesz zobaczyć dokumentację Romi, swoje
+        statystyki lub rozpocząć nową grę.
+    </p></li>
+    <li><p>
+        <B>Uporządkuj stół:</B> <img src="balais.gif"> Przestawia karty na stole w
+        specjalnej kolejności, jak pokazano poniżej:
+    </p></li>
+</UL>
+<center><img src="romi52.gif"></center>
+<H3><FONT COLOR=BLUE>
+    Pokazywanie i ukrywanie przycisków
+</FONT></H3>
+<UL>
+    <li><p>
+        W <B>Ustawienia</B> &rarr; <B>Układ</B> &rarr; <B>Przyciski</B> możesz ukryć przyciski,
+        których nigdy nie używasz. <B>Dobierz kartę</B> <img src="pige.gif"> jest jedynym, którego
+        nie można ukryć.
+    </p></li>
+    <li><p>
+        Ukrycie <B>Uporządkuj stół</B> <img src="balais.gif">, <B>Sprawdź</B>
+        <img src="valider.gif"> lub <B>Zagrane karty</B> <img src="cartesJ.gif"> po prostu usuwa
+        przycisk.
+    </p></li>
+    <li><p>
+        <B>Sortuj według koloru</B> <img src="suites.gif"> i <B>Ustawienia</B> <img src="roue.gif">
+        zachowują się inaczej: ich pole nigdy nie jest usuwane, staje się na stałe <B>Ponów</B> i
+        <B>Cofnij</B>, wyszarzone gdy nie ma czego ponawiać ani cofać. Ustawienia pozostają dostępne
+        z menu <img src="baseline_menu_black_18.png">.
+    </p></li>
+    <li><p>
+        Nawet gdy oba przyciski są widoczne, przycisk sortowania zmienia się w <B>Ponów</B>, gdy
+        tylko coś cofniesz, a przycisk ustawień w <B>Cofnij</B>, gdy tylko jest ruch do wycofania.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Ustawienia gry
+</FONT></H3>
+<UL>
+    <li><p>
+        <B>Poziom gry: </B>W <B>Ustawienia</B> &rarr; <B>Gra</B> wybierz <B>Początkujący</B>, <B>Średniozaawansowany</B> lub <B>Ekspert</B>. Poziom określa, jak sprytnie Romi układa swoje grupy, podbiera karty ze stołu i odbudowuje grupy, które rozbił.
+    </p></li>
+    <li><p>
+        <B>Zasada Romi: </B><B>Standardowa</B> lub <B>12–13–1</B>. Przy zasadzie 12–13–1 as może także następować po królu na końcu sekwensu (na przykład 11-12-13-1), a stół zyskuje jedną kolumnę więcej. Sekwens tam się kończy: po tym asie nie może być 2, a sekwens nie może jednocześnie zaczynać się i kończyć asem (1-2-…-13-1).
+    </p></li>
+    <li><p>
+        <B>Joker: </B><B>Normalnie</B> (dwa jokery w talii), <B>Brak</B> (bez jokerów) lub <B>Dla wszystkich</B> (żadnego w talii, ale każdy gracz zaczyna z jednym w ręce).
+    </p></li>
+    <li><p>
+        <B>Otwarcie: </B>Punkty wymagane do otwarcia: <B>25</B>, <B>30</B> lub <B>50</B>.
+    </p></li>
+    <li><p>
+        <B>Limit czasu i kara: </B>Od 0 (bez limitu) do 5 minut na turę. Gdy czas minie, stół wraca do stanu z początku twojej tury — z wyjątkiem poziomu <B>Początkujący</B> lub gry solo z wyłączonym przełącznikiem <B>Kara za przekroczenie limitu czasu</B>. Na poziomie <B>Ekspert</B> dobierasz wtedy dodatkowo dwie karty zamiast jednej.
+    </p></li>
+    <li><p>
+        <B>Zwycięzca zaczyna: </B>Gdy włączone, zwycięzca poprzedniej gry gra jako pierwszy w następnej.
+    </p></li>
+    <li><p>
+        <B>Romi też podbiera: </B>Tak jak ty, Romi może brać karty z grup na stole i układać je na nowo, o ile na końcu jego tury każda grupa pozostaje poprawna.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Układ i wygląd
+</FONT></H3>
+<UL>
+    <li><p>
+        <B>Panel po lewej: </B>W <B>Ustawienia</B> &rarr; <B>Układ</B> ten przełącznik przenosi
+        panel boczny na lewą stronę ekranu zamiast na prawą. Orientacja pionowa i pozioma mają
+        własne przełączniki.
+    </p></li>
+    <li><p>
+        <B>Układ tabletu: </B>W orientacji poziomej plansza zajmuje całą szerokość, a stojak,
+        przyciski i panel ustawiają się w rzędzie pod nią. Domyślnie włączony na tabletach.
+    </p></li>
+    <li><p>
+        <B>Dostosuj kafelki: </B>W <B>Ustawienia</B> &rarr; <B>Wygląd</B> wybierz gotową paletę
+        (<B>Standardowa</B>, <B>Dla daltonistów</B>, <B>Wysoki kontrast</B> lub
+        <B>Monochromatyczna</B>), albo weź <B>Niestandardowa</B> i dotknij kafelka, aby wybrać kolor
+        i symbol każdego z kolorów kart. Joker <img src="iconeFrime.gif"> ma własny kolor, zmieniany
+        w ten sam sposób. Każdy symbol może być używany tylko przez jeden kolor
+        kart, więc dwa kolory kart nigdy nie będą wyglądać identycznie na planszy.
+    </p></li>
+    <li><p>
+        <B>Tło stołu: </B>Również w <B>Ustawienia</B> &rarr; <B>Wygląd</B>. Obok czterech
+        numerowanych teł wybór <B>Kolor</B> otwiera próbnik, w którym wybierasz kolor tła, jaki
+        chcesz.
+        Wybór <B>Zdjęcie</B> pozwala zamiast tego użyć własnego zdjęcia: jest ono kopiowane do
+        aplikacji, wyświetlane pod lekką warstwą wybranego koloru i pozostaje tylko na tym
+        urządzeniu.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Gry online
+</FONT></H3>
+<UL>
+    <li><p>
+        <B>Uzupełnij graczami Romi: </B>Gdy prowadzisz grę online, miejsca, do których nikt się nie
+        przyłączył, gra komputer po rozpoczęciu partii: stół na 3 lub 4 miejsc mogą więc rozegrać 2
+        osoby. Potrzebni są co najmniej dwaj gracze ludzcy.
+    </p></li>
+    <li><p>
+        Jeśli gracz opuści partię i nie wróci, stół nie stoi już na jego turze: po upływie czasu na
+        ponowne połączenie jego dwie kolejne tury są rozgrywane jako zwykłe dobranie karty, a potem
+        miejsce przejmuje komputer. Kto wróci w trakcie tych dwóch tur, zachowuje miejsce; kto wróci
+        później, odbiera je komputerowi.
+    </p></li>
+</UL>
+
+<p style="margin:2%">
+    Wersje <B>Romi</B> dla <B>Mac OSX, iOS</B> i <B>Windows</B> są również dostępne
+    na stronie Romi: <a href="https://romi.ca">https://romi.ca</a>
+</P>
+</BODY>
+</HTML>

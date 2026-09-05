@@ -1,0 +1,286 @@
+<HTML>
+<HEAD>
+    <TITLE>Romi (Rummy, RummyCube, Rummikub, Rami)</TITLE>
+</HEAD>
+<BODY style="margin:2%">
+<CENTER>
+    <H2><FONT COLOR=BLUE>
+        Documentation de Romi.
+    </FONT></H2>
+</CENTER>
+<p style="margin:2%">
+    <B>Romi</B> permet de jouer au jeu de <B>Rummy (RummyCube, Rummikub, Rami)</B> contre
+    l'ordinateur &agrave; 3 niveaux possibles. Ce jeu se joue avec l'&eacute;quivalent de deux jeux
+    de 52 cartes et de deux frimes <img src="iconeFrime.gif">. Deux frimes, c'est le r&eacute;glage <B>Frime</B> par d&eacute;faut (<B>Normale</B>, <B>Aucune</B> ou <B>Pour tous</B>) dans <B>Pr&eacute;f&eacute;rences</B> &rarr; <B>Jeu</B>. Il consiste &agrave; former soit des
+    suites de trois cartes et plus de m&ecirc;me sorte ou soit des s&eacute;ries de cartes de m&ecirc;me
+    valeur num&eacute;rique mais de sortes diff&eacute;rentes.
+</p>
+<p style="margin:2%" class="demo-intro">
+    Vous voulez d'abord voir comment on joue ? Touchez le bouton <B>Démo</B> en haut à droite pour regarder Romi jouer contre Romi. Touchez la bannière de démo à tout moment pour l'arrêter et revenir à votre propre partie.
+</p>
+
+<H3><FONT COLOR=BLUE>
+    Les r&egrave;gles g&eacute;n&eacute;rales du jeu sont les suivantes:
+</FONT></H3>
+<UL>
+    <li><p>
+        Pour d&eacute;buter un jeu, 14 cartes sont tir&eacute;es au hasard pour Romi et 14 autres
+        pour le joueur; ces derni&egrave;res sont dispos&eacute;es sur la palette au bas de l'&eacute;cran.
+    </p></li>
+    <li><p>
+        Pour commencer &agrave; jouer, le joueur doit pouvoir former avec les cartes de sa palette
+        uniquement, une ou plusieurs suites ou s&eacute;ries de 3 cartes ou plus dont la somme des
+        valeurs num&eacute;riques doit &ecirc;tre sup&eacute;rieure ou &eacute;gale &agrave; (25, 30
+        ou 50) et les placer sur le jeu. C'est ce qu'on appelle l'ouverture.
+    </p></li>
+    <li><p>
+        D&egrave;s que le joueur a compl&eacute;t&eacute; l'ouverture de son jeu, il peut se servir
+        des cartes qui sont sur le jeu pour compl&eacute;ter des suites ou des s&eacute;ries avec
+        les cartes qui sont sur sa palette. Il peut d&eacute;placer toutes les cartes du
+        jeu &agrave; la condition qu'elles forment encore des suites ou des s&eacute;ries
+        de 3 cartes ou plus lorsqu'il a termin&eacute; de jouer.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Les r&egrave;gles particuli&egrave;res de Romi sont:
+</FONT></H3>
+<UL>
+    <li><p>
+        L'&eacute;cran est divis&eacute; en deux parties principales: le jeu, avec 8 rang&eacute;es de 23 cases (une colonne de plus avec le r&egrave;glement 12&ndash;13&ndash;1), contient les cartes d&eacute;j&agrave;
+        jou&eacute;es et la palette contient les cartes du joueur. Les s&eacute;ries que l'on joue
+        dans la partie du haut doivent &ecirc;tre pr&eacute;c&eacute;d&eacute;es et suivies d'au
+        moins une case vide et doivent &ecirc;tre dispos&eacute;es horizontalement.
+    </p></li>
+    <li><p>
+        Romi vous permet de d&eacute;placer et de former facilement de nouveaux groupes de
+        cartes dans le jeu, vous n'avez qu'&agrave; cliquer en s&eacute;quence sur
+        les cartes de votre palette et/ou sur les cartes du jeu.
+    </p></li>
+    <li><p>
+        Le programme ne permet pas de placer une carte imm&eacute;diatement avant ou apr&egrave;s
+        une autre carte sur le jeu si la s&eacute;rie form&eacute;e n'est pas valide. Dans ce cas,
+        la carte s&eacute;lectionn&eacute;e n'est pas d&eacute;plac&eacute;e &agrave; l'endroit
+        choisi.
+    </p></li>
+    <li><p>
+        Si le joueur ne peut pas ou ne veut pas jouer de carte, il doit piger une carte en cliquant
+        sur l'ic&ocirc;ne <img src="pige.gif"> .
+    </p></li>
+    <li><p>
+        Si le joueur a termin&eacute;, il passe le contr&ocirc;le &agrave; Romi en cliquant sur le
+        sablier <img src="sablier.gif"> , Romi v&eacute;rifie que les cartes jou&eacute;es sont
+        correctes et il essaie &agrave; son tour de jouer. Pendant que Romi joue, le sablier est
+        remplac&eacute; par une ic&ocirc;ne repr&eacute;sentant un ordinateur.
+    </p></li>
+    <li><p>
+        Veuillez prendre note que vous ne pouvez pas d&eacute;placer les cartes (qui ne vous
+        appartiennent pas) dans le jeu tant que vous n'avez pas ouvert avec des groupes de vos
+        cartes qui totalisent (25, 30 ou 50) points et plus.
+    </p></li>
+    <li><p>
+        Pour d&eacute;placer une carte dans le jeu, vous pouvez cliquer sur la carte et elle se d&eacute;placera
+        automatiquement dans le jeu. Pour former une suite de cartes vous n'avez qu'&agrave; cliquer
+        sur les cartes dans l'ordre croissant. Vous pouvez aussi faire de m&ecirc;me pour former des
+        s&eacute;ries de cartes de valeur num&eacute;rique identique.
+    </p></li>
+    <li><p>
+        Vous pouvez aussi d&eacute;placer manuellement une carte en la s&eacute;lectionnant et en la
+        d&eacute;posant &agrave; l'endroit d&eacute;sir&eacute;. Si vous d&eacute;placez une carte
+        sur une suite de 5 cartes et plus, la suite sera d&eacute;coup&eacute;e en deux suites
+        distinctes.
+    </p></li>
+    <li><p>
+        Pour replacer le jeu comme il &eacute;tait avant que vous jouiez votre tour, cliquez sur le
+        sablier et vous aurez l'option de le replacer comme il &eacute;tait. Vous pouvez consulter
+        vos statistiques d'utilisation de Romi et vous pouvez les remettre &agrave; z&eacute;ro, en
+        cliquant sur le bouton <img src="baseline_menu_black_18.png"> et en s&eacute;lectionnant <B>Statistiques</B>.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Trucs et raccourcis
+</FONT></H3>
+<UL>
+    <li><p>
+        Romi vous permet d'ajouter une carte avant ou apr&egrave;s une autre s&eacute;rie en
+        cliquant ou d&eacute;pla&ccedil;ant la s&eacute;rie respectivement sur la premi&egrave;re ou
+        la derni&egrave;re carte de l'autre s&eacute;rie. Si l'espace libre &agrave; cet endroit est
+        insuffisant, le programme recherche un espace libre et d&eacute;place toutes les cartes de
+        la s&eacute;rie &agrave; un nouvel endroit.
+    </p></li>
+    <li><p>
+        Il y a aussi un autre facilit&eacute; qui permet de former deux s&eacute;ries &agrave;
+        partir d'une s&eacute;rie existante d'au moins 5 cartes et d'une autre carte qui peut compl&eacute;ter
+        une deuxi&egrave;me s&eacute;rie. Par exemple s'il y a dans le jeu une s&eacute;rie compos&eacute;e
+        des cartes 4,5,6,7,8 et 9, on peut avec un 6 former les deux s&eacute;ries suivantes 4,5,6
+        et 6,7,8,9. Un raccourci pour former ces deux groupes sans d&eacute;placer manuellement les
+        7,8,9, consiste &agrave; s&eacute;lectionner le 6 additionnel et le d&eacute;placer sur une
+        des cartes de la s&eacute;rie existante. Le programme d&eacute;placera alors automatiquement
+        la deuxi&egrave;me s&eacute;rie form&eacute;e du 6,7,8,9 o&ugrave; il y a de la place
+        disponible.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Passe et Joue
+</FONT></H3>
+<UL>
+    <li><p>
+        Un appareil unique peut &ecirc;tre utilis&eacute; par plusieurs joueurs humains, en passant l’appareil au prochain joueur, &agrave; la fin de son tour.
+    </p></li>
+    <li><p>
+        &Agrave; l’&eacute;cran des <B>Pr&eacute;f&eacute;rences</B> <img src="roue.gif"> &rarr; <B>Joueurs</B>, il suffit de d&eacute;cocher les cases &agrave; c&ocirc;t&eacute; du nom du joueur qui devrait &ecirc;tre jou&eacute; par un humain.
+    </p></li>
+    <li><p>
+        Une case modifi&eacute;e prend effet au d&eacute;but de la prochaine partie.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Boutons utilitaires
+</FONT></H3>
+<UL>
+    <li><p>
+        <B>Piger une carte: </B><img src="pige.gif"> Choisit une carte au hazard et permet &agrave;
+        Romi de jouer.
+    </p></li>
+    <li><p>
+        <B>Trier par suites: </B><img src="suites.gif"> Permet de mettre en ordre de suites
+        les cartes du joueur sur la Palette.
+    </p></li>
+    <li><p>
+        <B>Pr&eacute;f&eacute;rences: </B><img src="roue.gif"> Permet de changer et de sauvegarder
+        vos pr&eacute;f&eacute;rences pour Romi.
+    </p></li>
+    <li><p>
+        <B>Cartes jou&eacute;es: </B><img src="cartesJ.gif"> Montre, soit les cartes jou&eacute;es
+        lors du dernier coup de Romi (lorsque vous n'avez pas encore jou&eacute; de carte), ou
+        celles que vous avez jou&eacute;es depuis ce dernier coup.
+    </p></li>
+    <li><p>
+        <B>Valider le jeu: </B><img src="valider.gif"> Permet de v&eacute;rifier que les s&eacute;ries
+        de cartes du jeu sont valides, c'est-&agrave;-dire par groupe de trois ou plus.
+    </p></li>
+    <li><p>
+        <B>Information: </B><img src="baseline_menu_black_18.png"> Permet de consulter la documentation de Romi, de
+        voir les pointages, ou de commencer une nouvelle partie.
+    </p></li>
+    <li><p>
+        <B>R&eacute;organiser le jeu: </B><img src="balais.gif"> Permet de r&eacute;organiser
+        les cartes du jeu d'une mani&egrave;re sp&eacute;ciale comme ci-dessous:
+    </p></li>
+</UL>
+
+<center><img src="romi52.gif"></center>
+<H3><FONT COLOR=BLUE>
+    Afficher ou cacher les boutons
+</FONT></H3>
+<UL>
+    <li><p>
+        Dans <B>Pr&eacute;f&eacute;rences</B> &rarr; <B>Disposition</B> &rarr; <B>Boutons</B>, vous pouvez cacher
+        les boutons dont vous ne vous servez jamais. <B>Piger une carte</B> <img src="pige.gif"> est
+        le seul qui ne peut jamais &ecirc;tre cach&eacute;.
+    </p></li>
+    <li><p>
+        Cacher <B>R&eacute;organiser le jeu</B> <img src="balais.gif">, <B>Valider le jeu</B>
+        <img src="valider.gif"> ou <B>Cartes jou&eacute;es</B> <img src="cartesJ.gif"> retire simplement le
+        bouton.
+    </p></li>
+    <li><p>
+        <B>Trier par suites</B> <img src="suites.gif"> et <B>Pr&eacute;f&eacute;rences</B> <img src="roue.gif"> se
+        comportent autrement : leur case n'est jamais retir&eacute;e, elle devient <B>Refaire</B> et
+        <B>D&eacute;faire</B> en permanence, en gris&eacute; quand il n'y a rien &agrave; refaire ou &agrave; d&eacute;faire. Les
+        pr&eacute;f&eacute;rences restent accessibles par le menu <img src="baseline_menu_black_18.png">.
+    </p></li>
+    <li><p>
+        M&ecirc;me lorsque ces deux boutons sont affich&eacute;s, le bouton de tri devient <B>Refaire</B> d&egrave;s que
+        vous avez d&eacute;fait quelque chose, et le bouton des pr&eacute;f&eacute;rences devient <B>D&eacute;faire</B> d&egrave;s
+        qu'un coup peut &ecirc;tre repris.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    R&eacute;glages de la partie
+</FONT></H3>
+<UL>
+    <li><p>
+        <B>Niveau du jeu : </B>Dans <B>Pr&eacute;f&eacute;rences</B> &rarr; <B>Jeu</B>, choisissez <B>D&eacute;butant</B>, <B>Interm&eacute;diaire</B> ou <B>Expert</B>. Le niveau d&eacute;termine l'habilet&eacute; de Romi &agrave; former ses s&eacute;ries, &agrave; voler des cartes sur le jeu et &agrave; reconstruire les s&eacute;ries qu'il d&eacute;fait.
+    </p></li>
+    <li><p>
+        <B>R&egrave;glement : </B><B>Standard</B> ou <B>12&ndash;13&ndash;1</B>. Avec 12&ndash;13&ndash;1, un as peut aussi suivre le roi &agrave; la fin d'une suite (par exemple 11-12-13-1), et le jeu gagne une colonne. La suite s'arr&ecirc;te l&agrave; : pas de 2 apr&egrave;s cet as, et une suite ne peut pas commencer et finir par un as (1-2-&hellip;-13-1).
+    </p></li>
+    <li><p>
+        <B>Frime : </B><B>Normale</B> (deux frimes dans le paquet), <B>Aucune</B> (pas de frime), ou <B>Pour tous</B> (aucune dans le paquet, mais chaque joueur en re&ccedil;oit une en main au d&eacute;part).
+    </p></li>
+    <li><p>
+        <B>Ouverture : </B>Les points requis pour ouvrir : <B>25</B>, <B>30</B> ou <B>50</B>.
+    </p></li>
+    <li><p>
+        <B>Limite de temps et p&eacute;nalit&eacute; : </B>De 0 (aucune limite) &agrave; 5 minutes par tour. Quand le temps est &eacute;coul&eacute;, le jeu revient &agrave; son &eacute;tat du d&eacute;but de votre tour &mdash; sauf au niveau <B>D&eacute;butant</B>, ou dans une partie solo si l'interrupteur <B>P&eacute;nalit&eacute; apr&egrave;s la limite</B> est ferm&eacute;. Au niveau <B>Expert</B>, vous pigez alors deux cartes au lieu d'une.
+    </p></li>
+    <li><p>
+        <B>Gagnant commence : </B>Quand il est activ&eacute;, le gagnant de la partie pr&eacute;c&eacute;dente joue en premier &agrave; la suivante.
+    </p></li>
+    <li><p>
+        <B>Romi vole aussi : </B>Comme vous, Romi peut prendre des cartes dans les s&eacute;ries du jeu et les reconstruire, pourvu que toutes les s&eacute;ries soient encore valides &agrave; la fin de son tour.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Disposition et apparence
+</FONT></H3>
+<UL>
+    <li><p>
+        <B>Panneau &agrave; gauche : </B>Dans <B>Pr&eacute;f&eacute;rences</B> &rarr; <B>Disposition</B>, cet
+        interrupteur place le panneau lat&eacute;ral &agrave; gauche de l'&eacute;cran plut&ocirc;t qu'&agrave; droite. Le portrait et
+        le paysage ont chacun le leur.
+    </p></li>
+    <li><p>
+        <B>Disposition tablette : </B>En paysage, le plateau occupe toute la largeur, et la palette,
+        les boutons et le panneau se placent en rang&eacute;e en dessous. Activ&eacute;e par d&eacute;faut sur les
+        tablettes.
+    </p></li>
+    <li><p>
+        <B>Personnaliser les tuiles : </B>Dans <B>Pr&eacute;f&eacute;rences</B> &rarr; <B>Apparence</B>,
+        choisissez une palette pr&ecirc;te &agrave; l'emploi (<B>Standard</B>, <B>Daltonien</B>, <B>Contraste
+        &eacute;lev&eacute;</B> ou <B>Monochrome</B>), ou prenez <B>Personnalis&eacute;</B> et touchez une tuile pour
+        choisir la couleur et le symbole de chaque suite. La frime <img src="iconeFrime.gif"> a sa
+        propre couleur, modifiable de la m&ecirc;me fa&ccedil;on. Chaque symbole ne peut &ecirc;tre
+        utilis&eacute; que par une seule suite, si bien que deux suites ne peuvent jamais
+        para&icirc;tre identiques sur le plateau.
+    </p></li>
+    <li><p>
+        <B>Fond de table : </B>&eacute;galement dans <B>Pr&eacute;f&eacute;rences</B> &rarr; <B>Apparence</B>. &agrave; c&ocirc;t&eacute; des
+        quatre fonds num&eacute;rot&eacute;s, le choix <B>Couleur</B> ouvre un nuancier o&ugrave; vous choisissez la
+        couleur de fond de votre go&ucirc;t.
+        Le choix <B>Photo</B> permet plut&ocirc;t d'utiliser une de vos propres photos : elle est
+        copi&eacute;e dans l'application, affich&eacute;e sous un l&eacute;ger voile de la couleur
+        choisie, et reste sur cet appareil seulement.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Parties en ligne
+</FONT></H3>
+<UL>
+    <li><p>
+        <B>Compl&eacute;ter avec des Romi : </B>Quand vous h&eacute;bergez une partie en ligne, les si&egrave;ges que
+        personne n'a rejoints sont jou&eacute;s par l'ordinateur au d&eacute;marrage : une table de 3 ou 4 peut
+        ainsi &ecirc;tre jou&eacute;e par 2 personnes. Il faut au moins deux joueurs humains.
+    </p></li>
+    <li><p>
+        Si un joueur quitte la partie et ne revient pas, la table ne reste plus bloqu&eacute;e sur son tour
+        : une fois son d&eacute;lai de reconnexion &eacute;coul&eacute;, ses deux prochains tours sont jou&eacute;s comme une
+        simple pige, puis l'ordinateur prend le si&egrave;ge. Revenir pendant ces deux tours conserve le
+        si&egrave;ge ; revenir plus tard le reprend &agrave; l'ordinateur.
+    </p></li>
+</UL>
+
+<p style="margin:2%">
+    Des versions de Romi pour <B>Mac OSX, IOS</B> et <B>Windows</B>, sont aussi disponibles sur le
+    site Web: <a href="https://romi.ca">https://romi.ca</a>
+</p>
+
+</BODY>
+</HTML>

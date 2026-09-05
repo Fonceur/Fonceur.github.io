@@ -1,0 +1,265 @@
+<HTML>
+<HEAD>
+    <TITLE>Romi (Rummy, RummyCube, Rummikub, Rami)</TITLE>
+</HEAD>
+<BODY style="margin:2%">
+<CENTER>
+    <H2><FONT COLOR=BLUE>
+        Dokumentation för Romi.
+    </FONT></H2>
+</CENTER>
+<p style="margin:2%">
+    <B>Romi</B> låter dig spela <B>Rummy Tile (RummyCube, Rummikub, Rami)</B> mot datorn på 3
+    olika nivåer. Spelet spelas med 2 set á 52 brickor samt 2 <img
+        src="iconeFrime.gif"> jokrar. Två jokrar är standardinställningen <B>Jokrar</B> (<B>Normal</B>, <B>Ingen</B> eller <B>För alla</B>) i <B>Inställningar</B> &rarr; <B>Spel</B>.
+    Syftet med detta spel är att forma grupper med 3 brickor eller fler som innehåller
+    antingen brickor i samma valör men i olika färger (trissar/fyrtal) eller stegar i
+    olika valörer men i samma färg.
+</p>
+<p style="margin:2%" class="demo-intro">
+    Vill du först se hur man spelar? Tryck på knappen <B>Demo</B> uppe till höger för att se Romi spela mot Romi. Tryck på demobannern när som helst för att stoppa den och återgå till ditt eget spel.
+</p>
+<H3><FONT COLOR=BLUE>
+    De allmänna spelreglerna är:
+</FONT></H3>
+<UL>
+    <li><p>
+        När du börjar ett nytt spel dras 14 brickor slumpmässigt för Romi och 14 för
+        spelaren. De sistnämnda placeras på hyllan i sekventiell ordning.
+    </p></li>
+    <li><p>
+        Spelaren öppnar sitt spel genom att spela minst en grupp om 3 brickor eller fler,
+        med endast brickorna på sin hylla. Summan av dessa brickors värden måste vara
+        (25, 30 eller 50) eller mer.
+    </p></li>
+    <li><p>
+        Efter att spelaren har öppnat spelet kan han använda brickorna på bordet för
+        att komplettera grupper med brickor från sin hylla. Spelaren kan flytta eller
+        omorganisera alla brickor på bordet, men de nya grupperna måste vara giltiga
+        och bestå av 3 brickor eller fler.
+    </p></li>
+</UL>
+<H3><FONT COLOR=BLUE>
+    De särskilda reglerna för Romi är:
+</FONT></H3>
+<UL>
+    <li><p>
+        Romis fönster är uppdelat i två huvudelement: bordet, med 8 rader om 23 celler (en kolumn till med Romi-regeln 12–13–1)
+        där du placerar brickorna du spelar, och hyllan där spelarens brickor förvaras.
+        Grupperna av brickor som placeras på bordet måste separeras med en eller flera
+        tomma celler. Spelarens brickor kan placeras var som helst på hyllan.
+    </p></li>
+    <li><p>
+        Romi tillåter inte att du placerar en bricka före eller efter en bricka på
+        bordet om gruppen som bildas med denna bricka inte är giltig.
+    </p></li>
+    <li><p>
+        Om du inte kan eller inte vill spela en bricka måste du dra en genom att klicka
+        på <img src="pige.gif">-ikonen.
+    </p></li>
+    <li><p>
+        När du har avslutat din tur klickar du på timglaset <img src="sablier.gif">.
+        Romi kontrollerar att spelet är giltigt och spelar sedan sin tur. När Romi
+        spelar ersätts timglasikonen med en datorikon.
+    </p></li>
+    <li><p>
+        Observera att du inte kan flytta brickor (som inte är dina) på bordet innan
+        du öppnar spelet med dina egna grupper av brickor på (25, 30 eller 50) poäng
+        eller mer.
+    </p></li>
+    <li><p>
+        För att placera en bricka på bordet kan du klicka på brickan så flyttas den
+        automatiskt till bordet. Om du vill placera en följd av brickor klickar du på
+        varje bricka i ordning för att bilda följden. Du kan också placera en grupp
+        brickor (med identiska nummer) genom att klicka på varje bricka i gruppen.
+    </p></li>
+    <li><p>
+        Du kan också välja en bricka och flytta den manuellt till valfri destination.
+        Om du flyttar en bricka över en följd av 5 brickor eller fler (som innehåller
+        samma bricka) delas följden i två följder.
+    </p></li>
+    <li><p>
+        Du kan återställa bordet som det var innan du började spela din tur genom att
+        klicka på timglasikonen så får du möjlighet att återställa bordet.
+    </p></li>
+    <li><p>
+        Du kan se dina Romi-poäng och/eller återställa dina poäng till noll genom att
+        klicka på <img src="baseline_menu_black_18.png">-knappen och välja <B>Statistik</B>.
+    </p></li>
+</UL>
+<H3><FONT COLOR=BLUE>
+    Genvägar
+</FONT></H3>
+
+<UL>
+    <li><p>
+        Du kan lägga till en bricka i slutet eller början av en grupp brickor genom att
+        dra brickan till respektive första eller sista brickan i gruppen. Om utrymmet före
+        eller efter gruppen inte är tillräckligt flyttar Romi den nya gruppen av brickor
+        dit det finns tillräckligt med utrymme.
+    </p></li>
+    <li><p>
+        Romi låter dig också skapa två grupper av brickor med en grupp om 5 brickor eller
+        fler, och en annan bricka som är identisk med en i denna grupp. De två nya
+        grupperna måste var och en bestå av 3 brickor eller fler. Till exempel, om det
+        finns en grupp brickor som (4,5,6,7,8,9) och om du har en annan 6, kan du skapa
+        följande två grupper (4,5,6) och (6,7,8,9). Genvägen fungerar genom att välja
+        din 6 och dra den på valfri bricka i gruppen (4,5,6,7,8,9).
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Skicka och Spela
+</FONT></H3>
+<UL>
+    <li><p>
+        En enda enhet kan användas av flera mänskliga spelare genom att skicka enheten till nästa spelare när de har avslutat sin tur.
+    </p></li>
+    <li><p>
+        På skärmen <B>Inställningar</B> <img src="roue.gif"> &rarr; <B>Spelare</B> avmarkerar du kryssrutorna bredvid namnet på spelaren som ska spelas av en människa.
+    </p></li>
+    <li><p>
+        En ändrad kryssruta träder i kraft när nästa spel startar.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Verktygsknappar
+</FONT></H3>
+<UL>
+    <li><p>
+        <B>Dra en bricka: </B><img src="pige.gif"> Drar en bricka slumpmässigt och låter Romi
+        spela sin tur.
+    </p></li>
+    <li><p>
+        <B>Sortera efter färg: </B><img src="suites.gif"> Ordnar om spelarens brickor på
+        hyllan efter färg.
+    </p></li>
+    <li><p>
+        <B>Inställningar: </B><img src="roue.gif"> Låter dig ändra och spara dina
+        inställningar för Romi.
+    </p></li>
+    <li><p>
+        <B>Spelade brickor: </B><img src="cartesJ.gif"> Visar brickorna som spelades av Romi
+        under sin senaste tur eller brickorna du spelade under din tur.
+    </p></li>
+    <li><p>
+        <B>Godkänn: </B><img src="valider.gif"> Kontrollerar att grupperna av brickor som
+        spelats på bordet är giltiga.
+    </p></li>
+    <li><p>
+        <B>Information: </B><img src="baseline_menu_black_18.png"> Du kan se dokumentationen för Romi, se din
+        statistik eller börja ett nytt spel.
+    </p></li>
+    <li><p>
+        <B>Rensa bordet:</B> <img src="balais.gif"> Ordnar om brickorna på bordet i en
+        speciell ordning som visas nedan:
+    </p></li>
+</UL>
+<center><img src="romi52.gif"></center>
+<H3><FONT COLOR=BLUE>
+    Visa eller dölja knapparna
+</FONT></H3>
+<UL>
+    <li><p>
+        Under <B>Inställningar</B> &rarr; <B>Layout</B> &rarr; <B>Knappar</B> kan du dölja de
+        knappar du aldrig använder. <B>Dra en bricka</B> <img src="pige.gif"> är den enda som aldrig
+        kan döljas.
+    </p></li>
+    <li><p>
+        Döljer du <B>Rensa bordet</B> <img src="balais.gif">, <B>Godkänn</B> <img src="valider.gif">
+        eller <B>Spelade brickor</B> <img src="cartesJ.gif"> försvinner knappen helt enkelt.
+    </p></li>
+    <li><p>
+        <B>Sortera efter färg</B> <img src="suites.gif"> och <B>Inställningar</B>
+        <img src="roue.gif"> beter sig annorlunda: deras ruta tas aldrig bort, den blir permanent
+        <B>Gör om</B> och <B>Ångra</B>, gråtonad när det inte finns något att göra om eller ångra.
+        Inställningarna nås fortfarande från menyn <img src="baseline_menu_black_18.png">.
+    </p></li>
+    <li><p>
+        Även när båda knapparna visas blir sorteringsknappen <B>Gör om</B> så snart du har ångrat
+        något, och inställningsknappen blir <B>Ångra</B> så snart det finns ett drag att ta
+        tillbaka.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Spelinställningar
+</FONT></H3>
+<UL>
+    <li><p>
+        <B>Spela nivå: </B>I <B>Inställningar</B> &rarr; <B>Spel</B> väljer du <B>Nybörjare</B>, <B>Normal</B> eller <B>Expert</B>. Nivån avgör hur skickligt Romi bygger sina grupper, stjäl brickor från bordet och bygger upp de grupper den bryter isär igen.
+    </p></li>
+    <li><p>
+        <B>Romi regler: </B><B>Standard</B> eller <B>12–13–1</B>. Med 12–13–1 får ett ess även följa kungen i slutet av en stege (till exempel 11-12-13-1), och bordet får en kolumn till. Stegen slutar där: ingen 2:a efter det esset, och en stege kan inte både börja och sluta med ett ess (1-2-…-13-1).
+    </p></li>
+    <li><p>
+        <B>Jokrar: </B><B>Normal</B> (två jokrar i kortleken), <B>Ingen</B> (inga jokrar) eller <B>För alla</B> (inga i kortleken, men varje spelare börjar med en på handen).
+    </p></li>
+    <li><p>
+        <B>Öppning: </B>Poängen som krävs för att öppna: <B>25</B>, <B>30</B> eller <B>50</B>.
+    </p></li>
+    <li><p>
+        <B>Tidsbegränsning och straff: </B>Från 0 (ingen gräns) till 5 minuter per drag. När tiden går ut återgår bordet till hur det såg ut i början av ditt drag — utom på nivån <B>Nybörjare</B>, eller i ett solospel med brytaren <B>Tidsgräns-straff</B> av. På nivån <B>Expert</B> drar du då dessutom två brickor i stället för en.
+    </p></li>
+    <li><p>
+        <B>Vinnaren börjar: </B>När den är på spelar vinnaren av förra spelet först i nästa.
+    </p></li>
+    <li><p>
+        <B>Romi stjäl också: </B>Precis som du får Romi ta brickor från grupperna på bordet och bygga upp dem igen, så länge varje grupp fortfarande är giltig när draget är slut.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Layout och utseende
+</FONT></H3>
+<UL>
+    <li><p>
+        <B>Panel till vänster: </B>Under <B>Inställningar</B> &rarr; <B>Layout</B> flyttar det här
+        reglaget sidopanelen till vänster på skärmen i stället för till höger. Porträtt och landskap
+        har var sitt reglage.
+    </p></li>
+    <li><p>
+        <B>Surfplattelayout: </B>I landskap tar bordet hela bredden, och stället, knapparna och
+        panelen står på en rad under. Påslaget som standard på surfplattor.
+    </p></li>
+    <li><p>
+        <B>Anpassa brickor: </B>Under <B>Inställningar</B> &rarr; <B>Titta och känna</B> väljer du
+        en färdig palett (<B>Standard</B>, <B>Färgblind</B>, <B>Hög kontrast</B> eller
+        <B>Monokrom</B>), eller tar <B>Anpassad</B> och trycker på en bricka för att välja färg och
+        symbol för varje sort. Jokern <img src="iconeFrime.gif"> har sin egen färg, som ändras på
+        samma sätt. Varje symbol kan bara användas av
+        en sort, så två sorter kan aldrig se likadana ut på bordet.
+    </p></li>
+    <li><p>
+        <B>Bordets bakgrund: </B>Även under <B>Inställningar</B> &rarr; <B>Titta och känna</B>. Vid
+        sidan av de fyra numrerade bakgrunderna öppnar valet <B>Färg</B> en färgkarta där du väljer
+        den bakgrundsfärg du vill ha.
+        Valet <B>Foto</B> låter dig i stället använda en av dina egna bilder: den kopieras in i
+        appen, visas under en lätt slöja av den valda färgen och stannar bara på den här enheten.
+    </p></li>
+</UL>
+
+<H3><FONT COLOR=BLUE>
+    Onlinespel
+</FONT></H3>
+<UL>
+    <li><p>
+        <B>Fyll med Romi-spelare: </B>När du är värd för ett onlinespel spelas de platser som ingen
+        har tagit av datorn vid starten: ett bord med 3 eller 4 platser kan därmed spelas av 2
+        personer. Det behövs minst två mänskliga spelare.
+    </p></li>
+    <li><p>
+        Om en spelare lämnar spelet och inte kommer tillbaka fastnar bordet inte längre på hans tur:
+        när hans tid för att återansluta har gått ut spelas hans två nästa turer som ett vanligt
+        drag, och sedan tar datorn över platsen. Den som kommer tillbaka under de två turerna
+        behåller sin plats; den som kommer senare tar den tillbaka från datorn.
+    </p></li>
+</UL>
+
+<p style="margin:2%">
+    <B>Romi</B>-versioner för <B>Mac OSX, iOS</B> och <B>Windows</B> finns också tillgängliga
+    på Romis webbsida: <a href="https://romi.ca">https://romi.ca</a>
+</P>
+</BODY>
+</HTML>
