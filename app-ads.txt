@@ -1,5 +1,10 @@
-# AdMob (Google)
+# AdMob (Google) + Google Open Bidding exchanges, as shown in AdMob > Apps > app-ads.txt
 google.com, pub-1086212638194755, DIRECT, f08c47fec0942fa0
+indexexchange.com, 195528, DIRECT, 50b1c356f2c5c8fc
+media.net, 8CU5X8XB8, DIRECT
+openx.com, 545589102, DIRECT, 6a698e2ec38604c6
+pubmatic.com, 159856, DIRECT, 5d62403b186f2ace
+rubiconproject.com, 22884, DIRECT, 0bfd66d529a55807
 
 # Amazon Publisher Services (APS)
 aps.amazon.com, d09e25b3-1e98-44d6-a6d7-d60e82eeb87f, DIRECT
@@ -10,3 +15,9 @@ adcolony.com, 44ef7fd4adebf701, RESELLER, 1ad675c9de6b5176
 indexexchange.com, 192410, RESELLER, 50b1c356f2c5c8fc
 admanmedia.com, 726, RESELLER
 loopme.com, 11405, RESELLER
+
+# Chocolate Platform (Vdopia) mediation
+vdopia.com, 15964, DIRECT, 49a66ce31a704197 #video
+chocolateplatform.com, 15964, DIRECT, 49a66ce31a704197 #video
+vdopia.com, 15964, DIRECT, 49a66ce31a704197 #banner
+chocolateplatform.com, 15964, DIRECT, 49a66ce31a704197 #banner
