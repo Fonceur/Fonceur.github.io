@@ -1,12 +1,16 @@
 # AdMob, from AdMob > Apps > app-ads.txt > Set up (2026-09-05)
 google.com, pub-1086212638194755, DIRECT, f08c47fec0942fa0
 
-# Google exchange-bidding seats for this account (verified in each exchange's sellers.json, 2026-09-05:
-# Index and OpenX list "Patrick Roy via Google OB/EB", Rubicon and PubMatic list Google)
+# AdMob bidding ad sources enabled under Mediation > Ad sources (2026-09-05): Index Exchange,
+# OpenX, PubMatic, Magnite DV+ (rubiconproject.com), Media.net. Seats verified in each exchange's
+# sellers.json the same day: Index and OpenX list "Patrick Roy via Google OB/EB", Rubicon and
+# PubMatic list Google. The Media.net seat is absent from media.net/sellers.json; kept until
+# Media.net or AdMob provides a current one.
 indexexchange.com, 195528, DIRECT, 50b1c356f2c5c8fc
 openx.com, 545589102, DIRECT, 6a698e2ec38604c6
 pubmatic.com, 159856, DIRECT, 5d62403b186f2ace
 rubiconproject.com, 22884, DIRECT, 0bfd66d529a55807
+media.net, 8CU5X8XB8, DIRECT
 
 # Amazon Publisher Services (APS), from APS portal > Admin > App-Ads.txt (2026-09-05)
 aps.amazon.com,d09e25b3-1e98-44d6-a6d7-d60e82eeb87f,DIRECT
@@ -43,7 +47,7 @@ richaudience.com,MMuGgvZcVd,RESELLER
 thebrave.io,1234794,RESELLER,c25b2154543746ac
 bidline.net,550e8400,RESELLER
 
-# Chocolate Platform (Vdopia) mediation
+# Chocolate Platform (Vdopia), enabled under Mediation > Ad sources; seat 15964 = "Patrick Roy, romi.ca" in chocolateplatform.com/sellers.json
 vdopia.com, 15964, DIRECT, 49a66ce31a704197 #video
 chocolateplatform.com, 15964, DIRECT, 49a66ce31a704197 #video
 vdopia.com, 15964, DIRECT, 49a66ce31a704197 #banner
