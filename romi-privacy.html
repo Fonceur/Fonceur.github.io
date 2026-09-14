@@ -35,8 +35,8 @@ The editions differ only in the third-party services they include, summarized in
 <h2>In short</h2>
 <ul>
   <li>We do not ask you to create an account and we do not run any analytics or tracking of our own.</li>
-  <li>Your games, statistics, settings and background photo stay on your device unless you turn on an optional feature that syncs or shares them (Google Play Games, online multiplayer).</li>
-  <li>The free editions show ads. The ad providers (Google AdMob or Amazon Publisher Services) collect the usual advertising data described below.</li>
+  <li>Your games, statistics, settings and background photo stay on your device unless you turn on an optional feature that syncs or shares them (Google Play Games, online multiplayer) or Android's own backup includes them.</li>
+  <li>The free editions show ads. The ad providers (Google AdMob and, on the Amazon edition, Amazon Publisher Services as well) collect the usual advertising data described below.</li>
   <li>We never sell personal information.</li>
 </ul>
 
@@ -46,7 +46,7 @@ The editions differ only in the third-party services they include, summarized in
   <tr><th>Edition</th><th>Store</th><th>Ads</th><th>Google Play Games</th><th>Online &amp; nearby multiplayer</th><th>Other</th></tr>
   <tr><td>Romi (paid)</td><td>Google Play</td><td>None</td><td>Optional</td><td>Yes</td><td>In-app update check</td></tr>
   <tr><td>Romi Lite, Romi Express, Romi Maxi</td><td>Google Play</td><td>Google AdMob</td><td>Optional</td><td>Yes</td><td>In-app update check</td></tr>
-  <tr><td>Romi Lite</td><td>Amazon Appstore</td><td>Amazon Publisher Services</td><td>No</td><td>Online only</td><td>Amazon license check</td></tr>
+  <tr><td>Romi Lite</td><td>Amazon Appstore</td><td>Google AdMob + Amazon Publisher Services</td><td>No</td><td>Online only</td><td>Amazon license check</td></tr>
   <tr><td>Romi (paid)</td><td>Amazon Appstore</td><td>None</td><td>No</td><td>Online only</td><td>Amazon license check</td></tr>
 </table>
 </div>
@@ -55,20 +55,21 @@ The editions differ only in the third-party services they include, summarized in
 <ul>
   <li><b>Games and statistics</b>: saved games, game history and win/loss statistics are kept in the app's private storage.</li>
   <li><b>Settings</b>, including the player name you may type in for multiplayer games.</li>
-  <li><b>Background photo</b>: if you choose a photo from your gallery as the table background, the app makes a reduced copy in its private storage. It does not keep access to your photo library and never uploads the photo anywhere.</li>
+  <li><b>Background photo</b>: if you choose a photo from your gallery as the table background, the app makes a reduced copy in its private storage. It does not keep access to your photo library, and the app itself never uploads the photo anywhere.</li>
 </ul>
-<p>Uninstalling the app deletes all of this.</p>
+<p>Uninstalling the app deletes all of this. If Android's automatic backup is turned on for your device, Android may include these files (settings, the game database and the reduced photo) in the encrypted backup of your Google account or in a device-to-device transfer; that backup is run by Android and Google, not by us, and you can turn it off in Android's settings.</p>
 
 <h2>Online multiplayer (Firebase)</h2>
 <p>When you host or join an online game, the app connects to Google's Firebase Realtime Database
 using an <b>anonymous</b> Firebase sign-in: a random user ID with no name, e-mail or password.
 For the duration of the game the database holds the game state, the player name you entered in the
 settings, a SHA-256 hash of the game PIN (never the PIN itself), a random per-install device
-identifier used to give you your seat back after a disconnection, your win record for that table
-size (games, wins and points, as computed on your own device — shown to the other players on the
+identifier used to give you your seat back after a disconnection, your win records by table
+size (games, wins and points for each table size you have played online, as computed on your own device — shown to the other players on the
 end-of-game screen, never used for leaderboards), timestamps and a connection flag so other players
-can see whether you are still there. Games are deleted when they end; a game its host never finishes
-is removed at the host's next launch after 24 hours, or by a periodic cleanup after at most 7 days. Firebase is operated by Google and
+can see whether you are still there. A finished game, and any game created more than 24 hours earlier, is deleted the next time its host
+hosts an online game; on top of that we run a manual cleanup of the database from time to time, which deletes finished games after one hour without
+activity and every other record after 7 days without activity. Firebase is operated by Google and
 subject to the <a href="https://firebase.google.com/support/privacy">Firebase privacy documentation</a>.</p>
 
 <h2>Nearby multiplayer (Google Nearby Connections)</h2>
@@ -94,8 +95,9 @@ Kingdom, Switzerland and several US states the app shows a consent form before l
 change your choice later from the privacy options entry in the app. See
 <a href="https://policies.google.com/technologies/ads">how Google uses information from apps that use its services</a>
 and the <a href="https://support.google.com/admob/answer/9012903">list of ad technology providers</a>.</p>
-<p><b>Romi Lite on the Amazon Appstore</b> shows ads through <b>Amazon Publisher Services</b> and its
-partners, which collect the same categories of data. This edition has no nearby play; its location permission exists only for advertising: if you
+<p><b>Romi Lite on the Amazon Appstore</b> shows banner, interstitial and app-open ads through <b>Google AdMob</b>, with
+<b>Amazon Publisher Services</b> bidding on the same ad slots; both providers and their partners collect the same categories of data. This edition
+shows no consent form. It has no nearby play; its location permission exists only for advertising: if you
 grant it, Amazon's ad SDK may use the device's location to select ads. See the
 <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496">Amazon Privacy Notice</a> and
 <a href="https://www.amazon.com/adprefs">Amazon interest-based ads settings</a>.</p>
@@ -126,7 +128,7 @@ collect personal information from them. The free editions request ads suitable f
 <ul>
   <li>Delete everything stored on the device by uninstalling the app.</li>
   <li>Disconnect from Google Play Games in the app; your Saved Games data can be removed from your Google account through Google's tools.</li>
-  <li>Leave an online game to remove your player entry; the game record itself is deleted when the game ends, or within 7 days at the latest.</li>
+  <li>Leave an online game to remove your player entry; the game record itself is deleted by the cleanups described above (at the latest, 7 days after its last activity once we run the manual cleanup).</li>
   <li>Change your ad consent from the app's privacy options, or reset your advertising ID in Android settings.</li>
   <li>Ask us to delete any diagnostic archive you sent, or to answer any question about this policy, at the address below.</li>
 </ul>

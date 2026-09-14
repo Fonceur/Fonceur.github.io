@@ -36,8 +36,8 @@ résumés dans le tableau ci-dessous.</p>
 <h2>En bref</h2>
 <ul>
   <li>Aucun compte n'est requis et nous n'utilisons aucun outil d'analyse ou de suivi qui nous soit propre.</li>
-  <li>Vos parties, statistiques, réglages et photo de fond restent sur votre appareil, sauf si vous activez une fonction optionnelle qui les synchronise ou les partage (Google Play Jeux, parties en ligne).</li>
-  <li>Les éditions gratuites affichent des publicités. Les fournisseurs (Google AdMob ou Amazon Publisher Services) recueillent les données publicitaires habituelles décrites plus bas.</li>
+  <li>Vos parties, statistiques, réglages et photo de fond restent sur votre appareil, sauf si vous activez une fonction optionnelle qui les synchronise ou les partage (Google Play Jeux, parties en ligne) ou si la sauvegarde d'Android les inclut.</li>
+  <li>Les éditions gratuites affichent des publicités. Les fournisseurs (Google AdMob et, dans l'édition Amazon, Amazon Publisher Services aussi) recueillent les données publicitaires habituelles décrites plus bas.</li>
   <li>Nous ne vendons jamais de renseignements personnels.</li>
 </ul>
 
@@ -47,7 +47,7 @@ résumés dans le tableau ci-dessous.</p>
   <tr><th>Édition</th><th>Boutique</th><th>Publicité</th><th>Google Play Jeux</th><th>Parties en ligne et à proximité</th><th>Autre</th></tr>
   <tr><td>Romi (payante)</td><td>Google Play</td><td>Aucune</td><td>Optionnel</td><td>Oui</td><td>Vérification de mise à jour</td></tr>
   <tr><td>Romi Lite, Romi Express, Romi Maxi</td><td>Google Play</td><td>Google AdMob</td><td>Optionnel</td><td>Oui</td><td>Vérification de mise à jour</td></tr>
-  <tr><td>Romi Lite</td><td>Amazon Appstore</td><td>Amazon Publisher Services</td><td>Non</td><td>En ligne seulement</td><td>Vérification de licence Amazon</td></tr>
+  <tr><td>Romi Lite</td><td>Amazon Appstore</td><td>Google AdMob + Amazon Publisher Services</td><td>Non</td><td>En ligne seulement</td><td>Vérification de licence Amazon</td></tr>
   <tr><td>Romi (payante)</td><td>Amazon Appstore</td><td>Aucune</td><td>Non</td><td>En ligne seulement</td><td>Vérification de licence Amazon</td></tr>
 </table>
 </div>
@@ -56,9 +56,9 @@ résumés dans le tableau ci-dessous.</p>
 <ul>
   <li><b>Parties et statistiques</b> : les parties sauvegardées, l'historique et les statistiques de victoires sont conservés dans l'espace privé de l'application.</li>
   <li><b>Réglages</b>, y compris le nom de joueur que vous pouvez saisir pour les parties multijoueurs.</li>
-  <li><b>Photo de fond</b> : si vous choisissez une photo de votre galerie comme fond de table, l'application en fait une copie réduite dans son espace privé. Elle ne conserve pas l'accès à votre galerie et ne téléverse jamais la photo.</li>
+  <li><b>Photo de fond</b> : si vous choisissez une photo de votre galerie comme fond de table, l'application en fait une copie réduite dans son espace privé. Elle ne conserve pas l'accès à votre galerie, et l'application elle-même ne téléverse jamais la photo.</li>
 </ul>
-<p>Désinstaller l'application supprime tout cela.</p>
+<p>Désinstaller l'application supprime tout cela. Si la sauvegarde automatique d'Android est activée sur votre appareil, Android peut inclure ces fichiers (réglages, base de données des parties et photo réduite) dans la sauvegarde chiffrée de votre compte Google ou dans un transfert d'appareil à appareil; cette sauvegarde relève d'Android et de Google, pas de nous, et vous pouvez la désactiver dans les paramètres d'Android.</p>
 
 <h2>Parties en ligne (Firebase)</h2>
 <p>Quand vous créez ou rejoignez une partie en ligne, l'application se connecte à la base de données
@@ -66,12 +66,12 @@ Firebase Realtime Database de Google avec une connexion <b>anonyme</b> : un iden
 sans nom, courriel ni mot de passe. Pendant la partie, la base de données contient l'état du jeu, le
 nom de joueur saisi dans les réglages, une empreinte SHA-256 du NIP de la partie (jamais le NIP
 lui-même), un identifiant d'installation aléatoire servant à vous rendre votre siège après une
-déconnexion, votre palmarès pour cette taille de table (parties, victoires et points, calculés sur
-votre propre appareil — montré aux autres joueurs à l'écran de fin de partie, jamais utilisé pour les
+déconnexion, vos palmarès par taille de table (parties, victoires et points pour chaque taille de table jouée en ligne, calculés sur
+votre propre appareil — montrés aux autres joueurs à l'écran de fin de partie, jamais utilisés pour les
 classements), des horodatages et un indicateur de connexion permettant aux autres joueurs de voir si
-vous êtes toujours là. Les parties sont supprimées à leur fin; une partie que son hôte n'a jamais
-terminée est retirée à son lancement suivant après 24 heures, ou par un nettoyage périodique après
-au plus 7 jours. Firebase est exploité par Google; voir la
+vous êtes toujours là. Une partie terminée, comme toute partie créée depuis plus de 24 heures, est supprimée la prochaine fois
+que son hôte crée une partie en ligne; de plus, nous lançons de temps à autre un nettoyage manuel de la base de données, qui supprime les
+parties terminées après une heure sans activité et tout autre enregistrement après 7 jours sans activité. Firebase est exploité par Google; voir la
 <a href="https://firebase.google.com/support/privacy">documentation de Firebase sur la confidentialité</a>.</p>
 
 <h2>Parties à proximité (Google Nearby Connections)</h2>
@@ -101,8 +101,9 @@ l'application affiche un formulaire de consentement avant de charger des annonce
 modifier votre choix plus tard par l'entrée « options de confidentialité » de l'application. Voir
 <a href="https://policies.google.com/technologies/ads?hl=fr">comment Google utilise les données des applications qui font appel à ses services</a>
 et la <a href="https://support.google.com/admob/answer/9012903?hl=fr">liste des fournisseurs de technologies publicitaires</a>.</p>
-<p><b>Romi Lite sur l'Amazon Appstore</b> affiche des annonces par l'entremise d'<b>Amazon Publisher
-Services</b> et de ses partenaires, qui recueillent les mêmes catégories de données. Cette édition n'offre pas de parties à proximité; son autorisation de localisation ne sert qu'à la
+<p><b>Romi Lite sur l'Amazon Appstore</b> affiche des bannières, des interstitiels et des annonces à l'ouverture par l'entremise de
+<b>Google AdMob</b>, <b>Amazon Publisher Services</b> enchérissant sur les mêmes emplacements; les deux fournisseurs et leurs partenaires recueillent
+les mêmes catégories de données. Cette édition n'affiche pas de formulaire de consentement. Elle n'offre pas de parties à proximité; son autorisation de localisation ne sert qu'à la
 publicité : si vous l'accordez, la trousse publicitaire d'Amazon peut utiliser la position de
 l'appareil pour choisir les annonces. Voir
 l'<a href="https://www.amazon.ca/gp/help/customer/display.html?nodeId=918814">Avis de confidentialité d'Amazon</a> et les
@@ -137,7 +138,7 @@ des annonces convenant à un public général.</p>
 <ul>
   <li>Supprimez tout ce qui est conservé sur l'appareil en désinstallant l'application.</li>
   <li>Déconnectez-vous de Google Play Jeux dans l'application; vos parties sauvegardées peuvent être retirées de votre compte Google avec les outils de Google.</li>
-  <li>Quittez une partie en ligne pour retirer votre entrée de joueur; la partie elle-même est supprimée à sa fin, ou au plus tard dans les 7 jours.</li>
+  <li>Quittez une partie en ligne pour retirer votre entrée de joueur; la partie elle-même est supprimée par les nettoyages décrits plus haut (au plus tard 7 jours après sa dernière activité, une fois le nettoyage manuel lancé).</li>
   <li>Modifiez votre consentement publicitaire dans les options de confidentialité de l'application, ou réinitialisez votre identifiant publicitaire dans les paramètres d'Android.</li>
   <li>Demandez-nous de supprimer une archive de diagnostic que vous auriez envoyée, ou posez toute question sur cette politique, à l'adresse ci-dessous.</li>
 </ul>
