@@ -24,7 +24,7 @@
 <body>
 <nav><a href="index.html">Romi</a> · <a href="romi-privacy-fr.html" lang="fr">Version française</a></nav>
 <h1>Romi – Privacy Policy</h1>
-<p class="meta">Last updated: September 5, 2026</p>
+<p class="meta">Last updated: September 13, 2026</p>
 
 <p>Patrick Roy ("we", "us") publishes the Romi card game for Android. This policy explains what
 information the app handles, which of it leaves your device, who receives it, and the choices you
@@ -46,8 +46,8 @@ The editions differ only in the third-party services they include, summarized in
   <tr><th>Edition</th><th>Store</th><th>Ads</th><th>Google Play Games</th><th>Online &amp; nearby multiplayer</th><th>Other</th></tr>
   <tr><td>Romi (paid)</td><td>Google Play</td><td>None</td><td>Optional</td><td>Yes</td><td>In-app update check</td></tr>
   <tr><td>Romi Lite, Romi Express, Romi Maxi</td><td>Google Play</td><td>Google AdMob</td><td>Optional</td><td>Yes</td><td>In-app update check</td></tr>
-  <tr><td>Romi Lite</td><td>Amazon Appstore</td><td>Amazon Publisher Services</td><td>No</td><td>Yes</td><td>Amazon license check</td></tr>
-  <tr><td>Romi (paid)</td><td>Amazon Appstore</td><td>None</td><td>No</td><td>Yes</td><td>Amazon license check</td></tr>
+  <tr><td>Romi Lite</td><td>Amazon Appstore</td><td>Amazon Publisher Services</td><td>No</td><td>Online only</td><td>Amazon license check</td></tr>
+  <tr><td>Romi (paid)</td><td>Amazon Appstore</td><td>None</td><td>No</td><td>Online only</td><td>Amazon license check</td></tr>
 </table>
 </div>
 
@@ -63,8 +63,12 @@ The editions differ only in the third-party services they include, summarized in
 <p>When you host or join an online game, the app connects to Google's Firebase Realtime Database
 using an <b>anonymous</b> Firebase sign-in: a random user ID with no name, e-mail or password.
 For the duration of the game the database holds the game state, the player name you entered in the
-settings, the game PIN, timestamps and a connection flag so other players can see whether you are
-still there. Games are deleted when they end or after 24 hours. Firebase is operated by Google and
+settings, a SHA-256 hash of the game PIN (never the PIN itself), a random per-install device
+identifier used to give you your seat back after a disconnection, your win record for that table
+size (games, wins and points, as computed on your own device — shown to the other players on the
+end-of-game screen, never used for leaderboards), timestamps and a connection flag so other players
+can see whether you are still there. Games are deleted when they end; a game its host never finishes
+is removed at the host's next launch after 24 hours, or by a periodic cleanup after at most 7 days. Firebase is operated by Google and
 subject to the <a href="https://firebase.google.com/support/privacy">Firebase privacy documentation</a>.</p>
 
 <h2>Nearby multiplayer (Google Nearby Connections)</h2>
@@ -91,8 +95,8 @@ change your choice later from the privacy options entry in the app. See
 <a href="https://policies.google.com/technologies/ads">how Google uses information from apps that use its services</a>
 and the <a href="https://support.google.com/admob/answer/9012903">list of ad technology providers</a>.</p>
 <p><b>Romi Lite on the Amazon Appstore</b> shows ads through <b>Amazon Publisher Services</b> and its
-partners, which collect the same categories of data. Where the app has been granted location
-permission for nearby games, Amazon's ad SDK may also use the device's location to select ads. See the
+partners, which collect the same categories of data. This edition has no nearby play; its location permission exists only for advertising: if you
+grant it, Amazon's ad SDK may use the device's location to select ads. See the
 <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496">Amazon Privacy Notice</a> and
 <a href="https://www.amazon.com/adprefs">Amazon interest-based ads settings</a>.</p>
 <p>On any edition you can reset or delete your advertising ID and opt out of ad personalization in
@@ -110,8 +114,9 @@ offer the update. This request is handled entirely by Google Play.</p>
 <h2>Error reports you choose to send</h2>
 <p>If the computer player hits an internal error, the app offers to e-mail us a diagnostic archive. It
 is sent only if you tap the button and complete the send in your own e-mail app. The archive contains
-the app's local game database (game states, statistics and the player names you typed) and is used
-solely to fix the bug, then deleted.</p>
+the app's local game database (game states, statistics and the player names you typed); the e-mail
+body adds the app version, the device model and the Android version. Both are used solely to fix the
+bug, then deleted.</p>
 
 <h2>Children</h2>
 <p>Romi is a general-audience game. It is not directed at children under 13 and we do not knowingly
@@ -121,7 +126,7 @@ collect personal information from them. The free editions request ads suitable f
 <ul>
   <li>Delete everything stored on the device by uninstalling the app.</li>
   <li>Disconnect from Google Play Games in the app; your Saved Games data can be removed from your Google account through Google's tools.</li>
-  <li>Leave an online game to remove your player entry; the game record itself expires within 24 hours.</li>
+  <li>Leave an online game to remove your player entry; the game record itself is deleted when the game ends, or within 7 days at the latest.</li>
   <li>Change your ad consent from the app's privacy options, or reset your advertising ID in Android settings.</li>
   <li>Ask us to delete any diagnostic archive you sent, or to answer any question about this policy, at the address below.</li>
 </ul>

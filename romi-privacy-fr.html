@@ -24,7 +24,7 @@
 <body>
 <nav><a href="index-fr.html">Romi</a> · <a href="romi-privacy.html" lang="en">English version</a></nav>
 <h1>Romi – Politique de confidentialité</h1>
-<p class="meta">Dernière mise à jour : 5 septembre 2026</p>
+<p class="meta">Dernière mise à jour : 13 septembre 2026</p>
 
 <p>Patrick Roy (« nous ») publie le jeu de cartes Romi pour Android. Cette politique explique quels
 renseignements l'application traite, lesquels quittent votre appareil, qui les reçoit et les choix
@@ -47,8 +47,8 @@ résumés dans le tableau ci-dessous.</p>
   <tr><th>Édition</th><th>Boutique</th><th>Publicité</th><th>Google Play Jeux</th><th>Parties en ligne et à proximité</th><th>Autre</th></tr>
   <tr><td>Romi (payante)</td><td>Google Play</td><td>Aucune</td><td>Optionnel</td><td>Oui</td><td>Vérification de mise à jour</td></tr>
   <tr><td>Romi Lite, Romi Express, Romi Maxi</td><td>Google Play</td><td>Google AdMob</td><td>Optionnel</td><td>Oui</td><td>Vérification de mise à jour</td></tr>
-  <tr><td>Romi Lite</td><td>Amazon Appstore</td><td>Amazon Publisher Services</td><td>Non</td><td>Oui</td><td>Vérification de licence Amazon</td></tr>
-  <tr><td>Romi (payante)</td><td>Amazon Appstore</td><td>Aucune</td><td>Non</td><td>Oui</td><td>Vérification de licence Amazon</td></tr>
+  <tr><td>Romi Lite</td><td>Amazon Appstore</td><td>Amazon Publisher Services</td><td>Non</td><td>En ligne seulement</td><td>Vérification de licence Amazon</td></tr>
+  <tr><td>Romi (payante)</td><td>Amazon Appstore</td><td>Aucune</td><td>Non</td><td>En ligne seulement</td><td>Vérification de licence Amazon</td></tr>
 </table>
 </div>
 
@@ -64,9 +64,14 @@ résumés dans le tableau ci-dessous.</p>
 <p>Quand vous créez ou rejoignez une partie en ligne, l'application se connecte à la base de données
 Firebase Realtime Database de Google avec une connexion <b>anonyme</b> : un identifiant aléatoire,
 sans nom, courriel ni mot de passe. Pendant la partie, la base de données contient l'état du jeu, le
-nom de joueur saisi dans les réglages, le NIP de la partie, des horodatages et un indicateur de
-connexion permettant aux autres joueurs de voir si vous êtes toujours là. Les parties sont supprimées
-à leur fin ou après 24 heures. Firebase est exploité par Google; voir la
+nom de joueur saisi dans les réglages, une empreinte SHA-256 du NIP de la partie (jamais le NIP
+lui-même), un identifiant d'installation aléatoire servant à vous rendre votre siège après une
+déconnexion, votre palmarès pour cette taille de table (parties, victoires et points, calculés sur
+votre propre appareil — montré aux autres joueurs à l'écran de fin de partie, jamais utilisé pour les
+classements), des horodatages et un indicateur de connexion permettant aux autres joueurs de voir si
+vous êtes toujours là. Les parties sont supprimées à leur fin; une partie que son hôte n'a jamais
+terminée est retirée à son lancement suivant après 24 heures, ou par un nettoyage périodique après
+au plus 7 jours. Firebase est exploité par Google; voir la
 <a href="https://firebase.google.com/support/privacy">documentation de Firebase sur la confidentialité</a>.</p>
 
 <h2>Parties à proximité (Google Nearby Connections)</h2>
@@ -97,9 +102,9 @@ modifier votre choix plus tard par l'entrée « options de confidentialité » d
 <a href="https://policies.google.com/technologies/ads?hl=fr">comment Google utilise les données des applications qui font appel à ses services</a>
 et la <a href="https://support.google.com/admob/answer/9012903?hl=fr">liste des fournisseurs de technologies publicitaires</a>.</p>
 <p><b>Romi Lite sur l'Amazon Appstore</b> affiche des annonces par l'entremise d'<b>Amazon Publisher
-Services</b> et de ses partenaires, qui recueillent les mêmes catégories de données. Si
-l'autorisation de localisation a été accordée pour les parties à proximité, la trousse publicitaire
-d'Amazon peut aussi utiliser la position de l'appareil pour choisir les annonces. Voir
+Services</b> et de ses partenaires, qui recueillent les mêmes catégories de données. Cette édition n'offre pas de parties à proximité; son autorisation de localisation ne sert qu'à la
+publicité : si vous l'accordez, la trousse publicitaire d'Amazon peut utiliser la position de
+l'appareil pour choisir les annonces. Voir
 l'<a href="https://www.amazon.ca/gp/help/customer/display.html?nodeId=918814">Avis de confidentialité d'Amazon</a> et les
 <a href="https://www.amazon.com/adprefs">préférences d'annonces basées sur les intérêts</a>.</p>
 <p>Dans toutes les éditions, vous pouvez réinitialiser ou supprimer votre identifiant publicitaire et
@@ -119,8 +124,9 @@ vous proposer la mise à jour. Cette requête est traitée entièrement par Goog
 <p>Si le joueur ordinateur rencontre une erreur interne, l'application propose de nous envoyer par
 courriel une archive de diagnostic. Elle n'est envoyée que si vous appuyez sur le bouton et confirmez
 l'envoi dans votre propre application de courriel. L'archive contient la base de données locale du
-jeu (états des parties, statistiques et noms de joueurs saisis); elle sert uniquement à corriger le
-bogue, puis est supprimée.</p>
+jeu (états des parties, statistiques et noms de joueurs saisis); le corps du courriel ajoute la version
+de l'application, le modèle de l'appareil et la version d'Android. Le tout sert uniquement à corriger
+le bogue, puis est supprimé.</p>
 
 <h2>Enfants</h2>
 <p>Romi est un jeu grand public. Il ne s'adresse pas aux enfants de moins de 13 ans et nous ne
@@ -131,7 +137,7 @@ des annonces convenant à un public général.</p>
 <ul>
   <li>Supprimez tout ce qui est conservé sur l'appareil en désinstallant l'application.</li>
   <li>Déconnectez-vous de Google Play Jeux dans l'application; vos parties sauvegardées peuvent être retirées de votre compte Google avec les outils de Google.</li>
-  <li>Quittez une partie en ligne pour retirer votre entrée de joueur; la partie elle-même expire dans les 24 heures.</li>
+  <li>Quittez une partie en ligne pour retirer votre entrée de joueur; la partie elle-même est supprimée à sa fin, ou au plus tard dans les 7 jours.</li>
   <li>Modifiez votre consentement publicitaire dans les options de confidentialité de l'application, ou réinitialisez votre identifiant publicitaire dans les paramètres d'Android.</li>
   <li>Demandez-nous de supprimer une archive de diagnostic que vous auriez envoyée, ou posez toute question sur cette politique, à l'adresse ci-dessous.</li>
 </ul>
