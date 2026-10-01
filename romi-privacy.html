@@ -24,7 +24,7 @@
 <body>
 <nav><a href="index.html">Romi</a> · <a href="romi-privacy-fr.html" lang="fr">Version française</a></nav>
 <h1>Romi – Privacy Policy</h1>
-<p class="meta">Last updated: September 26, 2026</p>
+<p class="meta">Last updated: October 1, 2026</p>
 
 <p>Patrick Roy ("we", "us") publishes the Romi card game for Android. This policy explains what
 information the app handles, which of it leaves your device, who receives it, and the choices you
@@ -57,7 +57,7 @@ The editions differ only in the third-party services they include, summarized in
   <li><b>Settings</b>, including the player name you may type in for multiplayer games.</li>
   <li><b>Background photo</b>: if you choose a photo from your gallery as the table background, the app makes a reduced copy in its private storage. It does not keep access to your photo library, and the app itself never uploads the photo anywhere.</li>
 </ul>
-<p>Uninstalling the app deletes all of this. If Android's automatic backup is turned on for your device, Android may include these files (settings, the game database and the reduced photo) in the encrypted backup of your Google account or in a device-to-device transfer; that backup is run by Android and Google, not by us, and you can turn it off in Android's settings.</p>
+<p>Uninstalling the app deletes all of this. If Android's automatic backup is turned on for your device, Android may include these files (settings, including the multiplayer install identifier described below, the game database and the reduced photo) in the encrypted backup of your Google account or in a device-to-device transfer; that backup is run by Android and Google, not by us, and you can turn it off in Android's settings.</p>
 
 <h2>Online multiplayer (Firebase)</h2>
 <p>When you host or join an online game, the app connects to Google's Firebase Realtime Database
@@ -67,7 +67,10 @@ settings, a SHA-256 hash of the game PIN (never the PIN itself), a random per-in
 identifier used to give you your seat back after a disconnection, your win records by table
 size (games, wins and points for each table size you have played online, as computed on your own device — shown to the other players on the
 end-of-game screen, never used for leaderboards), timestamps and a connection flag so other players
-can see whether you are still there. A finished game, and any game created more than 24 hours earlier, is deleted the next time its host
+can see whether you are still there. Your player name, win records and install identifier can be read
+by the other players of the game, and by any player of the app who looks the game up while it is open;
+when you host, your player name also appears in the list of open games that any player can browse.
+A finished game, and any game created more than 24 hours earlier, is deleted the next time its host
 hosts an online game; on top of that we run a manual cleanup of the database from time to time, which deletes finished games after one hour without
 activity and every other record after 7 days without activity. Firebase is operated by Google and
 subject to the <a href="https://firebase.google.com/support/privacy">Firebase privacy documentation</a>.</p>
@@ -76,7 +79,8 @@ subject to the <a href="https://firebase.google.com/support/privacy">Firebase pr
 <p>Nearby games use Bluetooth and Wi-Fi to talk directly to the other devices in the room; game data
 does not go through our servers. Android requires Bluetooth, Wi-Fi (nearby Wi-Fi devices and
 local network access) and, on older versions, location permissions for a device to find nearby devices. The app does not read, store or transmit your
-location; the permission only unlocks device discovery.</p>
+location; the permission only unlocks device discovery. When you host a nearby game, your player name
+is broadcast to the nearby devices looking for a game.</p>
 
 <h2>Google Play Games (Google Play editions)</h2>
 <p>If you sign in to Google Play Games, the app receives your Play Games display name and player ID,
@@ -96,8 +100,8 @@ change your choice later from the privacy options entry in the app. See
 <a href="https://policies.google.com/technologies/ads">how Google uses information from apps that use its services</a>
 and the <a href="https://support.google.com/admob/answer/9012903">list of ad technology providers</a>.</p>
 <p><b>Romi Lite on the Amazon Appstore</b> shows banner, interstitial and app-open ads through <b>Google AdMob</b>, with
-<b>Amazon Publisher Services</b> bidding on the same ad slots; both providers and their partners collect the same categories of data. This edition
-shows no consent form. It has no nearby play; its location permission exists only for advertising: if you
+<b>Amazon Publisher Services</b> also bidding on the banner and interstitial slots; both providers and their partners collect the same categories of data. This edition
+shows no consent form. It has no nearby play; its location permission (on Android 12 and older) exists only for advertising: if you
 grant it, Amazon's ad SDK may use the device's location to select ads. The app never asks for this
 permission itself; it can only be granted from the device's system settings. See the
 <a href="https://www.amazon.com/gp/help/customer/display.html?nodeId=468496">Amazon Privacy Notice</a> and
@@ -126,7 +130,7 @@ bug, then deleted.</p>
 
 <h2>Children</h2>
 <p>Romi is a general-audience game. It is not directed at children under 13 and we do not knowingly
-collect personal information from them. The free editions request ads suitable for a general audience.</p>
+collect personal information from them. The free editions do not request child-directed treatment for their ads.</p>
 
 <h2>Your choices and rights</h2>
 <ul>
