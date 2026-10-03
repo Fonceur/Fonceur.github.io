@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tromi</title>
+<meta name="description" content="Les prix d'essence en temps réel et les bornes de recharge VÉ au Québec, pour Android, gratuitement et sans publicité.">
+<link rel="icon" href="images/tromi-icone.png">
+<script>
+  // Choix explicite (bouton) conserve dans localStorage ; sinon, langue du navigateur.
+  try {
+    var c = localStorage.getItem("lang");
+    if (c === "en") location.replace("index.html");
+  } catch (e) {}
+</script>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 2rem 1rem 3rem; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         background: #faf8f4; color: #222; max-width: 40rem; margin-inline: auto; }
+  @media (prefers-color-scheme: dark) { body { background: #1b1b1b; color: #e6e6e6; } a { color: #8ab4f8; } }
+  header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  header img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+  h1 { font-size: 2rem; margin: 0; line-height: 1.1; }
+  .lang { font-size: .9rem; opacity: .8; margin-top: .25rem; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; border-bottom: 1px solid #8884; padding-bottom: .25rem; }
+  p.lead { margin: 0 0 1rem; opacity: .9; }
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin: 1.5rem 0 0; }
+  figure { margin: 0; }
+  figure img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 12px #0003; }
+  figcaption { font-size: .85rem; opacity: .7; margin-top: .4rem; text-align: center; }
+  ul { padding-left: 1.25rem; margin: 0; }
+  li { margin: .25rem 0; }
+  footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+</style>
+</head>
+<body>
+<header>
+  <img src="images/tromi-icone.png" alt="">
+  <div>
+    <h1>Tromi</h1>
+    <div class="lang"><a href="index.html" lang="en" onclick="try{localStorage.setItem('lang','en')}catch(e){}">English</a></div>
+  </div>
+</header>
+<p class="lead">Trop mis à ce prix là? Pas avec Tromi. Les prix d'essence en temps réel et les bornes de recharge VÉ au Québec, pour Android, gratuitement et sans publicité.</p>
+
+<div class="shots">
+  <figure>
+    <img src="images/fr-01_map.jpg" width="480" height="1066" alt="Carte de Québec avec les prix d'essence en cents le litre, du moins cher (vert) au plus cher (rouge).">
+    <figcaption>Les prix sur la carte</figcaption>
+  </figure>
+  <figure>
+    <img src="images/fr-02_station_detail.jpg" width="480" height="1066" alt="Fiche d'une station Couche-Tard : adresse, distance, services, prix du régulier et du super, et bouton Itinéraire.">
+    <figcaption>Fiche d'une station</figcaption>
+  </figure>
+  <figure>
+    <img src="images/fr-05_trip_map.jpg" width="480" height="1066" alt="Un trajet de Québec à Montréal sur la carte, avec des stations suggérées en chemin.">
+    <figcaption>Trajet multi-arrêts</figcaption>
+  </figure>
+</div>
+
+<h2>Obtenir l'application</h2>
+<ul>
+  <li>Google Play : <a href="https://play.google.com/store/apps/details?id=ca.romi.tromi">Tromi</a> (gratuit, sans publicité)</li>
+</ul>
+
+<h2>Fonctionnalités</h2>
+<ul>
+  <li>Prix en temps réel pour plus de 2 300 stations au Québec (ordinaire, super, diesel), historique sur 30 jours et moyennes régionales</li>
+  <li>Plus de 17 000 bornes du Circuit électrique et d'Open Charge Map, filtrées par niveau et type de connecteur</li>
+  <li>Planificateur de trajet multi-arrêts, avec suggestions en chemin (essence moins chère, bornes, haltes, attraits, parcs) et passage à Google Maps ou Waze</li>
+  <li>Routes touristiques officielles du Québec, horaires des traversiers de la STQ, haltes routières, plus de 4 800 attraits touristiques et 49 parcs</li>
+  <li>Alertes de prix et widget d'écran d'accueil</li>
+  <li>Android Auto : stations à proximité et trajet actif sur l'écran de la voiture</li>
+  <li>Mode clair ou sombre, 5 langues (français, anglais, espagnol, italien, portugais), compatible TalkBack</li>
+</ul>
+
+<h2>Sources de données</h2>
+<ul>
+  <li>Régie de l'énergie du Québec : prix d'essence</li>
+  <li>Le Circuit électrique et Open Charge Map : bornes de recharge</li>
+  <li>OpenStreetMap : carte et commodités des stations</li>
+  <li>Société des traversiers du Québec : horaires des traversiers</li>
+  <li>Ministère des Transports du Québec : haltes routières</li>
+  <li>Tourisme Québec / SIT Québec : attraits touristiques</li>
+  <li>Ministère des Ressources naturelles et des Forêts : parcs; Wikipédia : descriptions des parcs</li>
+  <li>OpenRouteService : calcul des trajets</li>
+  <li>Statistique Canada : prix moyens de détail de l'essence</li>
+</ul>
+
+<h2>Confidentialité</h2>
+<p><a href="https://fonceur.github.io/tromi-legal/" hreflang="en">Politique de confidentialité</a> (en anglais)</p>
+
+<h2>Soutien</h2>
+<p>Une question ou un problème? Utilisez le lien de contact de la fiche de l'application sur Google Play.</p>
+
+<footer>© Patrick Roy · Du même développeur : <a href="../index-fr.html">Romi</a>, un jeu de Rami</footer>
+</body>
+</html>

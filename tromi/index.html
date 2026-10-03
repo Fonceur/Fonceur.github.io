@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tromi</title>
+<meta name="description" content="Real-time gas prices and EV charging stations in Québec for Android, free and ad-free.">
+<link rel="icon" href="images/tromi-icone.png">
+<script>
+  // Choix explicite (bouton) conserve dans localStorage ; sinon, langue du navigateur.
+  try {
+    var c = localStorage.getItem("lang");
+    if (c === "fr" || (!c && /^fr\b/i.test(navigator.language || ""))) location.replace("index-fr.html");
+  } catch (e) {}
+</script>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 2rem 1rem 3rem; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         background: #faf8f4; color: #222; max-width: 40rem; margin-inline: auto; }
+  @media (prefers-color-scheme: dark) { body { background: #1b1b1b; color: #e6e6e6; } a { color: #8ab4f8; } }
+  header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  header img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+  h1 { font-size: 2rem; margin: 0; line-height: 1.1; }
+  .lang { font-size: .9rem; opacity: .8; margin-top: .25rem; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; border-bottom: 1px solid #8884; padding-bottom: .25rem; }
+  p.lead { margin: 0 0 1rem; opacity: .9; }
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin: 1.5rem 0 0; }
+  figure { margin: 0; }
+  figure img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 12px #0003; }
+  figcaption { font-size: .85rem; opacity: .7; margin-top: .4rem; text-align: center; }
+  ul { padding-left: 1.25rem; margin: 0; }
+  li { margin: .25rem 0; }
+  footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+</style>
+</head>
+<body>
+<header>
+  <img src="images/tromi-icone.png" alt="">
+  <div>
+    <h1>Tromi</h1>
+    <div class="lang"><a href="index-fr.html" lang="fr" onclick="try{localStorage.setItem('lang','fr')}catch(e){}">Français</a></div>
+  </div>
+</header>
+<p class="lead">Real-time gas prices and EV charging stations in Québec for Android, completely free and ad-free.</p>
+
+<div class="shots">
+  <figure>
+    <img src="images/en-01_map.jpg" width="480" height="1066" alt="Map of Québec City with gas prices in cents per litre, colour-coded from cheapest (green) to most expensive (red), and EV charger pins.">
+    <figcaption>Prices on the map</figcaption>
+  </figure>
+  <figure>
+    <img src="images/en-02_station_detail.jpg" width="480" height="1066" alt="Station detail for Costco Québec: address, distance, regular and premium prices, and a Directions button.">
+    <figcaption>Station detail</figcaption>
+  </figure>
+  <figure>
+    <img src="images/en-05_trip_map.jpg" width="480" height="1066" alt="A Québec City to Montréal trip on the map, with suggested gas stations along the route.">
+    <figcaption>Multi-stop trip</figcaption>
+  </figure>
+</div>
+
+<h2>Get the app</h2>
+<ul>
+  <li>Google Play: <a href="https://play.google.com/store/apps/details?id=ca.romi.tromi">Tromi</a> (free, ad-free)</li>
+</ul>
+
+<h2>Features</h2>
+<ul>
+  <li>Real-time prices for over 2,300 Québec gas stations (regular, premium, diesel), with 30-day history and regional averages</li>
+  <li>Over 17,000 EV chargers from Circuit électrique and Open Charge Map, filtered by level and connector</li>
+  <li>Multi-stop trip planner with suggestions along the way (cheap gas, chargers, rest areas, attractions, parks), then hand-off to Google Maps or Waze</li>
+  <li>Québec's official scenic routes, STQ ferry schedules, highway rest areas, over 4,800 tourist attractions and 49 parks</li>
+  <li>Price alerts and a home-screen price widget</li>
+  <li>Android Auto: nearby stations and your active trip on the car screen</li>
+  <li>Light or dark mode, 5 languages (French, English, Spanish, Italian, Portuguese), TalkBack support</li>
+</ul>
+
+<h2>Data sources</h2>
+<ul>
+  <li>Régie de l'énergie du Québec: gas prices</li>
+  <li>Le Circuit électrique and Open Charge Map: EV chargers</li>
+  <li>OpenStreetMap: map and station amenities</li>
+  <li>Société des traversiers du Québec: ferry schedules</li>
+  <li>Ministère des Transports du Québec: highway rest areas</li>
+  <li>Tourisme Québec / SIT Québec: tourist attractions</li>
+  <li>Ministère des Ressources naturelles et des Forêts: parks; Wikipedia: park descriptions</li>
+  <li>OpenRouteService: trip routing</li>
+  <li>Statistics Canada: average retail gas prices</li>
+</ul>
+
+<h2>Privacy</h2>
+<p><a href="https://fonceur.github.io/tromi-legal/">Privacy policy</a></p>
+
+<h2>Support</h2>
+<p>Questions or problems? Use the contact link on the app's Google Play listing.</p>
+
+<footer>© Patrick Roy · Also by the same developer: <a href="../index.html">Romi</a>, a Rummy tile game</footer>
+</body>
+</html>
