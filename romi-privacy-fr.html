@@ -24,7 +24,7 @@
 <body>
 <nav><a href="index-fr.html">Romi</a> · <a href="romi-privacy.html" lang="en">English version</a></nav>
 <h1>Romi – Politique de confidentialité</h1>
-<p class="meta">Dernière mise à jour : 1er octobre 2026</p>
+<p class="meta">Dernière mise à jour : 5 octobre 2026</p>
 
 <p>Patrick Roy (« nous ») publie le jeu de cartes Romi pour Android. Cette politique explique quels
 renseignements l'application traite, lesquels quittent votre appareil, qui les reçoit et les choix
@@ -63,8 +63,9 @@ résumés dans le tableau ci-dessous.</p>
 <h2>Parties en ligne (Firebase)</h2>
 <p>Quand vous créez ou rejoignez une partie en ligne, l'application se connecte à la base de données
 Firebase Realtime Database de Google avec une connexion <b>anonyme</b> : un identifiant aléatoire,
-sans nom, courriel ni mot de passe. Pendant la partie, la base de données contient l'état du jeu, le
-nom de joueur saisi dans les réglages, une empreinte SHA-256 du NIP de la partie (jamais le NIP
+sans nom, courriel ni mot de passe. Pendant la partie, la base de données contient l'état du jeu, votre
+nom de joueur (celui saisi dans les réglages ou, tant que vous êtes connecté à Google Play Jeux, votre
+nom d'affichage Play Jeux), une empreinte SHA-256 du NIP de la partie (jamais le NIP
 lui-même), un identifiant d'installation aléatoire servant à vous rendre votre siège après une
 déconnexion, vos palmarès par taille de table (parties, victoires et points pour chaque taille de table jouée en ligne, calculés sur
 votre propre appareil — montrés aux autres joueurs à l'écran de fin de partie, jamais utilisés pour les
@@ -84,14 +85,19 @@ exige les autorisations Bluetooth, Wi-Fi (appareils Wi-Fi à proximité et accè
 sur les versions plus anciennes, de localisation pour
 qu'un appareil puisse en découvrir d'autres. L'application ne lit, ne conserve ni ne transmet votre
 position; l'autorisation sert uniquement à la découverte des appareils. Quand vous créez une partie à
-proximité, votre nom de joueur est diffusé aux appareils voisins qui cherchent une partie.</p>
+proximité, votre nom de joueur est diffusé aux appareils voisins qui cherchent une partie. Quand vous en
+rejoignez une, votre appareil envoie à l'hôte votre nom de joueur, l'identifiant d'installation aléatoire
+décrit plus haut, le NIP saisi si la partie en a un et vos palmarès par taille de table; les appareils
+échangent aussi les résultats des parties à proximité que vous avez jouées ensemble (noms de joueurs,
+identifiants d'installation et points) pour que chacun garde le même historique multijoueur.</p>
 
 <h2>Google Play Jeux (éditions Google Play)</h2>
 <p>Si vous vous connectez à Google Play Jeux, l'application reçoit votre nom d'affichage et votre
 identifiant de joueur, envoie vos scores aux classements et utilise les <b>parties sauvegardées</b>
 de Play Jeux pour synchroniser vos réglages, statistiques et historique entre vos appareils par
-l'intermédiaire de votre compte Google. La connexion est optionnelle : l'application ne tente une
-connexion silencieuse au lancement que si Play Jeux est déjà configuré sur l'appareil, et vous pouvez
+l'intermédiaire de votre compte Google. Tant que vous êtes connecté, votre nom d'affichage Play Jeux est
+le nom que voient les autres joueurs des parties en ligne. La connexion est optionnelle : l'application
+ne tente une connexion silencieuse à l'ouverture ou quand elle revient au premier plan que si Play Jeux est déjà configuré sur l'appareil, et vous pouvez
 vous déconnecter à tout moment depuis l'écran Google Play Jeux de l'application. Google traite ces
 données selon les <a href="https://policies.google.com/privacy?hl=fr">Règles de confidentialité de Google</a>.</p>
 
