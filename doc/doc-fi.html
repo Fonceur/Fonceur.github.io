@@ -11,9 +11,10 @@
 <p style="margin:2%">
     <B>Romi</B> antaa sinun pelata <B>Rummy Tile (RummyCube, Rummikub, Rami)</B> -pelejä tietokonetta
     vastaan kolmella eri tasolla. Peliä pelataan kahdella 52 kortin pakalla ja
-    kahdella jokerilla <img src="iconeFrime.gif">. Kaksi jokeria on <B>Jokeri</B>-asetuksen oletus (<B>Normaali</B>, <B>Ei mitään</B> tai <B>Kaikille</B>) kohdassa <B>Asetukset</B> &rarr; <B>Peli</B>. Pelin tarkoituksena on muodostaa ryhmiä
+    kahdella jokerilla <img src="iconeFrime.gif">. Kaksi jokeria on <B>Jokeri</B>-asetuksen oletus (<B>Normaali</B>, <B>Ei mitään</B>, <B>Kaikille</B> tai <B>Erikoisjokerit (Twist)</B>) kohdassa <B>Asetukset</B> &rarr; <B>Peli</B> &rarr; <B>Jokerit</B>. Pelin tarkoituksena on muodostaa ryhmiä
     kolmesta tai useammasta kortista, jotka sisältävät joko peräkkäisiä kortteja samasta
     maasta tai kortteja samalla numeroarvolla mutta eri maista.
+    Jokaisessa ryhmässä on oltava vähintään yksi oikea kortti: pelkät jokerit, erikoisjokerit mukaan lukien, eivät muodosta ryhmää.
 </p>
 <p style="margin:2%" class="demo-intro">
     Haluatko ensin nähdä, miten peliä pelataan? Napauta oikeassa yläkulmassa olevaa <B>Esittely</B> -painiketta nähdäksesi Romin pelaavan Romia vastaan. Napauta esittelypalkkia milloin tahansa pysäyttääksesi sen ja palataksesi omaan peliisi.
@@ -28,7 +29,7 @@
     </p></li>
     <li><P>Pelaaja avaa pelinsä pelaamalla vähintään yhden ryhmän
         3 tai useammasta kortista, käyttäen vain telineellään olevia kortteja. Näiden
-        korttien arvojen summan on oltava (25, 30 tai 50) tai enemmän.
+        korttien arvojen summan on oltava (25, 30 tai 50) tai enemmän — tai mikä tahansa ryhmä <B>Ei minimiä</B> -avauksella.
     </p></li>
     <li><P>Kun pelaaja on avannut pelin, hän voi käyttää laudalla olevia kortteja
         täydentääkseen ryhmiä telineellään olevilla korteilla.
@@ -63,7 +64,7 @@
     </p></li>
     <li><p>
         Huomaa, että et voi siirtää kortteja (jotka eivät ole sinun) laudalla ennen kuin avaat
-        pelin omilla korttiryhmilläsi, joiden arvo on (25, 30 tai 50) pistettä tai enemmän.
+        pelin omilla korttiryhmilläsi, joiden arvo on (25, 30 tai 50) pistettä tai enemmän (tai millä tahansa ryhmällä <B>Ei minimiä</B> -avauksella).
     </p></li>
     <li><p>
         Asettaaksesi kortin laudalle voit napsauttaa korttia ja se siirtyy automaattisesti
@@ -80,6 +81,7 @@
     <li><p>
         Voit palauttaa laudan sellaiseksi kuin se oli ennen vuorosi aloittamista napsauttamalla
         tiimalasikuvaketta, ja sinulla on mahdollisuus palauttaa lauta.
+        Kun jotkin ryhmistäsi ovat virheellisiä, valitset vaihtoehdoista <B>Palauta</B> (lauta sellaisena kuin se oli vuorosi alussa), <B>Muokkaa</B> (jatka pelaamista) ja, kun on jotain otettavaa takaisin, <B>Ota virheelliset takaisin</B> (tällä vuorolla telineestäsi pelaamasi kortit, jotka ovat virheellisessä ryhmässä, palaavat telineeseen; mikä on yhä virheellistä, pysyy korostettuna).
     </p></li>
     <li><p>
         Voit nähdä Romi-pisteesi ja/tai nollata pisteesi napsauttamalla <img
@@ -146,6 +148,8 @@
     <li><p>
         <B>Vahvista: </B><img src="valider.gif"> Tarkistaa, että laudalle pelatut korttiryhmät
         ovat kelvollisia.
+        Se kertoo myös, mikä estäisi vuorosi päättymisen: takaisin ottamasi jokeri, joka on yhä telineessäsi; <B>Jäädytetyt jokerit</B> -asetuksella pöydän jokeri, joka ei enää esitä samaa korttia; <B>Odota vuoro avauksen jälkeen</B> -asetuksella muihin ryhmiin lisätyt kortit avausvuorollasi.
+        Moninpelissä, jonka isäntänä toimii joku muu, se tarkistaa vain ryhmät: isännän laite päättää, voiko vuorosi päättyä.
     </p></li>
     <li><p>
         <B>Tiedot: </B><img src="baseline_menu_black_18.png"> Voit nähdä Romin dokumentaation, nähdä
@@ -192,16 +196,30 @@
         <B>Pelitaso: </B>Valitse kohdassa <B>Asetukset</B> &rarr; <B>Peli</B> <B>Aloittelija</B>, <B>Keskitaso</B> tai <B>Asiantuntija</B>. Taso määrää, kuinka taitavasti Romi muodostaa ryhmänsä, varastaa kortteja laudalta ja rakentaa purkamansa ryhmät uudelleen.
     </p></li>
     <li><p>
-        <B>Romi-sääntö: </B><B>Standardi</B> tai <B>12–13–1</B>. Säännöllä 12–13–1 ässä voi seurata kuningasta myös suoran lopussa (esimerkiksi 11-12-13-1), ja lauta saa yhden sarakkeen lisää. Suora päättyy siihen: ässän jälkeen ei tule kakkosta, eikä suora voi sekä alkaa että päättyä ässään (1-2-…-13-1).
+        <B>Romi-sääntö: </B><B>Standardi</B> tai <B>12–13–1</B>. Säännöllä 12–13–1 ässä voi seurata kuningasta myös suoran lopussa (esimerkiksi 11-12-13-1), ja lauta saa yhden sarakkeen lisää. Suora päättyy siihen: ässän jälkeen ei tule kakkosta.
     </p></li>
     <li><p>
-        <B>Jokeri: </B><B>Normaali</B> (pakassa kaksi jokeria), <B>Ei mitään</B> (ei jokereita) tai <B>Kaikille</B> (ei yhtään pakassa, mutta jokainen pelaaja aloittaa yksi jokeri kädessään).
+        <B>Jokeri: </B><B>Normaali</B> (pakassa kaksi jokeria), <B>Ei mitään</B> (ei jokereita) tai <B>Kaikille</B> (ei yhtään pakassa, mutta jokainen pelaaja aloittaa yksi jokeri kädessään). Pelin päättyessä kädessäsi vielä oleva jokeri lasketaan 30 pisteeksi sinua vastaan.
     </p></li>
     <li><p>
-        <B>Avaus: </B>Avaamiseen tarvittavat pisteet: <B>25</B>, <B>30</B> tai <B>50</B>.
+        <B>Erikoisjokerit (Twist): </B>Neljäs <B>Jokeri</B>-vaihtoehto: vaihtoehdon <B>Normaali</B> jokerit sekä pakkaa kohden yksi Tuplajokeri, yksi Värinvaihtojokeri ja yksi Peilijokeri, kuten pelissä <I>Rummikub with a Twist</I>. Tuplajokerin voi ottaa takaisin pöydältä, kuten jokerin: vedä sen päälle yksi korteista, joita se esittää; jos sen ryhmä tarvitsee molemmat, toinen tulee mukana kädestäsi. Myös suoran päässä olevan Värinvaihtojokerin voi ottaa takaisin kortilla, jota se esittää suoran maassa. Peilijokeri jää pöytään. Pelin lopussa käteen jäänyt erikoisjokeri lasketaan jokeriksi. Verkkopelissä jokainen pelaaja tarvitsee Romin uusimman version.
+    </p>
+    <UL>
+        <li><B>Tuplajokeri: </B>korvaa kaksi korttia: kaksi peräkkäistä numeroa suorassa (5, jokeri, 8: se on 6 ja 7) tai samannumeroisen ryhmän kaksi puuttuvaa maata. Sitä ei koskaan aseteta 2:n eteen eikä 12:n perään, paitsi 12:n perään suoran lopussa säännöllä 12–13–1, jolloin se on 13 ja 1. Avauksessa se lasketaan kahden korvaamansa numeron arvoiseksi.</li>
+        <li><B>Värinvaihtojokeri: </B>vain suorissa. Se korvaa yhden numeron, ja suora jatkuu sen jälkeen toisessa maassa: yhden maan 3 ja 4, jokeri (5), sitten toisen maan 6.</li>
+        <li><B>Peilijokeri: </B>on keskellä, ja kaksi puolta ovat toistensa peilikuvia, vähintään kaksi korttia kummallakin puolella: 4 5 jokeri 5 4 samassa maassa, tai kolmosten ryhmä, jossa kukin maa on kahdesti, peilijärjestyksessä. Kortteja lisätään tai poistetaan molemmilta puolilta yhtä aikaa. Tavallinen jokeri voi olla kortin vastapäätä ja saa sen arvon; erikoisjokeri on vastapäätä vain samanlaista jokeria. Avauksessa sen arvo on 0. Se pelataan vetämällä se laudalle ryhmänsä keskelle tai napauttamalla sitä heti tällä vuorolla rakentamasi ryhmän korttien jälkeen (4 5, sitten peilijokeri); muulloin napautettuna se jää käteesi.</li>
+    </UL></li>
+    <li><p>
+        <B>Jäädytetyt jokerit (pelaajat): </B>Oletuksena pois: kun olet avannut, voit siirtää pöydällä jo olevan jokerin toiseen ryhmään, kunhan jokainen ryhmä on kelvollinen vuorosi lopussa. Kun asetus on päällä, vuorosi alussa pöydällä ollut jokeri voidaan ottaa takaisin vain kortilla, jota se esittää. Siihen asti se esittää edelleen samaa korttia vähintään 3 kortin ryhmässä ja liikkuu vain koko ryhmänsä mukana. Kortti, jolla se otetaan takaisin, jää sitten pöydälle vuorosi loppuun asti. Sama koskee Tuplajokeria ja suoran päässä olevaa Värinvaihtojokeria; Peilijokeri ei koskaan poistu pöydältä, ja sen ryhmä säilyttää muotonsa: suora pysyy samassa maassa, yhden luvun ryhmä säilyttää tämän luvun. Asetus <B>Jäädytetyt jokerit (Romi)</B> tekee saman Romille (oletuksena päällä), paitsi verkkopelissä, jossa Romi noudattaa pelaajien asetusta. Verkkopelissä jokainen pelaaja tarvitsee Romin uusimman version.
     </p></li>
     <li><p>
-        <B>Aikaraja ja rangaistus: </B>0 (ei rajaa) – 5 minuuttia vuoroa kohti. Kun aika loppuu <B>Aikarajarangaistus</B>-kytkimen ollessa päällä, lauta palaa vuorosi alun tilaan — paitsi tasolla <B>Aloittelija</B> yksinpelissä. Tasolla <B>Asiantuntija</B> nostat silloin lisäksi kaksi korttia yhden sijaan.
+        <B>Avaus: </B>Avaamiseen tarvittavat pisteet: <B>25</B>, <B>30</B>, <B>50</B> tai <B>Ei minimiä</B> (mikä tahansa telineen vähintään 3 kortin ryhmä avaa).
+    </p></li>
+    <li><p>
+        <B>Odota vuoro avauksen jälkeen: </B>Avausvuorollasi voit pelata vain oman telineesi korteista koottuja ryhmiä; pöydän kortteja (ja lisäämistä muihin ryhmiin) voi käyttää vasta seuraavalla vuorollasi. Tietokonepelaajat noudattavat samaa sääntöä.
+    </p></li>
+    <li><p>
+        <B>Aikaraja ja rangaistus: </B>0 (ei rajaa) – 5 minuuttia vuoroa kohti. Kun aika loppuu <B>Aikarajarangaistus</B>-kytkimen ollessa päällä, lauta palaa vuorosi alun tilaan. Yksinpelissä näin käy myös aina, kun useat ihmispelaajat jakavat laitteen, mutta ei koskaan tasolla <B>Aloittelija</B>. Yksinpelissä nostat silloin lisäksi yhden kortin, tasolla <B>Asiantuntija</B> kaksi.
     </p></li>
     <li><p>
         <B>Voittaja aloittaa: </B>Kun tämä on päällä, edellisen pelin voittaja pelaa seuraavassa ensimmäisenä.
@@ -259,9 +277,10 @@
     </p></li>
     <li><p>
         Jos pelaaja poistuu pelistä eikä palaa, pöytä ei enää jää jumiin hänen vuoroonsa: kun hänen
-        uudelleenyhdistämisaikansa on kulunut, hänen kaksi seuraavaa vuoroaan pelataan tavallisena
-        nostona, ja sen jälkeen tietokone ottaa paikan. Näiden kahden vuoron aikana palaava
-        säilyttää paikkansa; myöhemmin palaava saa sen takaisin tietokoneelta.
+        uudelleenyhdistämisaikansa on kulunut, tai heti, jos hän poistui pelistä eikä vain
+        menettänyt yhteyttä, hänen kaksi seuraavaa vuoroaan pelataan tavallisena nostona, ja sen
+        jälkeen tietokone ottaa paikan. Näiden kahden vuoron aikana palaava säilyttää paikkansa;
+        myöhemmin palaava saa sen takaisin tietokoneelta.
     </p></li>
 </UL>
 

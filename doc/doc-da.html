@@ -11,9 +11,10 @@
 <p style="margin:2%">
     <B>Romi</B> lader dig spille <B>Rummy Tile (RummyCube, Rummikub, Rami)</B> mod computeren på 3
     forskellige niveauer. Spillet spilles med to sæt á 52 brikker og med to <img
-        src="iconeFrime.gif"> jokere. To jokere er standardindstillingen <B>Joker</B> (<B>Normal</B>, <B>Ingen</B> eller <B>For alle</B>) under <B>Indstillinger</B> &rarr; <B>Spil</B>. Formålet med dette spil er at danne grupper af 3 eller
+        src="iconeFrime.gif"> jokere. To jokere er standardindstillingen <B>Joker</B> (<B>Normal</B>, <B>Ingen</B>, <B>For alle</B> eller <B>Specialjokere (Twist)</B>) under <B>Indstillinger</B> &rarr; <B>Spil</B> &rarr; <B>Jokere</B>. Formålet med dette spil er at danne grupper af 3 eller
     flere brikker, som enten indeholder på hinanden følgende brikker af samme farve
     eller brikker med samme talværdi men i forskellige farver.
+    Hver gruppe skal indeholde mindst én rigtig brik: jokere alene, også specialjokere, danner ingen gruppe.
 </p>
 <p style="margin:2%" class="demo-intro">
     Vil du først se, hvordan der spilles? Tryk på knappen <B>Demo</B> øverst til højre for at se Romi spille mod Romi. Tryk på demobanneret når som helst for at stoppe og vende tilbage til dit eget spil.
@@ -29,7 +30,7 @@
     <li><p>
         Spilleren åbner sit spil ved at spille mindst én gruppe på 3 brikker eller
         flere, kun ved hjælp af brikkerne på sin hylde. Summen af disse brikkers
-        værdier skal være (25, 30 eller 50) eller mere.
+        værdier skal være (25, 30 eller 50) eller mere — eller en hvilken som helst gruppe med åbningen <B>Intet minimum</B>.
     </p></li>
     <li><p>
         Efter at spilleren har åbnet spillet, kan han bruge brikkerne på bordet til at
@@ -64,7 +65,7 @@
     <li><p>
         Bemærk venligst, at du ikke kan flytte brikker (som ikke er dine) på bordet,
         før du åbner spillet med dine egne grupper af brikker på (25, 30 eller 50)
-        point eller mere.
+        point eller mere (eller en hvilken som helst gruppe med åbningen <B>Intet minimum</B>).
     </p></li>
     <li><p>
         For at placere en brik på bordet kan du klikke på brikken, og den flyttes
@@ -80,6 +81,7 @@
     <li><p>
         Du kan gendanne bordet, som det var, før du begyndte at spille din tur, ved at
         klikke på timeglasset, og du får mulighed for at gendanne bordet.
+        Når nogle af dine grupper er ugyldige, vælger du mellem <B>Gendan</B> (bordet, som det var ved starten af din tur), <B>Rediger</B> (spil videre) og, når der er noget at tage tilbage, <B>Tag ugyldige tilbage</B> (de kort, du har lagt fra holderen i denne tur, og som ligger i en ugyldig gruppe, kommer tilbage på holderen; det, der stadig er ugyldigt, forbliver fremhævet).
     </p></li>
     <li><p>
         Du kan se dine Romi-point og/eller nulstille dine point ved at klikke på
@@ -148,6 +150,8 @@
     <li><p>
         <B>Valider: </B><img src="valider.gif"> Kontrollerer, at grupperne af brikker spillet
         på bordet er gyldige.
+        Den fortæller dig også, hvad der ville forhindre din tur i at slutte: en joker, du tog tilbage, som stadig er på din hylde; med <B>Frosne jokere</B> en joker fra bordet, der ikke længere står for det samme kort; med <B>Vent en tur efter åbning</B> brikker lagt til andre grupper i den tur, hvor du åbner.
+        I et multiplayerspil, som en anden er vært for, kontrolleres kun grupperne: værtens enhed afgør, om din tur kan slutte.
     </p></li>
     <li><p>
         <B>Information: </B><img src="baseline_menu_black_18.png"> Du kan se dokumentationen for Romi, se din
@@ -193,16 +197,30 @@
         <B>Spilniveau: </B>Under <B>Indstillinger</B> &rarr; <B>Spil</B> vælger du <B>Begynder</B>, <B>Mellem</B> eller <B>Ekspert</B>. Niveauet afgør, hvor snedigt Romi danner sine grupper, stjæler brikker fra bordet og genopbygger de grupper, den bryder op.
     </p></li>
     <li><p>
-        <B>Romi-regel: </B><B>Standard</B> eller <B>12–13–1</B>. Med 12–13–1 må et es også følge kongen i slutningen af en række (for eksempel 11-12-13-1), og bordet får én kolonne mere. Rækken slutter der: ingen 2'er efter det es, og en række kan ikke både begynde og slutte med et es (1-2-…-13-1).
+        <B>Romi-regel: </B><B>Standard</B> eller <B>12–13–1</B>. Med 12–13–1 må et es også følge kongen i slutningen af en række (for eksempel 11-12-13-1), og bordet får én kolonne mere. Rækken slutter der: ingen 2'er efter det es.
     </p></li>
     <li><p>
-        <B>Joker: </B><B>Normal</B> (to jokere i kortsættet), <B>Ingen</B> (ingen jokere) eller <B>For alle</B> (ingen i kortsættet, men hver spiller starter med én på hånden).
+        <B>Joker: </B><B>Normal</B> (to jokere i kortsættet), <B>Ingen</B> (ingen jokere) eller <B>For alle</B> (ingen i kortsættet, men hver spiller starter med én på hånden). En joker, der stadig er på hånden, når spillet slutter, tæller 30 point imod dig.
     </p></li>
     <li><p>
-        <B>Åbning: </B>De point, der kræves for at åbne: <B>25</B>, <B>30</B> eller <B>50</B>.
+        <B>Specialjokere (Twist): </B>Et fjerde valg under <B>Joker</B>: jokerne fra <B>Normal</B> samt én Dobbeltjoker, én Farveskiftjoker og én Spejljoker pr. kortsæt, som i <I>Rummikub with a Twist</I>. Dobbeltjokeren kan tages tilbage fra bordet, som en joker: træk et af de kort, den står for, oven på den; har gruppen brug for begge, følger det andet med fra din hånd. En Farveskiftjoker for enden af en række kan også tages tilbage, med det kort i rækkens farve, som den står for. Spejljokeren bliver på bordet. En specialjoker, der er tilbage på hånden ved spillets slutning, tæller som en joker. I et netværksspil skal alle spillere have den nyeste version af Romi.
+    </p>
+    <UL>
+        <li><B>Dobbeltjoker: </B>erstatter to kort: to på hinanden følgende tal i en række (5, joker, 8: den er 6 og 7) eller de to manglende farver i en gruppe med samme tal. Den lægges aldrig før et 2-tal eller efter et 12-tal, undtagen efter et 12-tal i enden af en række med reglen 12–13–1, hvor den er 13 og 1. Ved åbningen tæller den de to tal, den erstatter.</li>
+        <li><B>Farveskiftjoker: </B>kun i rækker. Den erstatter ét tal, og rækken fortsætter i en anden farve efter den: 3 og 4 i én farve, jokeren (5'eren), så 6 i en anden farve.</li>
+        <li><B>Spejljoker: </B>står i midten, og de to sider spejler hinanden, med mindst to kort på hver side: 4 5 joker 5 4 i én farve, eller en gruppe 3'ere, hvor hver farve optræder to gange, i spejlvendt rækkefølge. Kort lægges til eller fjernes på begge sider på én gang. En almindelig joker kan stå over for et kort og får dets værdi; en specialjoker står kun over for en joker af samme slags. Den er 0 værd ved åbningen. Den lægges ved at trække den hen på bordet, midt i sin gruppe, eller ved at trykke på den lige efter kortene i den gruppe, du bygger i denne tur (4 5, derefter spejljokeren); trykker du på den på et andet tidspunkt, bliver den på hånden.</li>
+    </UL></li>
+    <li><p>
+        <B>Frosne jokere (spillere): </B>Slået fra som standard: når du har åbnet, må du flytte en joker, der allerede ligger på bordet, til en anden gruppe, så længe alle grupper er gyldige, når din tur slutter. Når den er slået til, kan en joker, der lå på bordet, da din tur begyndte, kun tages tilbage med det kort, den står for. Indtil da står den fortsat for det samme kort, i en gruppe på mindst 3 kort, og flytter kun med hele sin gruppe. Kortet, der tager den tilbage, bliver derefter på bordet resten af din tur. Det samme gælder Dobbeltjokeren og en Farveskiftjoker for enden af en række; Spejljokeren forlader aldrig bordet, og dens gruppe beholder sin form: en række forbliver i samme farve, en gruppe af ét tal beholder det tal. Indstillingen <B>Frosne jokere (Romi)</B> gør det samme for Romi (slået til som standard), undtagen i et netværksspil, hvor Romi følger spillernes indstilling. I et netværksspil skal alle spillere have den nyeste version af Romi.
     </p></li>
     <li><p>
-        <B>Tidsgrænse og straf: </B>Fra 0 (ingen grænse) til 5 minutter pr. tur. Når tiden løber ud med kontakten <B>Tidsgrænsestraf</B> slået til, vender bordet tilbage til, som det så ud ved starten af din tur — undtagen på niveauet <B>Begynder</B> i et solospil. På niveauet <B>Ekspert</B> trækker du så desuden to brikker i stedet for én.
+        <B>Åbning: </B>De point, der kræves for at åbne: <B>25</B>, <B>30</B>, <B>50</B> eller <B>Intet minimum</B> (enhver gruppe på mindst 3 brikker fra hylden åbner).
+    </p></li>
+    <li><p>
+        <B>Vent en tur efter åbning: </B>I den tur, hvor du åbner, må du kun lægge grupper fra din egen hylde; brikkerne på bordet (og at lægge til andre grupper) kan bruges fra din næste tur. Computerspillerne følger samme regel.
+    </p></li>
+    <li><p>
+        <B>Tidsgrænse og straf: </B>Fra 0 (ingen grænse) til 5 minutter pr. tur. Når tiden løber ud med kontakten <B>Tidsgrænsestraf</B> slået til, vender bordet tilbage til, som det så ud ved starten af din tur. I et solospil sker det også, når flere menneskelige spillere deler enheden, men aldrig på niveauet <B>Begynder</B>. I et solospil trækker du så desuden én brik, eller to på niveauet <B>Ekspert</B>.
     </p></li>
     <li><p>
         <B>Vinderen starter: </B>Når den er slået til, spiller vinderen af forrige spil først i det næste.
@@ -260,9 +278,10 @@
     </p></li>
     <li><p>
         Forlader en spiller spillet uden at komme tilbage, går bordet ikke længere i stå på hans
-        tur: når hans frist for at komme tilbage er udløbet, spilles hans to næste ture som et
-        almindeligt træk, og derefter overtager computeren pladsen. Kommer han tilbage i løbet af de
-        to ture, beholder han pladsen; kommer han senere, får han den tilbage fra computeren.
+        tur: når hans frist for at komme tilbage er udløbet, eller med det samme hvis han forlod
+        spillet i stedet for at miste forbindelsen, spilles hans to næste ture som et almindeligt
+        træk, og derefter overtager computeren pladsen. Kommer han tilbage i løbet af de to ture,
+        beholder han pladsen; kommer han senere, får han den tilbage fra computeren.
     </p></li>
 </UL>
 

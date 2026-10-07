@@ -11,9 +11,10 @@
 <p style="margin:2%">
     <B>Romi</B> umožňuje hrát hry <B>Rummy Tile (RummyCube, Rummikub, Rami)</B> proti
     počítači na třech různých úrovních. Hra se hraje se dvěma sadami 52 karet a se
-    dvěma žolíky <img src="iconeFrime.gif">. Dva žolíci jsou výchozí nastavení <B>Žolík</B> (<B>Normální</B>, <B>Žádný</B> nebo <B>Pro všechny</B>) v <B>Nastavení</B> &rarr; <B>Hra</B>. Cílem této hry je tvořit skupiny
+    dvěma žolíky <img src="iconeFrime.gif">. Dva žolíci jsou výchozí nastavení <B>Žolík</B> (<B>Normální</B>, <B>Žádný</B>, <B>Pro všechny</B> nebo <B>Speciální žolíci (Twist)</B>) v <B>Nastavení</B> &rarr; <B>Hra</B> &rarr; <B>Žolíci</B>. Cílem této hry je tvořit skupiny
     tří nebo více karet, které obsahují buď po sobě jdoucí karty stejné
     barvy, nebo karty stejné číselné hodnoty ale různých barev.
+    Každá skupina musí obsahovat alespoň jednu skutečnou kartu: samotní žolíci, včetně speciálních, skupinu netvoří.
 </p>
 <p style="margin:2%" class="demo-intro">
     Chcete nejprve vidět, jak se hraje? Klepněte na tlačítko <B>Ukázka</B> vpravo nahoře a sledujte hru Romi proti Romi. Klepnutím na proužek ukázky ji kdykoli zastavíte a vrátíte se ke své hře.
@@ -28,7 +29,7 @@
     </p></li>
     <li><P>Hráč otevírá svou hru tím, že zahraje alespoň jednu skupinu
         3 karet nebo více, pouze s kartami ze svého držáku. Součet
-        hodnot těchto karet musí být (25, 30 nebo 50) nebo více.
+        hodnot těchto karet musí být (25, 30 nebo 50) nebo více — nebo stačí jakákoli skupina při otevření <B>Bez minima</B>.
     </p></li>
     <li><P>Poté, co hráč otevřel hru, může použít karty
         na hrací ploše k doplnění skupin kartami ze svého držáku.
@@ -63,7 +64,7 @@
     </p></li>
     <li><p>
         Upozorňujeme, že nemůžete přesouvat karty (které nejsou vaše) na hrací ploše, dokud neotevřete
-        hru s vlastními skupinami karet za (25, 30 nebo 50) bodů nebo více.
+        hru s vlastními skupinami karet za (25, 30 nebo 50) bodů nebo více (nebo jakoukoli skupinou při otevření <B>Bez minima</B>).
     </p></li>
     <li><p>
         Pro umístění karty na hrací plochu můžete kliknout na kartu a ta se automaticky přesune na
@@ -80,6 +81,7 @@
     <li><p>
         Můžete obnovit hrací plochu do stavu před začátkem vašeho tahu kliknutím na
         ikonu přesýpacích hodin a budete mít možnost hrací plochu obnovit.
+        Když jsou některé vaše skupiny neplatné, vybíráte mezi <B>Obnovit</B> (hrací plocha jako na začátku vašeho tahu), <B>Upravit</B> (hrajete dál) a, je-li co vzít zpět, <B>Vzít zpět neplatné</B> (karty položené v tomto tahu ze stojanu, které jsou v neplatné skupině, se vrátí na stojan; co zůstane neplatné, zůstane zvýrazněné).
     </p></li>
     <li><p>
         Můžete zobrazit své skóre Romi a/nebo resetovat své skóre na nulu kliknutím na tlačítko <img
@@ -146,6 +148,8 @@
     <li><p>
         <B>Ověřit: </B><img src="valider.gif"> Zkontroluje, zda skupiny karet zahrané na hrací ploše
         jsou platné.
+        Upozorní vás také na to, co by bránilo ukončení tahu: vzatý žolík, který máte stále v držáku; při volbě <B>Zmrazení žolíci</B> žolík ze stolu, který už nezastupuje stejnou kartu; při volbě <B>Po otevření počkat jedno kolo</B> karty přiložené k jiným skupinám v kole, kdy otevíráte.
+        Ve hře více hráčů, kterou hostuje někdo jiný, kontroluje jen skupiny: o tom, zda může váš tah skončit, rozhoduje zařízení hostitele.
     </p></li>
     <li><p>
         <B>Informace: </B><img src="baseline_menu_black_18.png"> Můžete zobrazit dokumentaci Romi, zobrazit své
@@ -191,16 +195,30 @@
         <B>Úroveň hry: </B>V <B>Nastavení</B> &rarr; <B>Hra</B> zvolte <B>Začátečník</B>, <B>Pokročilý</B> nebo <B>Expert</B>. Úroveň určuje, jak chytře Romi tvoří své skupiny, krade karty z hrací plochy a znovu skládá skupiny, které rozebral.
     </p></li>
     <li><p>
-        <B>Pravidlo Romi: </B><B>Standardní</B> nebo <B>12–13–1</B>. S pravidlem 12–13–1 může eso následovat i po králi na konci postupky (například 11-12-13-1) a hrací plocha získá o jeden sloupec více. Postupka tam končí: po tomto esu nesmí následovat 2 a postupka nemůže esem zároveň začínat i končit (1-2-…-13-1).
+        <B>Pravidlo Romi: </B><B>Standardní</B> nebo <B>12–13–1</B>. S pravidlem 12–13–1 může eso následovat i po králi na konci postupky (například 11-12-13-1) a hrací plocha získá o jeden sloupec více. Postupka tam končí: po tomto esu nesmí následovat 2.
     </p></li>
     <li><p>
-        <B>Žolík: </B><B>Normální</B> (dva žolíci v balíčku), <B>Žádný</B> (bez žolíků) nebo <B>Pro všechny</B> (v balíčku žádný, ale každý hráč začíná s jedním v ruce).
+        <B>Žolík: </B><B>Normální</B> (dva žolíci v balíčku), <B>Žádný</B> (bez žolíků) nebo <B>Pro všechny</B> (v balíčku žádný, ale každý hráč začíná s jedním v ruce). Žolík, který vám na konci hry ještě zůstane v ruce, se vám počítá jako 30 trestných bodů.
     </p></li>
     <li><p>
-        <B>Otevření: </B>Body potřebné k otevření: <B>25</B>, <B>30</B> nebo <B>50</B>.
+        <B>Speciální žolíci (Twist): </B>Čtvrtá volba nastavení <B>Žolík</B>: žolíci volby <B>Normální</B> a k tomu v každém balíčku jeden Dvojitý žolík, jeden Žolík změny barvy a jeden Zrcadlový žolík, jako v <I>Rummikub with a Twist</I>. Ze stolu lze vzít zpět Dvojitého žolíka, stejně jako žolíka: přetáhněte na něj jednu z karet, které zastupuje; potřebuje-li jeho skupina obě, druhá přijde s ní z vaší ruky. Žolíka změny barvy na konci postupky lze vzít zpět také, kartou v barvě této postupky, kterou zastupuje. Zrcadlový žolík zůstává na stole. Speciální žolík, který vám na konci hry zůstane v ruce, se počítá jako žolík. Při síťové hře potřebuje každý hráč nejnovější verzi Romi.
+    </p>
+    <UL>
+        <li><B>Dvojitý žolík: </B>nahrazuje dvě karty: dvě po sobě jdoucí čísla v postupce (5, žolík, 8: je to 6 a 7), nebo dvě chybějící barvy ve skupině stejných čísel. Nikdy se nepokládá před 2 ani za 12, kromě místa za 12 na konci postupky s pravidlem 12–13–1, kde je 13 a 1. Při otevření se počítají obě čísla, která nahrazuje.</li>
+        <li><B>Žolík změny barvy: </B>jen v postupkách. Nahrazuje jedno číslo a postupka za ním pokračuje v jiné barvě: 3 a 4 jedné barvy, žolík (5), pak 6 jiné barvy.</li>
+        <li><B>Zrcadlový žolík: </B>stojí uprostřed a obě strany jsou svým zrcadlovým obrazem, s nejméně dvěma kartami na každé straně: 4 5 žolík 5 4 v jedné barvě, nebo skupina trojek, kde je každá barva dvakrát, v zrcadlovém pořadí. Karty se přidávají nebo odebírají na obou stranách najednou. Obyčejný žolík může stát naproti kartě a přebírá její hodnotu; speciální žolík stojí jen naproti žolíkovi stejného druhu. Při otevření má hodnotu 0. Pokládá se přetažením na hrací plochu doprostřed své skupiny, nebo klepnutím hned po kartách skupiny, kterou v tomto tahu skládáte (4 5, pak zrcadlový žolík); klepnutím v jinou chvíli zůstane ve vaší ruce.</li>
+    </UL></li>
+    <li><p>
+        <B>Zmrazení žolíci (hráči): </B>Ve výchozím stavu vypnuto: jakmile máte otevřeno, můžete žolíka, který už leží na stole, přesunout do jiné skupiny, pokud je na konci vašeho tahu každá skupina platná. Když je zapnuto, žolíka, který ležel na stole na začátku vašeho tahu, lze vzít zpět jen kartou, kterou zastupuje. Do té doby dál zastupuje stejnou kartu, ve skupině aspoň 3 karet, a pohybuje se jen spolu s celou svou skupinou. Karta, která ho vezme zpět, pak zůstává na stole až do konce vašeho tahu. Totéž platí pro Dvojitého žolíka a pro Žolíka změny barvy na konci postupky; Zrcadlový žolík stůl nikdy neopouští a jeho skupina si zachovává svůj tvar: postupka zůstává v téže barvě, skupina jednoho čísla si ponechává toto číslo. Nastavení <B>Zmrazení žolíci (Romi)</B> platí stejně pro Romi (ve výchozím stavu zapnuto), kromě síťové hry, kde se Romi řídí nastavením hráčů. Při síťové hře potřebuje každý hráč nejnovější verzi Romi.
     </p></li>
     <li><p>
-        <B>Časový limit a penalizace: </B>Od 0 (bez limitu) do 5 minut na tah. Po vypršení času se zapnutým přepínačem <B>Penalizace za časový limit</B> se hrací plocha vrátí do stavu ze začátku vašeho tahu — kromě úrovně <B>Začátečník</B> v sólo hře. Na úrovni <B>Expert</B> pak navíc líznete dvě karty místo jedné.
+        <B>Otevření: </B>Body potřebné k otevření: <B>25</B>, <B>30</B>, <B>50</B> nebo <B>Bez minima</B> (otevírá jakákoli skupina alespoň 3 karet z držáku).
+    </p></li>
+    <li><p>
+        <B>Po otevření počkat jedno kolo: </B>V kole, kdy otevíráte, smíte vykládat jen skupiny ze svého držáku; karty na stole (a přikládání k jiným skupinám) můžete použít až od dalšího kola. Počítačoví hráči dodržují stejné pravidlo.
+    </p></li>
+    <li><p>
+        <B>Časový limit a penalizace: </B>Od 0 (bez limitu) do 5 minut na tah. Po vypršení času se zapnutým přepínačem <B>Penalizace za časový limit</B> se hrací plocha vrátí do stavu ze začátku vašeho tahu. V sólo hře se to stane také vždy, když zařízení sdílí více lidských hráčů, ale nikdy na úrovni <B>Začátečník</B>. V sólo hře pak navíc líznete jednu kartu, na úrovni <B>Expert</B> dvě.
     </p></li>
     <li><p>
         <B>Vítěz začíná: </B>Je-li zapnuto, vítěz předchozí hry hraje v další jako první.
@@ -257,9 +275,9 @@
     </p></li>
     <li><p>
         Pokud hráč hru opustí a nevrátí se, stůl už neuvízne na jeho tahu: jakmile vyprší jeho lhůta
-        pro opětovné připojení, jeho dva další tahy se odehrají jako obyčejné vzetí karty a poté
-        místo převezme počítač. Kdo se vrátí během těchto dvou tahů, místo si ponechá; kdo se vrátí
-        později, získá je od počítače zpět.
+        pro opětovné připojení, nebo hned, pokud hru opustil sám a neztratil jen spojení, jeho dva
+        další tahy se odehrají jako obyčejné vzetí karty a poté místo převezme počítač. Kdo se vrátí
+        během těchto dvou tahů, místo si ponechá; kdo se vrátí později, získá je od počítače zpět.
     </p></li>
 </UL>
 

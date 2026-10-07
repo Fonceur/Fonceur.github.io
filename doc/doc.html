@@ -11,9 +11,10 @@
 <p style="margin:2%">
     <B>Romi</B> lets you play <B>Rummy Tile (RummyCube, Rummikub, Rami)</B> games against the
     computer at three different levels. The game is played with two sets of 52 cards and with
-    two wild <img src="iconeFrime.gif"> cards. Two wild cards is the default <B>Wild card</B> setting (<B>Normal</B>, <B>None</B> or <B>For all</B>) in <B>Settings</B> &rarr; <B>Game</B>. The purpose of this game is to form groups of
+    two wild <img src="iconeFrime.gif"> cards. Two wild cards is the default <B>Wild card</B> setting (<B>Normal</B>, <B>None</B>, <B>For all</B> or <B>Special jokers (Twist)</B>) in <B>Settings</B> &rarr; <B>Game</B> &rarr; <B>Jokers</B>. The purpose of this game is to form groups of
     three or more cards, which contain either consecutive cards of the
     same suit or cards of the same number value but of differing suits.
+    Each group must contain at least one real card: wild cards alone, special jokers included, never form a group.
 </p>
 <p style="margin:2%" class="demo-intro">
     Want to see how it is played first? Tap the <B>Demo</B> button at the top right to watch Romi play against Romi. Tap the demo banner at any time to stop it and return to your own game.
@@ -28,7 +29,7 @@
     </p></li>
     <li><P>The player opens his game by playing at least one group of
         3 cards or more, using only the cards on his rack. The sum
-        of those cards values must be (25, 30 or 50) or more.
+        of those cards values must be (25, 30 or 50) or more — or any group, with the <B>No minimum</B> opening.
     </p></li>
     <li><P>After the player has opened the game, he can use the cards
         on the board to complete groups with cards on his rack. The
@@ -63,7 +64,7 @@
     </p></li>
     <li><p>
         Please note that you can't move cards (which are not yours) on the board before you open the
-        game with your own groups of cards of (25, 30 or 50) points or more.
+        game with your own groups of cards of (25, 30 or 50) points or more (or any group, with the <B>No minimum</B> opening).
     </p></li>
     <li><p>
         To place a card on the board, you can click the card and it will move automatically on the
@@ -80,6 +81,7 @@
     <li><p>
         You can restore the board as it was before you began to play your turn, by clicking the
         sand-glass icon and you will have the option to restore the board.
+        When some of your groups are invalid, you choose between <B>Restore</B> (the board as it was at the start of your turn), <B>Modify</B> (keep playing) and, when there is something to take back, <B>Take back invalid</B> (the cards you laid from your rack this turn that sit in an invalid group go back to your rack; what is still invalid stays highlighted).
     </p></li>
     <li><p>
         You can see your Romi scores and/or reset your scores to zero by clicking on the <img
@@ -146,6 +148,8 @@
     <li><p>
         <B>Validate: </B><img src="valider.gif"> Check that the groups of cards played on the board
         are valid.
+        It also tells you what would stop your turn from ending: a wild card you took back that is still in your rack; with <B>Frozen jokers</B>, a wild card from the board that no longer stands for the same card; with <B>Wait a turn after opening</B>, cards added to other groups on the turn you open.
+        In a multiplayer game someone else hosts, it only checks the groups: the host's device decides whether your turn can end.
     </p></li>
     <li><p>
         <B>Information : </B><img src="baseline_menu_black_18.png"> You can see the documentation for Romi, see your
@@ -191,16 +195,30 @@
         <B>Play level: </B>In <B>Settings</B> &rarr; <B>Game</B>, choose <B>Beginner</B>, <B>Intermediate</B> or <B>Expert</B>. The level sets how cleverly Romi builds its groups, steals cards from the board and rebuilds the groups it breaks up.
     </p></li>
     <li><p>
-        <B>Romi rule: </B><B>Standard</B> or <B>12–13–1</B>. With 12–13–1, an ace may also follow the king at the end of a run (for example 11-12-13-1), and the board gets one more column. The run ends there: no 2 after that ace, and a run cannot both start and end with an ace (1-2-…-13-1).
+        <B>Romi rule: </B><B>Standard</B> or <B>12–13–1</B>. With 12–13–1, an ace may also follow the king at the end of a run (for example 11-12-13-1), and the board gets one more column. The run ends there: no 2 after that ace.
     </p></li>
     <li><p>
-        <B>Wild card: </B><B>Normal</B> (two wild cards in the deck), <B>None</B> (no wild cards), or <B>For all</B> (none in the deck, but every player starts with one in hand).
+        <B>Wild card: </B><B>Normal</B> (two wild cards in the deck), <B>None</B> (no wild cards), or <B>For all</B> (none in the deck, but every player starts with one in hand). A wild card still in your hand when the game ends counts 30 points against you.
     </p></li>
     <li><p>
-        <B>Opening: </B>The points needed to open: <B>25</B>, <B>30</B> or <B>50</B>.
+        <B>Special jokers (Twist): </B>A fourth <B>Wild card</B> choice: the wild cards of <B>Normal</B>, plus one Double joker, one Color-change joker and one Mirror joker per deck, as in <I>Rummikub with a Twist</I>. The Double joker can be taken back from the board, like a wild card: drag one of the cards it stands for onto it, and if its group needs both, the other one comes along from your hand. A Color-change joker at the end of a run can be taken back too, with the card in that run's suit that it stands for. The Mirror joker stays on the board. A special joker left in your hand at the end of the game counts like a wild card. In a networked game, every player needs the latest version of Romi.
+    </p>
+    <UL>
+        <li><B>Double joker: </B>stands for two cards: two consecutive numbers in a run (5, joker, 8: it is the 6 and the 7), or the two missing suits of a group of the same number. It is never placed before a 2 or after a 12, except after a 12 at the end of a run with the 12–13–1 rule, where it is the 13 and the 1. At the opening it counts the two numbers it replaces.</li>
+        <li><B>Color-change joker: </B>runs only. It stands for one number, and the run goes on in another suit after it: 3 and 4 of one suit, the joker (the 5), then 6 of another suit.</li>
+        <li><B>Mirror joker: </B>sits in the middle, and the two sides mirror each other, with at least two cards on each side: 4 5 joker 5 4 in one suit, or a group of 3s where each suit comes twice, in mirror order. Cards are added or removed on both sides at once. A wild card may face a card and takes its value; a special joker only faces one of its own kind. It is worth 0 at the opening. It is laid by dragging it onto the board, in the middle of its group, or by tapping it right after the cards of the group you are building this turn (4 5, then the mirror); tapped at any other time, it stays in your hand.</li>
+    </UL></li>
+    <li><p>
+        <B>Frozen jokers (players): </B>Off by default: once you have opened, you may move a wild card that is already on the board into another group, as long as every group is valid at the end of your turn. When on, a wild card that was on the board at the start of your turn can only be taken back with the card it stands for. Until then it keeps standing for the same card, in a group of at least 3 cards, and only moves along with its whole group. The card that takes it back then stays on the board for the rest of your turn. The same goes for the Double joker and for a Color-change joker at the end of a run; the Mirror joker never leaves the board, and its group keeps its shape: a run stays in the same suit, a group of one number keeps that number. The <B>Frozen jokers (Romi)</B> setting does the same for Romi (on by default), except in a networked game, where Romi follows the players' setting. In a networked game, every player needs the latest version of Romi.
     </p></li>
     <li><p>
-        <B>Time limit and penalty: </B>From 0 (no limit) to 5 minutes per turn. When the time runs out with the <B>Time limit penalty</B> switch on, the board goes back to the way it was at the start of your turn — except at the <B>Beginner</B> level in a solo game. At the <B>Expert</B> level you then also draw two cards instead of one.
+        <B>Opening: </B>The points needed to open: <B>25</B>, <B>30</B>, <B>50</B> or <B>No minimum</B> (any group of 3 cards or more from the rack opens).
+    </p></li>
+    <li><p>
+        <B>Wait a turn after opening: </B>On the turn you open, you may only lay down groups made from your own rack; the cards already on the board (and adding to other groups) can be used from your next turn. The computer players follow the same rule.
+    </p></li>
+    <li><p>
+        <B>Time limit and penalty: </B>From 0 (no limit) to 5 minutes per turn. When the time runs out with the <B>Time limit penalty</B> switch on, the board goes back to the way it was at the start of your turn. In a solo game this also happens whenever several human players share the device, but never at the <B>Beginner</B> level. In a solo game you then also draw a card, or two at the <B>Expert</B> level.
     </p></li>
     <li><p>
         <B>Winner starts: </B>When on, the winner of the previous game plays first in the next one.
@@ -258,9 +276,10 @@
     </p></li>
     <li><p>
         If a player leaves and does not come back, the table no longer stays stuck on their turn:
-        once their reconnection delay has expired, their next two turns are played as a simple draw,
-        then a computer player takes over the seat. Coming back during those two turns keeps the
-        seat; coming back later takes it back from the computer.
+        once their reconnection delay has expired, or at once if they quit the game rather than
+        losing the connection, their next two turns are played as a simple draw, then a computer
+        player takes over the seat. Coming back during those two turns keeps the seat; coming back
+        later takes it back from the computer.
     </p></li>
 </UL>
 

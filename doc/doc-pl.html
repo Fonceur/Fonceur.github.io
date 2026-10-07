@@ -11,9 +11,10 @@
 <p style="margin:2%">
     <B>Romi</B> pozwala grać w <B>Rummy Tile (RummyCube, Rummikub, Rami)</B> przeciwko
     komputerowi na 3 różnych poziomach trudności. Gra wykorzystuje dwa zestawy po 52 karty
-    oraz dwa <img src="iconeFrime.gif"> jokery. Dwa jokery to domyślne ustawienie <B>Joker</B> (<B>Normalnie</B>, <B>Brak</B> lub <B>Dla wszystkich</B>) w <B>Ustawienia</B> &rarr; <B>Gra</B>. Celem gry jest tworzenie grup składających
+    oraz dwa <img src="iconeFrime.gif"> jokery. Dwa jokery to domyślne ustawienie <B>Joker</B> (<B>Normalnie</B>, <B>Brak</B>, <B>Dla wszystkich</B> lub <B>Specjalne jokery (Twist)</B>) w <B>Ustawienia</B> &rarr; <B>Gra</B> &rarr; <B>Jokery</B>. Celem gry jest tworzenie grup składających
     się z 3 lub więcej kart, które zawierają kolejne karty tego samego koloru lub karty
     o tej samej wartości liczbowej, ale w różnych kolorach.
+    Każda grupa musi zawierać co najmniej jedną prawdziwą kartę: same jokery, również specjalne, nie tworzą grupy.
 </p>
 <p style="margin:2%" class="demo-intro">
     Chcesz najpierw zobaczyć, jak się gra? Dotknij przycisku <B>Demo</B> w prawym górnym rogu, aby obejrzeć grę Romi przeciwko Romi. Dotknij paska demo w dowolnym momencie, aby je zatrzymać i wrócić do własnej gry.
@@ -29,7 +30,7 @@
     <li><p>
         Gracz otwiera grę, kładąc co najmniej jedną grupę 3 lub więcej kart,
         używając tylko kart ze swojej półki. Suma wartości tych kart musi wynosić
-        (25, 30 lub 50) lub więcej.
+        (25, 30 lub 50) lub więcej — albo wystarczy dowolna grupa, przy otwarciu <B>Bez minimum</B>.
     </p></li>
     <li><p>
         Po otwarciu gry gracz może używać kart na stole do uzupełniania grup kartami
@@ -62,7 +63,7 @@
     </p></li>
     <li><p>
         Pamiętaj, że nie możesz przenosić kart (które nie są twoje) na stole, dopóki
-        nie otworzysz gry własnymi grupami kart o wartości (25, 30 lub 50) punktów lub więcej.
+        nie otworzysz gry własnymi grupami kart o wartości (25, 30 lub 50) punktów lub więcej (albo dowolną grupą, przy otwarciu <B>Bez minimum</B>).
     </p></li>
     <li><p>
         Aby umieścić kartę na stole, możesz kliknąć kartę, a zostanie ona automatycznie
@@ -78,6 +79,7 @@
     <li><p>
         Możesz przywrócić stół do stanu sprzed rozpoczęcia swojej tury, klikając ikonę
         klepsydry, a otrzymasz opcję przywrócenia stołu.
+        Gdy niektóre z twoich grup są nieprawidłowe, wybierasz między <B>Przywróć</B> (stół taki jak na początku twojej tury), <B>Modyfikuj</B> (grasz dalej) a, gdy jest co cofnąć, <B>Cofnij nieprawidłowe</B> (karty położone w tej turze ze stojaka, które są w nieprawidłowej grupie, wracają na stojak; to, co nadal jest nieprawidłowe, pozostaje podświetlone).
     </p></li>
     <li><p>
         Możesz zobaczyć swoje wyniki Romi i/lub zresetować wyniki do zera, klikając
@@ -145,6 +147,8 @@
     <li><p>
         <B>Sprawdź: </B><img src="valider.gif"> Sprawdza, czy grupy kart zagranych na
         stole są prawidłowe.
+        Wskazuje też, co uniemożliwiłoby zakończenie tury: zabrany joker, który wciąż jest na twoim stojaku; przy opcji <B>Zamrożone jokery</B> joker ze stołu, który nie zastępuje już tej samej karty; przy opcji <B>Odczekaj turę po otwarciu</B> karty dołożone do innych grup w turze otwarcia.
+        W grze wieloosobowej prowadzonej przez kogoś innego sprawdzane są tylko grupy: o tym, czy twoja tura może się zakończyć, decyduje urządzenie hosta.
     </p></li>
     <li><p>
         <B>Informacje: </B><img src="baseline_menu_black_18.png"> Możesz zobaczyć dokumentację Romi, swoje
@@ -190,16 +194,30 @@
         <B>Poziom gry: </B>W <B>Ustawienia</B> &rarr; <B>Gra</B> wybierz <B>Początkujący</B>, <B>Średniozaawansowany</B> lub <B>Ekspert</B>. Poziom określa, jak sprytnie Romi układa swoje grupy, podbiera karty ze stołu i odbudowuje grupy, które rozbił.
     </p></li>
     <li><p>
-        <B>Zasada Romi: </B><B>Standardowa</B> lub <B>12–13–1</B>. Przy zasadzie 12–13–1 as może także następować po królu na końcu sekwensu (na przykład 11-12-13-1), a stół zyskuje jedną kolumnę więcej. Sekwens tam się kończy: po tym asie nie może być 2, a sekwens nie może jednocześnie zaczynać się i kończyć asem (1-2-…-13-1).
+        <B>Zasada Romi: </B><B>Standardowa</B> lub <B>12–13–1</B>. Przy zasadzie 12–13–1 as może także następować po królu na końcu sekwensu (na przykład 11-12-13-1), a stół zyskuje jedną kolumnę więcej. Sekwens tam się kończy: po tym asie nie może być 2.
     </p></li>
     <li><p>
-        <B>Joker: </B><B>Normalnie</B> (dwa jokery w talii), <B>Brak</B> (bez jokerów) lub <B>Dla wszystkich</B> (żadnego w talii, ale każdy gracz zaczyna z jednym w ręce).
+        <B>Joker: </B><B>Normalnie</B> (dwa jokery w talii), <B>Brak</B> (bez jokerów) lub <B>Dla wszystkich</B> (żadnego w talii, ale każdy gracz zaczyna z jednym w ręce). Joker, który na koniec gry nadal jest w twojej ręce, liczy się jako 30 punktów na twoją niekorzyść.
     </p></li>
     <li><p>
-        <B>Otwarcie: </B>Punkty wymagane do otwarcia: <B>25</B>, <B>30</B> lub <B>50</B>.
+        <B>Specjalne jokery (Twist): </B>Czwarta opcja ustawienia <B>Joker</B>: jokery z opcji <B>Normalnie</B> oraz w każdej talii jeden Podwójny joker, jeden Joker zmiany koloru i jeden Joker lustrzany, jak w <I>Rummikub with a Twist</I>. Podwójnego jokera można zabrać z powrotem ze stołu, jak zwykłego jokera: przeciągnij na niego jedną z kart, które zastępuje; jeśli jego grupa potrzebuje obu, druga idzie razem z nią z twojej ręki. Jokera zmiany koloru na końcu sekwensu też można zabrać, kartą w kolorze sekwensu, którą zastępuje. Joker lustrzany zostaje na stole. Specjalny joker, który zostanie w ręce na koniec gry, liczy się jak joker. W grze sieciowej każdy gracz potrzebuje najnowszej wersji Romi.
+    </p>
+    <UL>
+        <li><B>Podwójny joker: </B>zastępuje dwie karty: dwie kolejne liczby w sekwensie (5, joker, 8: jest to 6 i 7) albo dwa brakujące kolory w grupie tej samej liczby. Nigdy nie kładzie się go przed 2 ani po 12, z wyjątkiem miejsca po 12 na końcu sekwensu z regułą 12–13–1, gdzie jest 13 i 1. Przy otwarciu liczy się jak dwie liczby, które zastępuje.</li>
+        <li><B>Joker zmiany koloru: </B>tylko w sekwensach. Zastępuje jedną liczbę, a za nim sekwens ciągnie się w innym kolorze: 3 i 4 jednego koloru, joker (5), potem 6 innego koloru.</li>
+        <li><B>Joker lustrzany: </B>stoi pośrodku, a obie strony są swoim lustrzanym odbiciem, z co najmniej dwiema kartami po każdej stronie: 4 5 joker 5 4 w jednym kolorze albo grupa trójek, w której każdy kolor występuje dwa razy, w lustrzanej kolejności. Karty dokłada się lub zabiera po obu stronach naraz. Zwykły joker może stać naprzeciw karty i przyjmuje jej wartość; joker specjalny stoi tylko naprzeciw jokera tego samego rodzaju. Przy otwarciu jest wart 0. Kładzie się go, przeciągając na stół, w środek jego grupy, albo dotykając go tuż po kartach grupy, którą układasz w tej turze (4 5, potem joker lustrzany); dotknięty w innym momencie zostaje w ręce.</li>
+    </UL></li>
+    <li><p>
+        <B>Zamrożone jokery (gracze): </B>Domyślnie wyłączone: po otwarciu możesz przenieść jokera, który już leży na stole, do innej grupy, o ile na koniec twojej tury każda grupa jest poprawna. Po włączeniu jokera, który leżał na stole na początku twojej tury, można zabrać z powrotem tylko kartą, którą zastępuje. Do tego czasu zastępuje on tę samą kartę, w grupie co najmniej 3 kart, i przesuwa się tylko razem z całą swoją grupą. Karta, która go zabiera, zostaje potem na stole do końca twojej tury. To samo dotyczy Podwójnego jokera i Jokera zmiany koloru na końcu sekwensu; Joker lustrzany nigdy nie opuszcza stołu, a jego grupa zachowuje swój kształt: sekwens pozostaje w tym samym kolorze, grupa jednej liczby zachowuje tę liczbę. Ustawienie <B>Zamrożone jokery (Romi)</B> działa tak samo dla Romi (domyślnie włączone), z wyjątkiem gry sieciowej, w której Romi stosuje ustawienie graczy. W grze sieciowej każdy gracz potrzebuje najnowszej wersji Romi.
     </p></li>
     <li><p>
-        <B>Limit czasu i kara: </B>Od 0 (bez limitu) do 5 minut na turę. Gdy czas minie przy włączonym przełączniku <B>Kara za przekroczenie limitu czasu</B>, stół wraca do stanu z początku twojej tury — z wyjątkiem poziomu <B>Początkujący</B> w grze solo. Na poziomie <B>Ekspert</B> dobierasz wtedy dodatkowo dwie karty zamiast jednej.
+        <B>Otwarcie: </B>Punkty wymagane do otwarcia: <B>25</B>, <B>30</B>, <B>50</B> lub <B>Bez minimum</B> (otwiera każda grupa co najmniej 3 kart ze stojaka).
+    </p></li>
+    <li><p>
+        <B>Odczekaj turę po otwarciu: </B>W turze otwarcia możesz wykładać tylko grupy z własnego stojaka; karty leżące na stole (i dokładanie do innych grup) możesz wykorzystać od następnej tury. Gracze komputerowi stosują tę samą zasadę.
+    </p></li>
+    <li><p>
+        <B>Limit czasu i kara: </B>Od 0 (bez limitu) do 5 minut na turę. Gdy czas minie przy włączonym przełączniku <B>Kara za przekroczenie limitu czasu</B>, stół wraca do stanu z początku twojej tury. W grze solo dzieje się tak również zawsze, gdy z urządzenia korzysta kilku graczy-ludzi, ale nigdy na poziomie <B>Początkujący</B>. W grze solo dobierasz wtedy dodatkowo jedną kartę, a na poziomie <B>Ekspert</B> dwie.
     </p></li>
     <li><p>
         <B>Zwycięzca zaczyna: </B>Gdy włączone, zwycięzca poprzedniej gry gra jako pierwszy w następnej.
@@ -259,9 +277,10 @@
     </p></li>
     <li><p>
         Jeśli gracz opuści partię i nie wróci, stół nie stoi już na jego turze: po upływie czasu na
-        ponowne połączenie jego dwie kolejne tury są rozgrywane jako zwykłe dobranie karty, a potem
-        miejsce przejmuje komputer. Kto wróci w trakcie tych dwóch tur, zachowuje miejsce; kto wróci
-        później, odbiera je komputerowi.
+        ponowne połączenie, albo od razu, jeśli sam opuścił partię, a nie stracił połączenia, jego
+        dwie kolejne tury są rozgrywane jako zwykłe dobranie karty, a potem miejsce przejmuje
+        komputer. Kto wróci w trakcie tych dwóch tur, zachowuje miejsce; kto wróci później, odbiera
+        je komputerowi.
     </p></li>
 </UL>
 

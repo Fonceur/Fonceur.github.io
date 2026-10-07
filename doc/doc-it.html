@@ -11,9 +11,10 @@
 <p style="margin:2%">
     Romi vi permette di giocare partite di <B>Ramino (Machiavelli, RummyCube, Rummikub, Rami)</B> al
     computer a 3 diversi livelli. La partita di Ramino si gioca con due mazzi di 52 carte e con due
-    <img src="iconeFrime.gif"> matte. Due matte è l'impostazione <B>Joker</B> predefinita (<B>Normale</B>, <B>Nessuno</B> o <B>Per tutti</B>) in <B>Preferenze</B> &rarr; <B>Partita</B>. Lo scopo del gioco è di formare gruppi di tre o più
+    <img src="iconeFrime.gif"> matte. Due matte è l'impostazione <B>Joker</B> predefinita (<B>Normale</B>, <B>Nessuno</B>, <B>Per tutti</B> o <B>Jolly speciali (Twist)</B>) in <B>Preferenze</B> &rarr; <B>Partita</B> &rarr; <B>Jolly</B>. Lo scopo del gioco è di formare gruppi di tre o più
     carte, che contengano carte consecutive dello stesso seme o carte di seme diverso ma dello
     stesso valore.
+    Ogni gruppo deve contenere almeno una carta vera: i jolly da soli, jolly speciali compresi, non formano un gruppo.
 </p>
 <p style="margin:2%" class="demo-intro">
     Vuoi prima vedere come si gioca? Tocca il pulsante <B>Demo</B> in alto a destra per vedere Romi giocare contro Romi. Tocca la striscia della demo in qualsiasi momento per fermarla e tornare alla tua partita.
@@ -29,7 +30,7 @@
     <li><p>
         Il giocatore inizia la sua partita giocando subito un gruppo
         di tre carte o più, usando soltanto le carte sul suo tavolo.
-        La somma del valore di queste carte deve essere (25, 30 o 50) o più.
+        La somma del valore di queste carte deve essere (25, 30 o 50) o più — oppure qualsiasi gruppo, con l'apertura <B>Nessun minimo</B>.
     </p></li>
     <li><p>
         Dopo che il giocatore ha iniziato la partita, può usare le sue carte sul tavolo per
@@ -63,7 +64,7 @@
     </p></li>
     <li><p>
         Si prega di notare che non è possibile spostare le carte (che non sono tue) sul
-        tavolo prima di aprire il gioco con (25, 30 o 50) punti o più.
+        tavolo prima di aprire il gioco con (25, 30 o 50) punti o più (o con qualsiasi gruppo, se l'apertura è <B>Nessun minimo</B>).
     </p></li>
     <li><p>
         Per giocare, clicca sulla carta e questa si muoverà automaticamente sul tavolo.
@@ -79,6 +80,7 @@
     <li><p>
         Se devi annullare la tua giocata, ripristinando la situazione delle carte all'inizio del tuo
         turno, clicca sulla clessidra.
+        Quando alcuni tuoi gruppi non sono validi, scegli tra <B>Ripristina</B> (il tavolo com'era all'inizio del tuo turno), <B>Modifica</B> (continui a giocare) e, quando c'è qualcosa da ritirare, <B>Ritira le non valide</B> (le carte che hai messo dal leggio in questo turno e che sono in un gruppo non valido tornano sul leggio; ciò che resta non valido rimane evidenziato).
     </p></li>
     <li><p>
         Puoi vedere il tuo punteggio e/o azzerarlo
@@ -146,6 +148,8 @@
     <li><p>
         <B>Validità: </B><img src="valider.gif"> Indica se il gruppo di carte giocate
         sulla lavagna è valido.
+        Segnala anche ciò che impedirebbe di terminare il turno: un jolly ripreso ancora nella tua mano; con i <B>Jolly bloccati</B>, un jolly del tavolo che non rappresenta più la stessa carta; con <B>Attendere un turno dopo l'apertura</B>, carte aggiunte ad altri gruppi nel turno in cui apri.
+        In una partita multigiocatore ospitata da un altro giocatore, controlla solo i gruppi: è il dispositivo dell'host a decidere se il tuo turno può terminare.
     </p></li>
     <li><p>
         <B>Informazioni: </B><img src="baseline_menu_black_18.png"> Puoi vedere la documentazione di Romi, il tuo
@@ -192,16 +196,30 @@
         <B>Livello di gioco: </B>In <B>Preferenze</B> &rarr; <B>Partita</B>, scegli <B>Principiante</B>, <B>Intermedio</B> o <B>Esperto</B>. Il livello stabilisce quanto abilmente Romi forma i suoi gruppi, ruba carte dalla lavagna e ricostruisce i gruppi che scompone.
     </p></li>
     <li><p>
-        <B>Regole: </B><B>Standard</B> o <B>12–13–1</B>. Con 12–13–1, un asso può anche seguire il re alla fine di una scala (per esempio 11-12-13-1), e la lavagna guadagna una colonna. La scala finisce lì: nessun 2 dopo quell'asso, e una scala non può iniziare e finire con un asso (1-2-…-13-1).
+        <B>Regole: </B><B>Standard</B> o <B>12–13–1</B>. Con 12–13–1, un asso può anche seguire il re alla fine di una scala (per esempio 11-12-13-1), e la lavagna guadagna una colonna. La scala finisce lì: nessun 2 dopo quell'asso.
     </p></li>
     <li><p>
-        <B>Joker: </B><B>Normale</B> (due matte nel mazzo), <B>Nessuno</B> (nessuna matta) o <B>Per tutti</B> (nessuna nel mazzo, ma ogni giocatore ne riceve una in mano all'inizio).
+        <B>Joker: </B><B>Normale</B> (due matte nel mazzo), <B>Nessuno</B> (nessuna matta) o <B>Per tutti</B> (nessuna nel mazzo, ma ogni giocatore ne riceve una in mano all'inizio). Una matta che resta in mano a fine partita conta 30 punti contro di te.
     </p></li>
     <li><p>
-        <B>Apertura: </B>I punti necessari per aprire: <B>25</B>, <B>30</B> o <B>50</B>.
+        <B>Jolly speciali (Twist): </B>Una quarta scelta di <B>Joker</B>: le matte di <B>Normale</B>, più un Jolly doppio, un Jolly cambio colore e un Jolly specchio per mazzo, come in <I>Rummikub with a Twist</I>. Il Jolly doppio può essere ripreso dal tavolo, come un jolly: trascina su di esso una delle carte che rappresenta; se il suo gruppo ha bisogno di entrambe, l'altra arriva anch'essa dalla tua mano. Anche un Jolly cambio colore all'estremità di una scala può essere ripreso, con la carta del colore della scala che rappresenta. Il Jolly specchio resta sul tavolo. Un jolly speciale che resta in mano a fine partita conta come una matta. In una partita in rete, ogni giocatore ha bisogno dell'ultima versione di Romi.
+    </p>
+    <UL>
+        <li><B>Jolly doppio: </B>sostituisce due carte: due numeri consecutivi in una scala (5, jolly, 8: vale il 6 e il 7), oppure i due colori mancanti di un gruppo dello stesso numero. Non si mette mai prima di un 2 né dopo un 12, tranne dopo un 12 alla fine di una scala con la regola 12–13–1, dove vale il 13 e l'1. All'apertura conta i due numeri che sostituisce.</li>
+        <li><B>Jolly cambio colore: </B>solo nelle scale. Sostituisce un numero, e dopo di lui la scala continua in un altro colore: 3 e 4 di un colore, il jolly (il 5), poi 6 di un altro colore.</li>
+        <li><B>Jolly specchio: </B>sta al centro, e i due lati si rispecchiano, con almeno due carte per lato: 4 5 jolly 5 4 dello stesso colore, oppure un gruppo di 3 in cui ogni colore compare due volte, in ordine speculare. Le carte si aggiungono o si tolgono dai due lati insieme. Una matta può stare di fronte a una carta e ne prende il valore; un jolly speciale sta di fronte solo a un jolly del suo tipo. All'apertura vale 0. Si mette trascinandolo sul tavolo, al centro del suo gruppo, oppure toccandolo subito dopo le carte del gruppo che stai formando in questo turno (4 5, poi il jolly specchio); toccato in qualsiasi altro momento, resta in mano.</li>
+    </UL></li>
+    <li><p>
+        <B>Jolly bloccati (giocatori): </B>Disattivato per impostazione predefinita: dopo aver aperto, puoi spostare un jolly già sul tavolo in un altro gruppo, purché ogni gruppo sia valido alla fine del tuo turno. Attivato, un jolly che era sul tavolo all'inizio del tuo turno può essere ripreso solo con la carta che rappresenta. Fino ad allora continua a rappresentare la stessa carta, in un gruppo di almeno 3 carte, e si sposta solo insieme a tutto il suo gruppo. La carta che lo riprende resta poi sul tavolo fino alla fine del tuo turno. Lo stesso vale per il Jolly doppio e per un Jolly cambio colore all'estremità di una scala; il Jolly specchio non lascia mai il tavolo, e il suo gruppo mantiene la sua forma: una scala resta dello stesso colore, un gruppo di un numero mantiene quel numero. L'impostazione <B>Jolly bloccati (Romi)</B> fa lo stesso per Romi (attiva per impostazione predefinita), tranne in una partita in rete, dove Romi segue l'impostazione dei giocatori. In una partita in rete, ogni giocatore ha bisogno dell'ultima versione di Romi.
     </p></li>
     <li><p>
-        <B>Limite di tempo e penalità: </B>Da 0 (nessun limite) a 5 minuti per turno. Allo scadere del tempo con l'interruttore <B>Penalità per limite di tempo</B> attivato, la lavagna torna com'era all'inizio del tuo turno — tranne al livello <B>Principiante</B> in una partita in solitario. Al livello <B>Esperto</B>, inoltre, peschi allora due carte invece di una.
+        <B>Apertura: </B>I punti necessari per aprire: <B>25</B>, <B>30</B>, <B>50</B> o <B>Nessun minimo</B> (qualsiasi gruppo di almeno 3 carte della mano apre).
+    </p></li>
+    <li><p>
+        <B>Attendere un turno dopo l'apertura: </B>Nel turno in cui apri puoi mettere solo gruppi formati con la tua mano; le carte già sul tavolo (e l'aggiunta ad altri gruppi) si possono usare dal turno successivo. I giocatori computer seguono la stessa regola.
+    </p></li>
+    <li><p>
+        <B>Limite di tempo e penalità: </B>Da 0 (nessun limite) a 5 minuti per turno. Allo scadere del tempo con l'interruttore <B>Penalità per limite di tempo</B> attivato, la lavagna torna com'era all'inizio del tuo turno. In una partita in solitario questo avviene anche ogni volta che più giocatori umani condividono il dispositivo, ma mai al livello <B>Principiante</B>. In una partita in solitario, inoltre, peschi allora una carta, o due al livello <B>Esperto</B>.
     </p></li>
     <li><p>
         <B>Il vincitore inizia: </B>Se attivo, il vincitore della partita precedente gioca per primo in quella successiva.
@@ -262,9 +280,10 @@
     </p></li>
     <li><p>
         Se un giocatore lascia la partita e non torna, il tavolo non resta più bloccato sul suo
-        turno: scaduto il suo tempo di riconnessione, i suoi due turni successivi sono giocati come
-        una semplice pescata, poi il computer prende il posto. Chi torna durante quei due turni
-        conserva il posto; chi torna più tardi lo riprende al computer.
+        turno: scaduto il suo tempo di riconnessione, o subito se ha lasciato la partita invece di
+        perdere la connessione, i suoi due turni successivi sono giocati come una semplice pescata,
+        poi il computer prende il posto. Chi torna durante quei due turni conserva il posto; chi
+        torna più tardi lo riprende al computer.
     </p></li>
 </UL>
 

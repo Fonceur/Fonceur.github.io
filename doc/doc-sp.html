@@ -11,10 +11,11 @@
 <p style="margin:2%">
     <B>Romi</B> permite que usted juegue el <B>Rummy (Rummikub, RummyCube, Rami)</B>
     juegos contra la computadora en 3 niveles diferentes.
-    Romi se juega con dos mazos de 52 cartas y con dos <img src="iconeFrime.gif"> comodines. Dos comodines es el ajuste <B>Comodín</B> predeterminado (<B>Normal</B>, <B>Ninguno</B> o <B>Para todos</B>) en <B>Preferencias</B> &rarr; <B>Juego</B>.
+    Romi se juega con dos mazos de 52 cartas y con dos <img src="iconeFrime.gif"> comodines. Dos comodines es el ajuste <B>Comodín</B> predeterminado (<B>Normal</B>, <B>Ninguno</B>, <B>Para todos</B> o <B>Comodines especiales (Twist)</B>) en <B>Preferencias</B> &rarr; <B>Juego</B> &rarr; <B>Comodines</B>.
     El propósito del juego es formar grupos de 3 o más cartas, que contengan números
     consecutivos del mismo palo (series) ó cartas del mismo número, pero de palos
     diferentes (grupos).
+    Cada serie o grupo debe contener al menos una carta real: los comodines solos, incluidos los comodines especiales, no forman ninguno.
 </p>
 <p style="margin:2%" class="demo-intro">
     ¿Quiere ver primero cómo se juega? Toque el botón <B>Demo</B> arriba a la derecha para ver a Romi jugar contra Romi. Toque la franja de demostración en cualquier momento para detenerla y volver a su propia partida.
@@ -31,7 +32,7 @@
     <li><p>
         El jugador abre su juego, jugando al menos un grupo de 3 cartas o más,
         usando únicamente las cartas disponibles en su tablilla.
-        El total de puntos debe ser igual o mayor a (25, 30 o 50) puntos.
+        El total de puntos debe ser igual o mayor a (25, 30 o 50) puntos — o cualquier grupo, con la apertura <B>Sin mínimo</B>.
     </p></li>
     <li><p>
         Después de que el jugador ha abierto el juego, él puede usar las cartas en el
@@ -73,7 +74,7 @@
     <li><p>
         Por favor date cuenta que tú no puedes mover cartas (que no son tuyas) sobre el
         tablero antes de abrir el juego con tu propio grupos de cartas sumando (25, 30 o 50)
-        puntos ó más.
+        puntos ó más (o cualquier grupo, con la apertura <B>Sin mínimo</B>).
     </p></li>
     <li><p>
         Para colocar una carta en el tablero, usted debe hacer clic sobre la carta y ésta se
@@ -92,6 +93,7 @@
         Usted puede restaurar el tablero tal y como estaba antes de que usted empezara a jugar su
         turno, simplemente haciendo clic sobre el ícono del reloj de arena y tendrá la
         opción de restaurar el tablero.
+        Cuando algunos de sus grupos no son válidos, usted elige entre <B>Restaurar</B> (el tablero tal y como estaba al inicio de su turno), <B>Modificar</B> (seguir jugando) y, cuando hay algo que devolver, <B>Devolver las inválidas</B> (las cartas que colocó desde su atril en este turno y que están en un grupo no válido vuelven al atril; lo que sigue sin ser válido queda resaltado).
     </p></li>
     <li><p>
         Tú puedes ver tus puntajes en Romi y tú puedes reestablecer tus puntajes a
@@ -163,6 +165,8 @@
     <li><p>
         <B>Validar el juego: </B><img src="valider.gif"> Verifica que los grupos de cartas jugadas
         en el tablero sean válidos.
+        También indica lo que impediría terminar su turno: un comodín recuperado que sigue en su mano; con <B>Comodines congelados</B>, un comodín de la mesa que ya no representa la misma carta; con <B>Esperar un turno tras abrir</B>, cartas añadidas a otros grupos en el turno de su apertura.
+        En una partida multijugador organizada por otro jugador, solo se verifican los grupos: el dispositivo del anfitrión decide si su turno puede terminar.
     </p></li>
     <li><p>
         <B>Información: </B><img src="baseline_menu_black_18.png"> Puede ver la documentación de Romi,
@@ -209,16 +213,30 @@
         <B>Nivel de Romi: </B>En <B>Preferencias</B> &rarr; <B>Juego</B>, elija <B>Principiante</B>, <B>Intermediario</B> o <B>Experto</B>. El nivel determina la habilidad de Romi para formar sus grupos, robar cartas del tablero y reconstruir los grupos que deshace.
     </p></li>
     <li><p>
-        <B>Reglamento: </B><B>Estándar</B> o <B>12–13–1</B>. Con 12–13–1, un as también puede seguir al rey al final de una serie (por ejemplo 11-12-13-1), y el tablero gana una columna. La serie termina ahí: no hay 2 después de ese as, y una serie no puede empezar y terminar con un as (1-2-…-13-1).
+        <B>Reglamento: </B><B>Estándar</B> o <B>12–13–1</B>. Con 12–13–1, un as también puede seguir al rey al final de una serie (por ejemplo 11-12-13-1), y el tablero gana una columna. La serie termina ahí: no hay 2 después de ese as.
     </p></li>
     <li><p>
-        <B>Comodín: </B><B>Normal</B> (dos comodines en la baraja), <B>Ninguno</B> (sin comodines) o <B>Para todos</B> (ninguno en la baraja, pero cada jugador empieza con uno en la mano).
+        <B>Comodín: </B><B>Normal</B> (dos comodines en la baraja), <B>Ninguno</B> (sin comodines) o <B>Para todos</B> (ninguno en la baraja, pero cada jugador empieza con uno en la mano). Un comodín que siga en tu mano al final de la partida cuenta 30 puntos en tu contra.
     </p></li>
     <li><p>
-        <B>Apertura: </B>Los puntos necesarios para abrir: <B>25</B>, <B>30</B> o <B>50</B>.
+        <B>Comodines especiales (Twist): </B>Una cuarta opción de <B>Comodín</B>: los comodines de <B>Normal</B>, más un Comodín doble, un Comodín de cambio de color y un Comodín espejo por baraja, como en <I>Rummikub with a Twist</I>. El Comodín doble puede recuperarse de la mesa, como un comodín: arrastra sobre él una de las cartas que representa; si su grupo necesita las dos, la otra sale también de tu mano. Un Comodín de cambio de color en un extremo de una escalera también puede recuperarse, con la carta del color de la escalera que representa. El Comodín espejo se queda en la mesa. Un comodín especial que quede en tu mano al final de la partida cuenta como un comodín. En una partida en red, cada jugador necesita la última versión de Romi.
+    </p>
+    <UL>
+        <li><B>Comodín doble: </B>sustituye dos cartas: dos números consecutivos en una escalera (5, comodín, 8: vale el 6 y el 7), o los dos colores que faltan en un grupo del mismo número. Nunca se coloca antes de un 2 ni después de un 12, salvo después de un 12 al final de una escalera con la regla 12–13–1, donde vale el 13 y el 1. En la apertura cuenta los dos números que sustituye.</li>
+        <li><B>Comodín de cambio de color: </B>solo en escaleras. Sustituye un número, y después de él la escalera sigue en otro color: 3 y 4 de un color, el comodín (el 5), luego 6 de otro color.</li>
+        <li><B>Comodín espejo: </B>va en el centro, y los dos lados son el reflejo uno del otro, con al menos dos cartas por lado: 4 5 comodín 5 4 de un mismo color, o un grupo de 3 donde cada color aparece dos veces, en orden de espejo. Las cartas se añaden o se quitan por los dos lados a la vez. Un comodín normal puede estar frente a una carta y toma su valor; un comodín especial solo está frente a uno de su mismo tipo. Vale 0 en la apertura. Se coloca arrastrándolo al tablero, en el centro de su grupo, o tocándolo justo después de las cartas del grupo que estás formando en este turno (4 5, luego el comodín espejo); tocado en cualquier otro momento, se queda en tu mano.</li>
+    </UL></li>
+    <li><p>
+        <B>Comodines congelados (jugadores): </B>Desactivado por defecto: una vez que has abierto, puedes mover un comodín que ya está en la mesa a otro grupo, siempre que todos los grupos sean válidos al final de tu turno. Activado, un comodín que estaba en la mesa al comienzo de tu turno solo puede recuperarse con la carta que representa. Hasta entonces sigue representando la misma carta, en un grupo de al menos 3 cartas, y solo se mueve con todo su grupo. La carta que lo recupera queda luego en la mesa hasta el final de tu turno. Lo mismo vale para el Comodín doble y para un Comodín de cambio de color en un extremo de una escalera; el Comodín espejo nunca sale de la mesa, y su grupo conserva su forma: una escalera sigue siendo del mismo color, un grupo de un mismo número conserva ese número. El ajuste <B>Comodines congelados (Romi)</B> hace lo mismo para Romi (activado por defecto), salvo en una partida en red, donde Romi sigue el ajuste de los jugadores. En una partida en red, cada jugador necesita la última versión de Romi.
     </p></li>
     <li><p>
-        <B>Límite de tiempo y penalización: </B>De 0 (sin límite) a 5 minutos por turno. Cuando se agota el tiempo con el interruptor <B>Penalización por límite de tiempo</B> activado, el tablero vuelve al estado que tenía al inicio de su turno — salvo en el nivel <B>Principiante</B> en una partida en solitario. En el nivel <B>Experto</B>, además, roba entonces dos cartas en lugar de una.
+        <B>Apertura: </B>Los puntos necesarios para abrir: <B>25</B>, <B>30</B>, <B>50</B> o <B>Sin mínimo</B> (cualquier grupo de al menos 3 cartas de la mano abre).
+    </p></li>
+    <li><p>
+        <B>Esperar un turno tras abrir: </B>En el turno de su apertura solo puede colocar grupos formados con su mano; las cartas del tablero (y añadir a otros grupos) se pueden usar a partir de su próximo turno. Los jugadores de la computadora siguen la misma regla.
+    </p></li>
+    <li><p>
+        <B>Límite de tiempo y penalización: </B>De 0 (sin límite) a 5 minutos por turno. Cuando se agota el tiempo con el interruptor <B>Penalización por límite de tiempo</B> activado, el tablero vuelve al estado que tenía al inicio de su turno. En una partida en solitario esto también ocurre siempre que varios jugadores humanos comparten el dispositivo, pero nunca en el nivel <B>Principiante</B>. En una partida en solitario, además, roba entonces una carta, o dos en el nivel <B>Experto</B>.
     </p></li>
     <li><p>
         <B>Ganador comienza: </B>Si está activado, el ganador de la partida anterior juega primero en la siguiente.
@@ -278,9 +296,10 @@
     </p></li>
     <li><p>
         Si un jugador deja la partida y no vuelve, la mesa ya no se queda bloqueada en su turno: una
-        vez agotado su plazo de reconexión, sus dos turnos siguientes se juegan como una simple
-        extracción y después la computadora toma el puesto. Volver durante esos dos turnos conserva
-        el puesto; volver más tarde se lo recupera a la computadora.
+        vez agotado su plazo de reconexión, o de inmediato si abandonó la partida en lugar de perder
+        la conexión, sus dos turnos siguientes se juegan como una simple extracción y después la
+        computadora toma el puesto. Volver durante esos dos turnos conserva el puesto; volver más
+        tarde se lo recupera a la computadora.
     </p></li>
 </UL>
 

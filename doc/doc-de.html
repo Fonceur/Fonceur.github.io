@@ -11,9 +11,10 @@
 <p style="margin:2%">
     Mit <B>Romi</B> kann man <B>Rummy Tile (RummyCube, Rummikub, Rami)</B> Spiele gegen den Computer
     spielen. Romi wird mit zwei Sätzen zu je 52 Karten und mit zwei Jokern <img
-        src="iconeFrime.gif"> gespielt. Zwei Joker sind die Standardeinstellung <B>Joker</B> (<B>Normal</B>, <B>Keine</B> oder <B>Für alle</B>) unter <B>Einstellungen</B> &rarr; <B>Spiel</B>. Der Sinn des Spiels besteht darin, Gruppen von 3 und mehr
+        src="iconeFrime.gif"> gespielt. Zwei Joker sind die Standardeinstellung <B>Joker</B> (<B>Normal</B>, <B>Keine</B>, <B>Für alle</B> oder <B>Spezialjoker (Twist)</B>) unter <B>Einstellungen</B> &rarr; <B>Spiel</B> &rarr; <B>Joker</B>. Der Sinn des Spiels besteht darin, Gruppen von 3 und mehr
     Karten zu bilden, die entweder aus aufeinanderfolgenden Karten derselben Farbe oder aus Karten
     mit demselben Wert, aber mit unterschiedlichen Farben bestehen.
+    Jede Gruppe muss mindestens eine echte Karte enthalten: Joker allein, auch Spezialjoker, bilden keine Gruppe.
 </p>
 <p style="margin:2%" class="demo-intro">
     Möchten Sie zuerst sehen, wie gespielt wird? Tippen Sie oben rechts auf <B>Demo</B>, um Romi gegen Romi spielen zu sehen. Tippen Sie jederzeit auf das Demo-Banner, um sie zu beenden und zu Ihrem eigenen Spiel zurückzukehren.
@@ -29,7 +30,7 @@
     <li><p>
         Der Spieler eröffnet das Spiel, indem er eine Gruppe von mindestens 3 Karten ausspielt.
         Dafür darf er nur die Karten auf seiner Palette verwenden. Die Summe des Kartenwerts
-        muss mindestens (25, 30 oder 50) betragen.
+        muss mindestens (25, 30 oder 50) betragen — oder jede Gruppe, mit der Eröffnung <B>Kein Minimum</B>.
     </p></li>
     <li><p>
         Nachdem der Spieler das Spiel eröffnet hat, kann er mit den Karten auf dem Spielfeld
@@ -67,7 +68,7 @@
     <li><p>
         Bitte beachten Sie, dass Sie keine Karten auf dem Spielbrett bewegen können
         (ausser Ihre eigenen), bevor Sie das Spiel nicht mit einer Gruppe von eigenen Karten mit
-        (25, 30 oder 50) oder mehr Punkten eröffnet haben.
+        (25, 30 oder 50) oder mehr Punkten (oder mit einer beliebigen Gruppe, bei der Eröffnung <B>Kein Minimum</B>) eröffnet haben.
     </p></li>
     <li><p>
         Um eine Karte auf das Brett zu legen, Karte anklicken und es bewegt sich zum Spielbrett.
@@ -82,6 +83,7 @@
     <li><p>
         Um das Brett wiederherzustellen bevor Sie den Zug ausgeführt haben, auf die
         Sand-Uhr klicken für die Option zum zurückstellen.
+        Sind einige Ihrer Gruppen ungültig, wählen Sie zwischen <B>Zurückstellen</B> (das Spielfeld wie zu Beginn Ihres Zuges), <B>Ändern</B> (weiterspielen) und, wenn es etwas zurückzunehmen gibt, <B>Ungültige zurücknehmen</B> (die Karten, die Sie in diesem Zug aus Ihrer Ablage gelegt haben und die in einer ungültigen Gruppe liegen, kehren in die Ablage zurück; was weiterhin ungültig ist, bleibt hervorgehoben).
     </p></li>
     <li><p>
         Sie können Ihren Romi-Punktestand ansehen, den Punktestand auf Null zurücksetzen
@@ -151,6 +153,8 @@
     <li><p>
         <B>Spielzug überprüfen: </B><img src="valider.gif"> Überprüft
         die Kartengruppen auf dem Spielfeld auf ihre Gültigkeit.
+        Zeigt außerdem, was das Ende Ihres Zuges verhindern würde: ein zurückgenommener Joker, der noch auf Ihrer Hand ist; mit <B>Eingefrorene Joker</B> ein Joker vom Tisch, der nicht mehr für dieselbe Karte steht; mit <B>Nach dem Eröffnen eine Runde warten</B> an andere Gruppen angelegte Karten im Zug Ihrer Eröffnung.
+        In einem Mehrspieler-Spiel, das jemand anderes eröffnet hat, werden nur die Gruppen überprüft: Ob Ihr Zug enden kann, entscheidet das Gerät des Hosts.
     </p></li>
     <li><p>
         <B>Information: </B><img src="baseline_menu_black_18.png"> Sie können die Dokumentation für
@@ -198,16 +202,30 @@
         <B>Spielen Ebene: </B>Unter <B>Einstellungen</B> &rarr; <B>Spiel</B> wählen Sie <B>Anfänger</B>, <B>Fortgeschritten</B> oder <B>Experte</B>. Die Stufe bestimmt, wie geschickt Romi seine Gruppen bildet, Karten vom Spielfeld stiehlt und die aufgelösten Gruppen neu aufbaut.
     </p></li>
     <li><p>
-        <B>Regeln: </B><B>Standard</B> oder <B>12–13–1</B>. Mit 12–13–1 darf am Ende einer Reihe auch ein Ass auf den König folgen (zum Beispiel 11-12-13-1), und das Spielfeld erhält eine Spalte mehr. Die Reihe endet dort: keine 2 nach diesem Ass, und eine Reihe darf nicht zugleich mit einem Ass beginnen und enden (1-2-…-13-1).
+        <B>Regeln: </B><B>Standard</B> oder <B>12–13–1</B>. Mit 12–13–1 darf am Ende einer Reihe auch ein Ass auf den König folgen (zum Beispiel 11-12-13-1), und das Spielfeld erhält eine Spalte mehr. Die Reihe endet dort: keine 2 nach diesem Ass.
     </p></li>
     <li><p>
-        <B>Joker: </B><B>Normal</B> (zwei Joker im Kartensatz), <B>Keine</B> (keine Joker) oder <B>Für alle</B> (keine im Kartensatz, aber jeder Spieler beginnt mit einem auf der Hand).
+        <B>Joker: </B><B>Normal</B> (zwei Joker im Kartensatz), <B>Keine</B> (keine Joker) oder <B>Für alle</B> (keine im Kartensatz, aber jeder Spieler beginnt mit einem auf der Hand). Ein Joker, der am Spielende noch auf Ihrer Hand ist, zählt 30 Punkte gegen Sie.
     </p></li>
     <li><p>
-        <B>Eröffnung: </B>Die zum Eröffnen nötigen Punkte: <B>25</B>, <B>30</B> oder <B>50</B>.
+        <B>Spezialjoker (Twist): </B>Eine vierte Wahl unter <B>Joker</B>: die Joker von <B>Normal</B> und dazu je Kartensatz ein Doppeljoker, ein Farbwechsel-Joker und ein Spiegeljoker, wie in <I>Rummikub with a Twist</I>. Der Doppeljoker kann wie ein Joker vom Tisch zurückgenommen werden: Ziehen Sie eine der Karten, für die er steht, auf ihn; braucht seine Gruppe beide, kommt die andere aus Ihrer Hand mit. Ein Farbwechsel-Joker am Ende einer Reihe kann ebenfalls zurückgenommen werden, mit der Karte in der Farbe der Reihe, für die er steht. Der Spiegeljoker bleibt auf dem Tisch. Ein Spezialjoker, der am Spielende noch auf der Hand ist, zählt wie ein Joker. In einem Netzwerkspiel braucht jeder Spieler die neueste Version von Romi.
+    </p>
+    <UL>
+        <li><B>Doppeljoker: </B>ersetzt zwei Karten: zwei aufeinanderfolgende Zahlen in einer Reihe (5, Joker, 8: er ist die 6 und die 7) oder die zwei fehlenden Farben einer Gruppe gleicher Zahlen. Er liegt nie vor einer 2 oder nach einer 12, außer nach einer 12 am Ende einer Reihe mit der Regel 12–13–1, wo er die 13 und die 1 ist. Beim Auslegen zählt er die beiden Zahlen, die er ersetzt.</li>
+        <li><B>Farbwechsel-Joker: </B>nur in Reihen. Er ersetzt eine Zahl, und die Reihe geht nach ihm in einer anderen Farbe weiter: 3 und 4 einer Farbe, der Joker (die 5), dann 6 einer anderen Farbe.</li>
+        <li><B>Spiegeljoker: </B>steht in der Mitte, und die beiden Seiten spiegeln einander, mit mindestens zwei Karten auf jeder Seite: 4 5 Joker 5 4 in einer Farbe, oder eine Gruppe von 3ern, in der jede Farbe zweimal vorkommt, in gespiegelter Reihenfolge. Karten werden auf beiden Seiten zugleich angelegt oder entfernt. Ein normaler Joker kann einer Karte gegenüberstehen und nimmt ihren Wert an; ein Spezialjoker steht nur einem Joker seiner Art gegenüber. Beim Auslegen zählt er 0. Er wird gelegt, indem Sie ihn auf das Spielfeld ziehen, in die Mitte seiner Gruppe, oder indem Sie ihn direkt nach den Karten der Gruppe antippen, die Sie in diesem Zug bilden (4 5, dann der Spiegeljoker); zu jedem anderen Zeitpunkt angetippt, bleibt er auf der Hand.</li>
+    </UL></li>
+    <li><p>
+        <B>Eingefrorene Joker (Spieler): </B>Standardmäßig aus: Sobald Sie eröffnet haben, dürfen Sie einen Joker, der schon auf dem Tisch liegt, in eine andere Gruppe verschieben, solange am Ende Ihres Zuges jede Gruppe gültig ist. Eingeschaltet kann ein Joker, der zu Beginn Ihres Zuges auf dem Tisch lag, nur mit der Karte zurückgenommen werden, für die er steht. Bis dahin steht er weiter für dieselbe Karte, in einer Gruppe von mindestens 3 Karten, und bewegt sich nur mit seiner ganzen Gruppe. Die Karte, die ihn zurücknimmt, bleibt dann bis zum Ende Ihres Zuges auf dem Tisch. Dasselbe gilt für den Doppeljoker und für einen Farbwechsel-Joker am Ende einer Reihe; der Spiegeljoker verlässt den Tisch nie, und seine Gruppe behält ihre Form: Eine Reihe bleibt in derselben Farbe, eine Gruppe einer Zahl behält diese Zahl. Die Einstellung <B>Eingefrorene Joker (Romi)</B> gilt ebenso für Romi (standardmäßig an), außer in einem Netzwerkspiel, wo Romi der Einstellung der Spieler folgt. In einem Netzwerkspiel braucht jeder Spieler die neueste Version von Romi.
     </p></li>
     <li><p>
-        <B>Zeitlimit und Strafe: </B>Von 0 (kein Limit) bis 5 Minuten pro Zug. Läuft die Zeit bei eingeschalteter <B>Zeitlimit-Strafe</B> ab, wird das Spielfeld in den Zustand zu Beginn Ihres Zuges zurückversetzt — außer auf der Stufe <B>Anfänger</B> in einem Solospiel. Auf der Stufe <B>Experte</B> ziehen Sie dann außerdem zwei Karten statt einer.
+        <B>Eröffnung: </B>Die zum Eröffnen nötigen Punkte: <B>25</B>, <B>30</B>, <B>50</B> oder <B>Kein Minimum</B> (jede Gruppe von mindestens 3 Karten aus der Hand eröffnet).
+    </p></li>
+    <li><p>
+        <B>Nach dem Eröffnen eine Runde warten: </B>Im Zug Ihrer Eröffnung legen Sie nur Gruppen aus Ihrer eigenen Hand; die Karten auf dem Tisch (und das Anlegen an andere Gruppen) dürfen Sie erst ab Ihrem nächsten Zug verwenden. Die Computerspieler folgen derselben Regel.
+    </p></li>
+    <li><p>
+        <B>Zeitlimit und Strafe: </B>Von 0 (kein Limit) bis 5 Minuten pro Zug. Läuft die Zeit bei eingeschalteter <B>Zeitlimit-Strafe</B> ab, wird das Spielfeld in den Zustand zu Beginn Ihres Zuges zurückversetzt. In einem Solospiel geschieht das auch immer dann, wenn sich mehrere menschliche Spieler das Gerät teilen, aber nie auf der Stufe <B>Anfänger</B>. In einem Solospiel ziehen Sie dann außerdem eine Karte, auf der Stufe <B>Experte</B> zwei.
     </p></li>
     <li><p>
         <B>Gewinner beginnt: </B>Wenn aktiviert, spielt der Gewinner des vorigen Spiels im nächsten als Erster.
@@ -269,10 +287,11 @@
     </p></li>
     <li><p>
         Verlässt ein Spieler das Spiel und kommt nicht zurück, bleibt der Tisch nicht mehr an seinem
-        Zug hängen: Sobald seine Wiederverbindungsfrist abgelaufen ist, werden seine beiden nächsten
-        Züge als einfaches Ziehen gespielt, danach übernimmt der Computer den Platz. Wer während
-        dieser beiden Züge zurückkommt, behält seinen Platz; wer später zurückkommt, erhält ihn vom
-        Computer zurück.
+        Zug hängen: Sobald seine Wiederverbindungsfrist abgelaufen ist, oder sofort, wenn er das
+        Spiel selbst verlassen und nicht nur die Verbindung verloren hat, werden seine beiden
+        nächsten Züge als einfaches Ziehen gespielt, danach übernimmt der Computer den Platz. Wer
+        während dieser beiden Züge zurückkommt, behält seinen Platz; wer später zurückkommt, erhält
+        ihn vom Computer zurück.
     </p></li>
 </UL>
 

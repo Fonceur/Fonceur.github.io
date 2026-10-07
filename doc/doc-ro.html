@@ -11,9 +11,10 @@
 <p style="margin:2%">
     <B>Romi</B> vă permite să jucați <B>Rummy Tile (RummyCube, Rummikub, Remi)</B> împotriva
     computerului la 3 niveluri diferite de dificultate. Jocul folosește două seturi de 52 de
-    cărți și doi <img src="iconeFrime.gif"> jokeri. Doi jokeri este setarea <B>Joker</B> implicită (<B>Normal</B>, <B>Niciunul</B> sau <B>Pentru toți</B>) din <B>Setări</B> &rarr; <B>Joc</B>. Scopul acestui joc este de a forma grupuri
+    cărți și doi <img src="iconeFrime.gif"> jokeri. Doi jokeri este setarea <B>Joker</B> implicită (<B>Normal</B>, <B>Niciunul</B>, <B>Pentru toți</B> sau <B>Jokeri speciali (Twist)</B>) din <B>Setări</B> &rarr; <B>Joc</B> &rarr; <B>Jokeri</B>. Scopul acestui joc este de a forma grupuri
     de 3 sau mai multe cărți, care conțin fie cărți consecutive de aceeași culoare, fie cărți
     cu aceeași valoare numerică dar de culori diferite.
+    Fiecare grup trebuie să conțină cel puțin o carte adevărată: jokerii singuri, inclusiv jokerii speciali, nu formează un grup.
 </p>
 <p style="margin:2%" class="demo-intro">
     Vrei să vezi mai întâi cum se joacă? Atinge butonul <B>Demo</B> din dreapta sus pentru a urmări Romi jucând împotriva lui Romi. Atinge banda demonstrației oricând pentru a o opri și a reveni la propriul tău joc.
@@ -29,7 +30,7 @@
     <li><p>
         Jucătorul își deschide jocul jucând cel puțin un grup de 3 cărți sau mai multe,
         folosind doar cărțile de pe raftul său. Suma valorilor acestor cărți trebuie să fie
-        (25, 30 sau 50) sau mai mult.
+        (25, 30 sau 50) sau mai mult — sau orice grup, cu deschiderea <B>Fără minim</B>.
     </p></li>
     <li><p>
         După ce jucătorul a deschis jocul, poate folosi cărțile de pe tablă pentru a completa
@@ -63,7 +64,7 @@
     <li><p>
         Vă rugăm să rețineți că nu puteți muta cărțile (care nu sunt ale dumneavoastră) de pe
         tablă înainte de a deschide jocul cu propriile grupuri de cărți de (25, 30 sau 50)
-        puncte sau mai mult.
+        puncte sau mai mult (sau orice grup, cu deschiderea <B>Fără minim</B>).
     </p></li>
     <li><p>
         Pentru a plasa o carte pe tablă, puteți face clic pe carte și aceasta se va muta
@@ -79,6 +80,7 @@
     <li><p>
         Puteți restaura tabla așa cum era înainte de a începe să vă jucați tura, făcând clic
         pe pictograma clepsidrei și veți avea opțiunea de a restaura tabla.
+        Când unele dintre grupurile dumneavoastră sunt invalide, alegeți între <B>Restaurează</B> (tabla așa cum era la începutul turei), <B>Modifică</B> (continuați să jucați) și, când există ceva de retras, <B>Retrage invalidele</B> (cărțile pe care le-ați pus de pe suport în această tură și care se află într-un grup invalid se întorc pe suport; ce rămâne invalid rămâne evidențiat).
     </p></li>
     <li><p>
         Puteți vedea scorurile Romi și/sau reseta scorurile la zero făcând clic pe butonul
@@ -146,6 +148,8 @@
     <li><p>
         <B>Validare: </B><img src="valider.gif"> Verifică dacă grupurile de cărți jucate pe
         tablă sunt valide.
+        Arată și ce ar împiedica încheierea turei: un joker luat înapoi care este încă pe suportul dumneavoastră; cu <B>Jokeri înghețați</B>, un joker de pe masă care nu mai înlocuiește aceeași carte; cu <B>Așteaptă o tură după deschidere</B>, cărți adăugate la alte grupuri în tura în care deschideți.
+        Într-o partidă multiplayer găzduită de altcineva, verifică doar grupurile: dispozitivul gazdei decide dacă tura dumneavoastră se poate încheia.
     </p></li>
     <li><p>
         <B>Informații: </B><img src="baseline_menu_black_18.png"> Puteți vedea documentația Romi, statisticile
@@ -192,16 +196,30 @@
         <B>Nivel joc: </B>În <B>Setări</B> &rarr; <B>Joc</B>, alegeți <B>Începător</B>, <B>Intermediar</B> sau <B>Expert</B>. Nivelul stabilește cât de abil formează Romi grupurile sale, fură cărți de pe tablă și reconstruiește grupurile pe care le desface.
     </p></li>
     <li><p>
-        <B>Regula Romi: </B><B>Standard</B> sau <B>12–13–1</B>. Cu 12–13–1, un as poate urma și după rege la sfârșitul unei suite (de exemplu 11-12-13-1), iar tabla câștigă o coloană în plus. Suita se termină acolo: niciun 2 după acel as, iar o suită nu poate să înceapă și să se termine cu un as (1-2-…-13-1).
+        <B>Regula Romi: </B><B>Standard</B> sau <B>12–13–1</B>. Cu 12–13–1, un as poate urma și după rege la sfârșitul unei suite (de exemplu 11-12-13-1), iar tabla câștigă o coloană în plus. Suita se termină acolo: niciun 2 după acel as.
     </p></li>
     <li><p>
-        <B>Joker: </B><B>Normal</B> (doi jokeri în pachet), <B>Niciunul</B> (fără jokeri) sau <B>Pentru toți</B> (niciunul în pachet, dar fiecare jucător începe cu unul în mână).
+        <B>Joker: </B><B>Normal</B> (doi jokeri în pachet), <B>Niciunul</B> (fără jokeri) sau <B>Pentru toți</B> (niciunul în pachet, dar fiecare jucător începe cu unul în mână). Un joker rămas încă în mână la sfârșitul jocului contează 30 de puncte împotriva dumneavoastră.
     </p></li>
     <li><p>
-        <B>Deschidere: </B>Punctele necesare pentru a deschide: <B>25</B>, <B>30</B> sau <B>50</B>.
+        <B>Jokeri speciali (Twist): </B>O a patra opțiune la <B>Joker</B>: jokerii din <B>Normal</B>, plus câte un Joker dublu, un Joker de schimbare a culorii și un Joker oglindă pentru fiecare pachet, ca în <I>Rummikub with a Twist</I>. Jokerul dublu poate fi luat înapoi de pe masă, ca un joker: trageți peste el una dintre cărțile pe care le înlocuiește; dacă grupul are nevoie de amândouă, cealaltă vine și ea din mâna dumneavoastră. Un Joker de schimbare a culorii aflat la capătul unei serii poate fi și el luat înapoi, cu cartea din culoarea seriei pe care o înlocuiește. Jokerul oglindă rămâne pe masă. Un joker special rămas în mână la sfârșitul jocului contează ca un joker. Într-un joc în rețea, fiecare jucător are nevoie de cea mai nouă versiune de Romi.
+    </p>
+    <UL>
+        <li><B>Joker dublu: </B>înlocuiește două cărți: două numere consecutive într-o serie (5, joker, 8: el este 6 și 7) sau cele două culori lipsă dintr-un grup de același număr. Nu se pune niciodată înaintea unui 2 sau după un 12, cu excepția locului de după un 12 la capătul unei serii cu regula 12–13–1, unde este 13 și 1. La deschidere, contează cele două numere pe care le înlocuiește.</li>
+        <li><B>Joker de schimbare a culorii: </B>doar în serii. Înlocuiește un număr, iar după el seria continuă în altă culoare: 3 și 4 dintr-o culoare, jokerul (5), apoi 6 din altă culoare.</li>
+        <li><B>Joker oglindă: </B>stă la mijloc, iar cele două părți se oglindesc, cu cel puțin două cărți pe fiecare parte: 4 5 joker 5 4 de aceeași culoare, sau un grup de 3 în care fiecare culoare apare de două ori, în ordine în oglindă. Cărțile se adaugă sau se scot de pe ambele părți deodată. Un joker obișnuit poate sta în fața unei cărți și îi ia valoarea; un joker special stă doar în fața unui joker de același fel. Valorează 0 la deschidere. Se așază trăgându-l pe tablă, în mijlocul grupului său, sau atingându-l imediat după cărțile grupului pe care îl formați în această tură (4 5, apoi jokerul oglindă); atins în orice alt moment, rămâne în mână.</li>
+    </UL></li>
+    <li><p>
+        <B>Jokeri înghețați (jucători): </B>Dezactivat implicit: după ce ați deschis, puteți muta un joker aflat deja pe masă într-un alt grup, cu condiția ca fiecare grup să fie valid la sfârșitul turei. Activat, un joker care era pe masă la începutul turei dumneavoastră poate fi luat înapoi doar cu cartea pe care o înlocuiește. Până atunci, el înlocuiește în continuare aceeași carte, într-un grup de cel puțin 3 cărți, și se mută doar împreună cu tot grupul său. Cartea care îl ia înapoi rămâne apoi pe masă până la sfârșitul turei dumneavoastră. La fel și Jokerul dublu și un Joker de schimbare a culorii aflat la capătul unei serii; Jokerul oglindă nu părăsește niciodată masa, iar grupul său își păstrează forma: o serie rămâne de aceeași culoare, un grup al unui număr își păstrează acel număr. Setarea <B>Jokeri înghețați (Romi)</B> face la fel pentru Romi (activată implicit), cu excepția unui joc în rețea, unde Romi urmează setarea jucătorilor. Într-un joc în rețea, fiecare jucător are nevoie de cea mai nouă versiune de Romi.
     </p></li>
     <li><p>
-        <B>Limită de timp și penalizare: </B>De la 0 (fără limită) la 5 minute pe tură. Când timpul expiră cu comutatorul <B>Penalizare limită de timp</B> activat, tabla revine la starea de la începutul turei dvs. — cu excepția nivelului <B>Începător</B> într-un joc solo. La nivelul <B>Expert</B>, trageți atunci în plus două cărți în loc de una.
+        <B>Deschidere: </B>Punctele necesare pentru a deschide: <B>25</B>, <B>30</B>, <B>50</B> sau <B>Fără minim</B> (orice grup de cel puțin 3 cărți din suport deschide).
+    </p></li>
+    <li><p>
+        <B>Așteaptă o tură după deschidere: </B>În tura în care deschideți, puteți așeza doar grupuri din propriul suport; cărțile de pe masă (și adăugarea la alte grupuri) se pot folosi din tura următoare. Jucătorii calculator urmează aceeași regulă.
+    </p></li>
+    <li><p>
+        <B>Limită de timp și penalizare: </B>De la 0 (fără limită) la 5 minute pe tură. Când timpul expiră cu comutatorul <B>Penalizare limită de timp</B> activat, tabla revine la starea de la începutul turei dvs. Într-un joc solo, acest lucru se întâmplă și ori de câte ori mai mulți jucători umani împart dispozitivul, dar niciodată la nivelul <B>Începător</B>. Într-un joc solo, trageți atunci în plus o carte, sau două la nivelul <B>Expert</B>.
     </p></li>
     <li><p>
         <B>Câștigătorul începe: </B>Când este activat, câștigătorul jocului precedent joacă primul în următorul.
@@ -261,9 +279,10 @@
     </p></li>
     <li><p>
         Dacă un jucător părăsește partida și nu revine, masa nu mai rămâne blocată la rândul său:
-        odată expirat termenul său de reconectare, următoarele două rânduri ale sale sunt jucate ca
-        o simplă tragere de carte, apoi calculatorul preia locul. Cine revine în timpul acestor două
-        rânduri își păstrează locul; cine revine mai târziu îl recuperează de la calculator.
+        odată expirat termenul său de reconectare, sau imediat dacă a părăsit partida în loc să
+        piardă conexiunea, următoarele două rânduri ale sale sunt jucate ca o simplă tragere de
+        carte, apoi calculatorul preia locul. Cine revine în timpul acestor două rânduri își
+        păstrează locul; cine revine mai târziu îl recuperează de la calculator.
     </p></li>
 </UL>
 

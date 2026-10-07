@@ -11,9 +11,10 @@
 <p style="margin:2%">
     <B>Romi</B> deixa você jogar <B>Rummy Tile (RummyCube, Rummikub, Rami)</B> contra o
     computador em 3 níveis diferentes. O jogo usa dois grupos de 52 cartas e dois <img
-        src="iconeFrime.gif"> curingas. Dois curingas é a configuração <B>Curinga</B> padrão (<B>Normal</B>, <B>Nenhum</B> ou <B>Para todos</B>) em <B>Preferências</B> &rarr; <B>Jogo</B>. O objetivo deste jogo é formar grupos de 3 ou mais
+        src="iconeFrime.gif"> curingas. Dois curingas é a configuração <B>Curinga</B> padrão (<B>Normal</B>, <B>Nenhum</B>, <B>Para todos</B> ou <B>Curingas especiais (Twist)</B>) em <B>Preferências</B> &rarr; <B>Jogo</B> &rarr; <B>Curingas</B>. O objetivo deste jogo é formar grupos de 3 ou mais
     cartas, que contenham cartas consecutivas do mesmo naipe ou de mesmo valor numérico, porém
     com naipes diferentes.
+    Cada grupo deve conter pelo menos uma carta de verdade: curingas sozinhos, inclusive os curingas especiais, não formam um grupo.
 </p>
 <p style="margin:2%" class="demo-intro">
     Quer ver primeiro como se joga? Toque no botão <B>Demo</B> no canto superior direito para ver o Romi jogar contra o Romi. Toque na faixa da demonstração a qualquer momento para a parar e voltar ao seu próprio jogo.
@@ -29,7 +30,7 @@
     </p></li>
     <li><p>
         O jogador abre seu jogo jogando pelo menos um grupo de 3 cartas ou mais, usando apenas as
-        cartas da sua prateleira. A soma dos valores dessas cartas deve ser (25, 30 ou 50) ou mais.
+        cartas da sua prateleira. A soma dos valores dessas cartas deve ser (25, 30 ou 50) ou mais — ou qualquer grupo, com a abertura <B>Sem mínimo</B>.
     </p></li>
     <li><p>
         Depois que o jogador abriu o jogo, ele pode usar as cartas no tabuleiro para completar
@@ -64,7 +65,7 @@
     <li><p>
         Por favor, note que você não pode mover cartas (que não são suas)
         na mesa antes de você abrir o jogo com suas próprias cartas totalizando (25, 30
-        ou 50) pontos ou mais.
+        ou 50) pontos ou mais (ou qualquer grupo, com a abertura <B>Sem mínimo</B>).
     </p></li>
     <li><p>
         Para baixar uma carta, clique na carta e ela será movida para a mesa automaticamente.
@@ -80,6 +81,7 @@
     <li><p>
         Você pode voltar atrás e restituir a mesa da forma que estava antes de você
         jogar clicando na ampulheta, que lhe dará a opção voltar.
+        Quando alguns dos seus grupos são inválidos, você escolhe entre <B>Voltar</B> (a mesa como estava no início do seu turno), <B>Modificar</B> (continuar jogando) e, quando há algo a remover, <B>Remover as inválidas</B> (as cartas que você colocou do seu suporte neste turno e que estão num grupo inválido voltam para o suporte; o que continua inválido fica destacado).
     </p></li>
     <li><p>
         Você pode ver seus resultados do Romi e/ou voltar seus resultados para zero,
@@ -147,6 +149,8 @@
     <li><p>
         <B>Validar: </B><img src="valider.gif"> Verifica se os grupos de cartas jogados na mesa são
         válidos.
+        Indica também o que impediria o fim do seu turno: um curinga recuperado que ainda está na sua prateleira; com <B>Curingas congelados</B>, um curinga da mesa que já não representa a mesma carta; com <B>Esperar um turno após abrir</B>, cartas adicionadas a outros grupos no turno da sua abertura.
+        Numa partida multijogador organizada por outro jogador, só verifica os grupos: é o dispositivo do anfitrião que decide se o seu turno pode terminar.
     </p></li>
     <li><p>
         <B>Informação: </B><img src="baseline_menu_black_18.png"> Você pode ver a documentação
@@ -193,16 +197,30 @@
         <B>Play nível: </B>Em <B>Preferências</B> &rarr; <B>Jogo</B>, escolha <B>Iniciante</B>, <B>Intermediário</B> ou <B>Avançado</B>. O nível define a habilidade de Romi para formar seus grupos, roubar cartas do tabuleiro e reconstruir os grupos que desfaz.
     </p></li>
     <li><p>
-        <B>Regras: </B><B>Standard</B> ou <B>12–13–1</B>. Com 12–13–1, um ás também pode seguir o rei no fim de uma sequência (por exemplo 11-12-13-1), e o tabuleiro ganha uma coluna. A sequência termina aí: nenhum 2 depois desse ás, e uma sequência não pode começar e terminar com um ás (1-2-…-13-1).
+        <B>Regras: </B><B>Standard</B> ou <B>12–13–1</B>. Com 12–13–1, um ás também pode seguir o rei no fim de uma sequência (por exemplo 11-12-13-1), e o tabuleiro ganha uma coluna. A sequência termina aí: nenhum 2 depois desse ás.
     </p></li>
     <li><p>
-        <B>Curinga: </B><B>Normal</B> (dois curingas no baralho), <B>Nenhum</B> (sem curingas) ou <B>Para todos</B> (nenhum no baralho, mas cada jogador começa com um na mão).
+        <B>Curinga: </B><B>Normal</B> (dois curingas no baralho), <B>Nenhum</B> (sem curingas) ou <B>Para todos</B> (nenhum no baralho, mas cada jogador começa com um na mão). Um curinga que ainda estiver na sua mão no fim da partida conta 30 pontos contra você.
     </p></li>
     <li><p>
-        <B>Abertura: </B>Os pontos necessários para abrir: <B>25</B>, <B>30</B> ou <B>50</B>.
+        <B>Curingas especiais (Twist): </B>Uma quarta opção de <B>Curinga</B>: os curingas de <B>Normal</B>, mais um Curinga duplo, um Curinga de troca de cor e um Curinga espelho por baralho, como em <I>Rummikub with a Twist</I>. O Curinga duplo pode ser retomado da mesa, como um curinga: arraste sobre ele uma das cartas que ele representa; se o grupo precisar das duas, a outra vem junto da sua mão. Um Curinga de troca de cor na ponta de uma sequência também pode ser retomado, com a carta da cor da sequência que ele representa. O Curinga espelho fica na mesa. Um curinga especial que ficar na sua mão no fim da partida conta como um curinga. Em um jogo em rede, cada jogador precisa da versão mais recente do Romi.
+    </p>
+    <UL>
+        <li><B>Curinga duplo: </B>substitui duas cartas: dois números consecutivos numa sequência (5, curinga, 8: ele vale o 6 e o 7), ou as duas cores que faltam num grupo do mesmo número. Nunca é colocado antes de um 2 nem depois de um 12, exceto depois de um 12 no fim de uma sequência com a regra 12–13–1, onde vale o 13 e o 1. Na abertura, conta os dois números que substitui.</li>
+        <li><B>Curinga de troca de cor: </B>só em sequências. Substitui um número, e a sequência continua em outra cor depois dele: 3 e 4 de uma cor, o curinga (o 5), depois 6 de outra cor.</li>
+        <li><B>Curinga espelho: </B>fica no meio, e os dois lados são o reflexo um do outro, com pelo menos duas cartas de cada lado: 4 5 curinga 5 4 de uma mesma cor, ou um grupo de 3 em que cada cor aparece duas vezes, em ordem espelhada. As cartas são adicionadas ou retiradas dos dois lados ao mesmo tempo. Um curinga comum pode ficar diante de uma carta e assume o valor dela; um curinga especial só fica diante de um curinga do mesmo tipo. Vale 0 na abertura. É colocado arrastando-o para a mesa, no meio do seu grupo, ou tocando nele logo depois das cartas do grupo que você está formando neste turno (4 5, depois o curinga espelho); tocado em qualquer outro momento, fica na sua mão.</li>
+    </UL></li>
+    <li><p>
+        <B>Curingas congelados (jogadores): </B>Desligado por padrão: depois de abrir, você pode mover um curinga que já está na mesa para outro grupo, desde que todos os grupos sejam válidos no fim da sua vez. Ligado, um curinga que estava na mesa no início da sua vez só pode ser retomado com a carta que ele representa. Até lá, ele continua representando a mesma carta, num grupo de pelo menos 3 cartas, e só se move junto com o grupo inteiro. A carta que o retoma fica então na mesa até o fim da sua vez. O mesmo vale para o Curinga duplo e para um Curinga de troca de cor na ponta de uma sequência; o Curinga espelho nunca sai da mesa, e o grupo dele mantém a forma: uma sequência fica da mesma cor, um grupo de um mesmo número mantém esse número. A configuração <B>Curingas congelados (Romi)</B> faz o mesmo para o Romi (ligada por padrão), exceto em um jogo em rede, onde o Romi segue a configuração dos jogadores. Em um jogo em rede, cada jogador precisa da versão mais recente do Romi.
     </p></li>
     <li><p>
-        <B>Limite de tempo e penalidade: </B>De 0 (sem limite) a 5 minutos por turno. Quando o tempo acaba com o interruptor <B>Penalidade por limite de tempo</B> ligado, o tabuleiro volta ao estado do início do seu turno — exceto no nível <B>Iniciante</B> em uma partida solo. No nível <B>Avançado</B>, além disso, você compra então duas cartas em vez de uma.
+        <B>Abertura: </B>Os pontos necessários para abrir: <B>25</B>, <B>30</B>, <B>50</B> ou <B>Sem mínimo</B> (qualquer grupo de pelo menos 3 cartas da prateleira abre).
+    </p></li>
+    <li><p>
+        <B>Esperar um turno após abrir: </B>No turno da sua abertura, você só pode colocar grupos formados com a sua prateleira; as cartas da mesa (e adicionar a outros grupos) podem ser usadas a partir do seu próximo turno. Os jogadores do computador seguem a mesma regra.
+    </p></li>
+    <li><p>
+        <B>Limite de tempo e penalidade: </B>De 0 (sem limite) a 5 minutos por turno. Quando o tempo acaba com o interruptor <B>Penalidade por limite de tempo</B> ligado, o tabuleiro volta ao estado do início do seu turno. Em uma partida solo, isso também acontece sempre que vários jogadores humanos compartilham o dispositivo, mas nunca no nível <B>Iniciante</B>. Em uma partida solo, além disso, você compra então uma carta, ou duas no nível <B>Avançado</B>.
     </p></li>
     <li><p>
         <B>Vencedor começa: </B>Quando ligado, o vencedor da partida anterior joga primeiro na seguinte.
@@ -261,9 +279,10 @@
     </p></li>
     <li><p>
         Se um jogador sair da partida e não voltar, a mesa já não fica bloqueada na vez dele:
-        esgotado o prazo de reconexão, as suas duas jogadas seguintes são jogadas como uma simples
-        compra e depois o computador assume o lugar. Voltar durante essas duas jogadas mantém o
-        lugar; voltar mais tarde recupera-o ao computador.
+        esgotado o prazo de reconexão, ou de imediato se ele saiu da partida em vez de perder a
+        conexão, as suas duas jogadas seguintes são jogadas como uma simples compra e depois o
+        computador assume o lugar. Voltar durante essas duas jogadas mantém o lugar; voltar mais
+        tarde recupera-o ao computador.
     </p></li>
 </UL>
 

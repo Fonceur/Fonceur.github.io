@@ -11,9 +11,10 @@
 <p style="margin:2%">
     <B>Romi</B> permet de jouer au jeu de <B>Rummy (RummyCube, Rummikub, Rami)</B> contre
     l'ordinateur &agrave; 3 niveaux possibles. Ce jeu se joue avec l'&eacute;quivalent de deux jeux
-    de 52 cartes et de deux frimes <img src="iconeFrime.gif">. Deux frimes, c'est le r&eacute;glage <B>Frime</B> par d&eacute;faut (<B>Normale</B>, <B>Aucune</B> ou <B>Pour tous</B>) dans <B>Pr&eacute;f&eacute;rences</B> &rarr; <B>Jeu</B>. Il consiste &agrave; former soit des
+    de 52 cartes et de deux frimes <img src="iconeFrime.gif">. Deux frimes, c'est le r&eacute;glage <B>Frime</B> par d&eacute;faut (<B>Normale</B>, <B>Aucune</B>, <B>Pour tous</B> ou <B>Frimes sp&eacute;ciales (Twist)</B>) dans <B>Pr&eacute;f&eacute;rences</B> &rarr; <B>Jeu</B> &rarr; <B>Frimes</B>. Il consiste &agrave; former soit des
     suites de trois cartes et plus de m&ecirc;me sorte ou soit des s&eacute;ries de cartes de m&ecirc;me
     valeur num&eacute;rique mais de sortes diff&eacute;rentes.
+    Chaque suite ou s&eacute;rie doit contenir au moins une vraie carte : des frimes seules, frimes sp&eacute;ciales comprises, n'en forment pas.
 </p>
 <p style="margin:2%" class="demo-intro">
     Vous voulez d'abord voir comment on joue ? Touchez le bouton <B>Démo</B> en haut à droite pour regarder Romi jouer contre Romi. Touchez la bannière de démo à tout moment pour l'arrêter et revenir à votre propre partie.
@@ -31,7 +32,7 @@
         Pour commencer &agrave; jouer, le joueur doit pouvoir former avec les cartes de sa palette
         uniquement, une ou plusieurs suites ou s&eacute;ries de 3 cartes ou plus dont la somme des
         valeurs num&eacute;riques doit &ecirc;tre sup&eacute;rieure ou &eacute;gale &agrave; (25, 30
-        ou 50) et les placer sur le jeu. C'est ce qu'on appelle l'ouverture.
+        ou 50) &mdash; ou n'importe quel groupe, avec l'ouverture <B>Aucun minimum</B> &mdash; et les placer sur le jeu. C'est ce qu'on appelle l'ouverture.
     </p></li>
     <li><p>
         D&egrave;s que le joueur a compl&eacute;t&eacute; l'ouverture de son jeu, il peut se servir
@@ -76,7 +77,7 @@
     <li><p>
         Veuillez prendre note que vous ne pouvez pas d&eacute;placer les cartes (qui ne vous
         appartiennent pas) dans le jeu tant que vous n'avez pas ouvert avec des groupes de vos
-        cartes qui totalisent (25, 30 ou 50) points et plus.
+        cartes qui totalisent (25, 30 ou 50) points et plus (ou n'importe quel groupe, avec l'ouverture <B>Aucun minimum</B>).
     </p></li>
     <li><p>
         Pour d&eacute;placer une carte dans le jeu, vous pouvez cliquer sur la carte et elle se d&eacute;placera
@@ -92,7 +93,9 @@
     </p></li>
     <li><p>
         Pour replacer le jeu comme il &eacute;tait avant que vous jouiez votre tour, cliquez sur le
-        sablier et vous aurez l'option de le replacer comme il &eacute;tait. Vous pouvez consulter
+        sablier et vous aurez l'option de le replacer comme il &eacute;tait.
+        Quand certains de vos groupes sont invalides, vous choisissez entre <B>Replacer</B> (le jeu comme il &eacute;tait au d&eacute;but de votre tour), <B>Modifier</B> (continuer &agrave; jouer) et, s'il y a quelque chose &agrave; reprendre, <B>Reprendre les invalides</B> (les cartes pos&eacute;es depuis votre palette &agrave; ce tour qui sont dans un groupe invalide retournent dans votre palette ; ce qui reste invalide reste en surbrillance).
+        Vous pouvez consulter
         vos statistiques d'utilisation de Romi et vous pouvez les remettre &agrave; z&eacute;ro, en
         cliquant sur le bouton <img src="baseline_menu_black_18.png"> et en s&eacute;lectionnant <B>Statistiques</B>.
     </p></li>
@@ -164,6 +167,8 @@
     <li><p>
         <B>Valider le jeu: </B><img src="valider.gif"> Permet de v&eacute;rifier que les s&eacute;ries
         de cartes du jeu sont valides, c'est-&agrave;-dire par groupe de trois ou plus.
+        Signale aussi ce qui empêcherait de terminer le tour : une frime reprise encore dans votre palette ; avec les <B>Frimes gelées</B>, une frime du jeu qui ne remplace plus la même carte ; avec <B>Attendre un tour après l'ouverture</B>, des cartes ajoutées aux autres groupes au tour de votre ouverture.
+        Dans une partie multijoueur hébergée par un autre joueur, seuls les groupes sont vérifiés : c'est l'appareil de l'hôte qui décide si votre tour peut se terminer.
     </p></li>
     <li><p>
         <B>Information: </B><img src="baseline_menu_black_18.png"> Permet de consulter la documentation de Romi, de
@@ -211,16 +216,30 @@
         <B>Niveau du jeu : </B>Dans <B>Pr&eacute;f&eacute;rences</B> &rarr; <B>Jeu</B>, choisissez <B>D&eacute;butant</B>, <B>Interm&eacute;diaire</B> ou <B>Expert</B>. Le niveau d&eacute;termine l'habilet&eacute; de Romi &agrave; former ses s&eacute;ries, &agrave; voler des cartes sur le jeu et &agrave; reconstruire les s&eacute;ries qu'il d&eacute;fait.
     </p></li>
     <li><p>
-        <B>R&egrave;glement : </B><B>Standard</B> ou <B>12&ndash;13&ndash;1</B>. Avec 12&ndash;13&ndash;1, un as peut aussi suivre le roi &agrave; la fin d'une suite (par exemple 11-12-13-1), et le jeu gagne une colonne. La suite s'arr&ecirc;te l&agrave; : pas de 2 apr&egrave;s cet as, et une suite ne peut pas commencer et finir par un as (1-2-&hellip;-13-1).
+        <B>R&egrave;glement : </B><B>Standard</B> ou <B>12&ndash;13&ndash;1</B>. Avec 12&ndash;13&ndash;1, un as peut aussi suivre le roi &agrave; la fin d'une suite (par exemple 11-12-13-1), et le jeu gagne une colonne. La suite s'arr&ecirc;te l&agrave; : pas de 2 apr&egrave;s cet as.
     </p></li>
     <li><p>
-        <B>Frime : </B><B>Normale</B> (deux frimes dans le paquet), <B>Aucune</B> (pas de frime), ou <B>Pour tous</B> (aucune dans le paquet, mais chaque joueur en re&ccedil;oit une en main au d&eacute;part).
+        <B>Frime : </B><B>Normale</B> (deux frimes dans le paquet), <B>Aucune</B> (pas de frime), ou <B>Pour tous</B> (aucune dans le paquet, mais chaque joueur en re&ccedil;oit une en main au d&eacute;part). Une frime qui reste dans votre main &agrave; la fin de la partie compte 30 points contre vous.
     </p></li>
     <li><p>
-        <B>Ouverture : </B>Les points requis pour ouvrir : <B>25</B>, <B>30</B> ou <B>50</B>.
+        <B>Frimes sp&eacute;ciales (Twist) : </B>Un quatri&egrave;me choix de <B>Frime</B> : les frimes de <B>Normale</B>, plus une Frime double, une Frime changement de couleur et une Frime miroir par paquet, comme dans <I>Rummikub with a Twist</I>. La Frime double peut &ecirc;tre reprise du jeu, comme une frime ordinaire : glissez dessus une des cartes qu'elle repr&eacute;sente ; si son groupe a besoin des deux, l'autre suit depuis votre main. Une Frime changement de couleur au bout d'une suite se reprend aussi, par la carte de la couleur de la suite qu'elle repr&eacute;sente. La Frime miroir reste sur le jeu. Une frime sp&eacute;ciale qui reste dans votre main &agrave; la fin de la partie compte comme une frime ordinaire. En r&eacute;seau, chaque joueur doit avoir la derni&egrave;re version de Romi.
+    </p>
+    <UL>
+        <li><B>Frime double : </B>remplace deux cartes : deux nombres cons&eacute;cutifs dans une suite (5, frime, 8 : elle vaut le 6 et le 7), ou les deux couleurs manquantes d'un groupe de m&ecirc;me nombre. Elle ne se place jamais avant un 2 ni apr&egrave;s un 12, sauf apr&egrave;s un 12 au bout d'une suite avec le r&egrave;glement 12&ndash;13&ndash;1, o&ugrave; elle vaut le 13 et le 1. &Agrave; l'ouverture, elle compte les deux nombres qu'elle remplace.</li>
+        <li><B>Frime changement de couleur : </B>dans les suites seulement. Elle remplace un nombre, et la suite continue dans une autre couleur apr&egrave;s elle : 3 et 4 d'une couleur, la frime (le 5), puis 6 d'une autre couleur.</li>
+        <li><B>Frime miroir : </B>se place au milieu, et les deux c&ocirc;t&eacute;s se refl&egrave;tent, avec au moins deux cartes de chaque c&ocirc;t&eacute; : 4 5 frime 5 4 d'une m&ecirc;me couleur, ou un groupe de 3 o&ugrave; chaque couleur appara&icirc;t deux fois, en ordre miroir. On ajoute ou retire des cartes des deux c&ocirc;t&eacute;s &agrave; la fois. Une frime ordinaire peut faire face &agrave; une carte et en prend la valeur ; une frime sp&eacute;ciale ne fait face qu'&agrave; une frime de sa sorte. Elle vaut 0 &agrave; l'ouverture. Elle se pose en la glissant sur le plateau, au milieu de son groupe, ou en la touchant juste apr&egrave;s les cartes du groupe que vous formez &agrave; ce tour (4 5, puis la frime miroir) ; touch&eacute;e &agrave; tout autre moment, elle reste dans votre main.</li>
+    </UL></li>
+    <li><p>
+        <B>Frimes gel&eacute;es (joueurs) : </B>D&eacute;sactiv&eacute; par d&eacute;faut : une fois ouvert, vous pouvez d&eacute;placer une frime d&eacute;j&agrave; sur le jeu vers un autre groupe, pourvu que chaque groupe soit valide &agrave; la fin de votre tour. Activ&eacute;, une frime qui &eacute;tait sur le jeu au d&eacute;but de votre tour ne peut &ecirc;tre reprise que par la carte qu'elle repr&eacute;sente. D'ici l&agrave;, elle repr&eacute;sente toujours la m&ecirc;me carte, dans un groupe d'au moins 3 cartes, et ne se d&eacute;place qu'avec tout son groupe. La carte qui la reprend reste ensuite sur le jeu jusqu'&agrave; la fin de votre tour. Il en va de m&ecirc;me de la Frime double et d'une Frime changement de couleur au bout d'une suite ; la Frime miroir ne quitte jamais le jeu, et son groupe garde sa forme : une suite reste de la m&ecirc;me couleur, un groupe d'un m&ecirc;me nombre garde ce nombre. Le r&eacute;glage <B>Frimes gel&eacute;es (Romi)</B> fait de m&ecirc;me pour Romi (activ&eacute; par d&eacute;faut), sauf en r&eacute;seau, o&ugrave; Romi suit le r&eacute;glage des joueurs. En r&eacute;seau, chaque joueur doit avoir la derni&egrave;re version de Romi.
     </p></li>
     <li><p>
-        <B>Limite de temps et p&eacute;nalit&eacute; : </B>De 0 (aucune limite) &agrave; 5 minutes par tour. Quand le temps est &eacute;coul&eacute; et que l'interrupteur <B>P&eacute;nalit&eacute; apr&egrave;s la limite</B> est ouvert, le jeu revient &agrave; son &eacute;tat du d&eacute;but de votre tour &mdash; sauf au niveau <B>D&eacute;butant</B> dans une partie solo. Au niveau <B>Expert</B>, vous pigez alors deux cartes au lieu d'une.
+        <B>Ouverture : </B>Les points requis pour ouvrir : <B>25</B>, <B>30</B>, <B>50</B> ou <B>Aucun minimum</B> (n'importe quel groupe d'au moins 3 cartes de la palette ouvre).
+    </p></li>
+    <li><p>
+        <B>Attendre un tour après l'ouverture : </B>Au tour de votre ouverture, vous ne posez que des groupes tirés de votre palette ; les cartes déjà sur le plateau (et l'ajout aux autres groupes) servent à partir du tour suivant. Les joueurs ordinateur suivent la même règle.
+    </p></li>
+    <li><p>
+        <B>Limite de temps et p&eacute;nalit&eacute; : </B>De 0 (aucune limite) &agrave; 5 minutes par tour. Quand le temps est &eacute;coul&eacute; et que l'interrupteur <B>P&eacute;nalit&eacute; apr&egrave;s la limite</B> est ouvert, le jeu revient &agrave; son &eacute;tat du d&eacute;but de votre tour. Dans une partie solo, c'est aussi le cas chaque fois que plusieurs joueurs humains partagent l'appareil, mais jamais au niveau <B>D&eacute;butant</B>. Dans une partie solo, vous pigez alors aussi une carte, ou deux au niveau <B>Expert</B>.
     </p></li>
     <li><p>
         <B>Gagnant commence : </B>Quand il est activ&eacute;, le gagnant de la partie pr&eacute;c&eacute;dente joue en premier &agrave; la suivante.
@@ -284,10 +303,12 @@
         ainsi &ecirc;tre jou&eacute;e par 2 personnes. Il faut au moins deux joueurs humains.
     </p></li>
     <li><p>
-        Si un joueur quitte la partie et ne revient pas, la table ne reste plus bloqu&eacute;e sur son tour
-        : une fois son d&eacute;lai de reconnexion &eacute;coul&eacute;, ses deux prochains tours sont jou&eacute;s comme une
-        simple pige, puis l'ordinateur prend le si&egrave;ge. Revenir pendant ces deux tours conserve le
-        si&egrave;ge ; revenir plus tard le reprend &agrave; l'ordinateur.
+        Si un joueur quitte la partie et ne revient pas, la table ne reste plus bloqu&eacute;e sur
+        son tour : une fois son d&eacute;lai de reconnexion &eacute;coul&eacute;, ou tout de suite
+        s'il a quitt&eacute; la partie plut&ocirc;t que perdu la connexion, ses deux prochains tours
+        sont jou&eacute;s comme une simple pige, puis l'ordinateur prend le si&egrave;ge. Revenir
+        pendant ces deux tours conserve le si&egrave;ge ; revenir plus tard le reprend &agrave;
+        l'ordinateur.
     </p></li>
 </UL>
 

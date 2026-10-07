@@ -11,9 +11,10 @@
 <p style="margin:2%">
     <B>Romi</B> memungkinkan Anda bermain <B>Rummy Tile (RummyCube, Rummikub, Rami)</B> melawan
     komputer pada 3 tingkat kesulitan yang berbeda. Permainan ini menggunakan dua set 52 kartu
-    dan dua <img src="iconeFrime.gif"> joker. Dua joker adalah pengaturan <B>Joker</B> bawaan (<B>Normal</B>, <B>Tidak ada</B>, atau <B>Untuk semua</B>) di <B>Pengaturan</B> &rarr; <B>Permainan</B>. Tujuan permainan ini adalah membentuk kelompok
+    dan dua <img src="iconeFrime.gif"> joker. Dua joker adalah pengaturan <B>Joker</B> bawaan (<B>Normal</B>, <B>Tidak ada</B>, <B>Untuk semua</B>, atau <B>Joker spesial (Twist)</B>) di <B>Pengaturan</B> &rarr; <B>Permainan</B> &rarr; <B>Joker</B>. Tujuan permainan ini adalah membentuk kelompok
     yang terdiri dari 3 kartu atau lebih, yang berisi kartu berurutan dengan warna yang sama
     atau kartu dengan nilai angka yang sama tetapi dengan warna berbeda.
+    Setiap kelompok harus berisi setidaknya satu kartu asli: joker saja, termasuk joker spesial, tidak membentuk kelompok.
 </p>
 <p style="margin:2%" class="demo-intro">
     Ingin melihat cara bermainnya dulu? Ketuk tombol <B>Demo</B> di kanan atas untuk menonton Romi bermain melawan Romi. Ketuk spanduk demo kapan saja untuk menghentikannya dan kembali ke permainan Anda sendiri.
@@ -29,7 +30,7 @@
     <li><p>
         Pemain membuka permainannya dengan memainkan setidaknya satu kelompok 3 kartu atau lebih,
         hanya menggunakan kartu di raknya. Jumlah nilai kartu-kartu tersebut harus (25, 30 atau 50)
-        atau lebih.
+        atau lebih — atau kelompok apa pun, dengan pembukaan <B>Tanpa minimum</B>.
     </p></li>
     <li><p>
         Setelah pemain membuka permainan, ia dapat menggunakan kartu di papan untuk melengkapi
@@ -63,7 +64,7 @@
     <li><p>
         Harap perhatikan bahwa Anda tidak dapat memindahkan kartu (yang bukan milik Anda) di papan
         sebelum Anda membuka permainan dengan kelompok kartu Anda sendiri bernilai (25, 30 atau 50)
-        poin atau lebih.
+        poin atau lebih (atau kelompok apa pun, dengan pembukaan <B>Tanpa minimum</B>).
     </p></li>
     <li><p>
         Untuk menempatkan kartu di papan, Anda dapat mengklik kartu dan kartu akan bergerak secara
@@ -79,6 +80,7 @@
     <li><p>
         Anda dapat memulihkan papan seperti sebelum Anda mulai memainkan giliran Anda dengan
         mengklik ikon jam pasir dan Anda akan mendapat opsi untuk memulihkan papan.
+        Jika beberapa kelompok Anda tidak valid, Anda memilih antara <B>Pulihkan</B> (papan seperti pada awal giliran Anda), <B>Modifikasi</B> (terus bermain) dan, bila ada yang bisa ditarik, <B>Tarik yang tidak valid</B> (kartu yang Anda letakkan dari rak pada giliran ini dan berada dalam kelompok yang tidak valid kembali ke rak; yang masih tidak valid tetap disorot).
     </p></li>
     <li><p>
         Anda dapat melihat skor Romi Anda dan/atau mengatur ulang skor Anda ke nol dengan mengklik
@@ -146,6 +148,8 @@
     <li><p>
         <B>Validasi: </B><img src="valider.gif"> Memeriksa apakah kelompok kartu yang dimainkan
         di papan valid.
+        Tombol ini juga memberi tahu apa yang akan mencegah giliran Anda berakhir: joker yang diambil kembali tetapi masih di rak Anda; dengan <B>Joker beku</B>, joker dari meja yang tidak lagi mewakili kartu yang sama; dengan <B>Tunggu satu giliran setelah membuka</B>, kartu yang ditambahkan ke kelompok lain pada giliran Anda membuka.
+        Dalam permainan multipemain yang tuan rumahnya orang lain, tombol ini hanya memeriksa kelompok: perangkat tuan rumah yang menentukan apakah giliran Anda bisa berakhir.
     </p></li>
     <li><p>
         <B>Informasi: </B><img src="baseline_menu_black_18.png"> Anda dapat melihat dokumentasi Romi, melihat
@@ -193,16 +197,30 @@
         <B>Level permainan: </B>Di <B>Pengaturan</B> &rarr; <B>Permainan</B>, pilih <B>Pemula</B>, <B>Menengah</B>, atau <B>Ahli</B>. Level menentukan seberapa cerdik Romi menyusun kelompoknya, mengambil kartu dari papan, dan menyusun kembali kelompok yang dibongkarnya.
     </p></li>
     <li><p>
-        <B>Aturan Romi: </B><B>Standar</B> atau <B>12–13–1</B>. Dengan 12–13–1, As juga boleh mengikuti King di akhir sebuah urutan (misalnya 11-12-13-1), dan papan mendapat satu kolom tambahan. Urutan berakhir di situ: tidak ada 2 setelah As tersebut, dan sebuah urutan tidak boleh diawali sekaligus diakhiri dengan As (1-2-…-13-1).
+        <B>Aturan Romi: </B><B>Standar</B> atau <B>12–13–1</B>. Dengan 12–13–1, As juga boleh mengikuti King di akhir sebuah urutan (misalnya 11-12-13-1), dan papan mendapat satu kolom tambahan. Urutan berakhir di situ: tidak ada 2 setelah As tersebut.
     </p></li>
     <li><p>
-        <B>Joker: </B><B>Normal</B> (dua joker di dalam dek), <B>Tidak ada</B> (tanpa joker), atau <B>Untuk semua</B> (tidak ada di dek, tetapi setiap pemain memulai dengan satu joker di tangan).
+        <B>Joker: </B><B>Normal</B> (dua joker di dalam dek), <B>Tidak ada</B> (tanpa joker), atau <B>Untuk semua</B> (tidak ada di dek, tetapi setiap pemain memulai dengan satu joker di tangan). Joker yang masih ada di tangan Anda saat permainan berakhir dihitung sebagai 30 poin penalti bagi Anda.
     </p></li>
     <li><p>
-        <B>Pembukaan: </B>Poin yang diperlukan untuk membuka: <B>25</B>, <B>30</B>, atau <B>50</B>.
+        <B>Joker spesial (Twist): </B>Pilihan keempat pada <B>Joker</B>: joker dari <B>Normal</B>, ditambah satu Joker ganda, satu Joker ganti warna, dan satu Joker cermin per dek, seperti dalam <I>Rummikub with a Twist</I>. Joker ganda dapat diambil kembali dari meja, seperti joker biasa: seret salah satu kartu yang diwakilinya ke atasnya; jika kelompoknya memerlukan keduanya, kartu yang lain ikut dari tangan Anda. Joker ganti warna di ujung deret juga dapat diambil kembali, dengan kartu berwarna deret itu yang diwakilinya. Joker cermin tetap di meja. Joker spesial yang tersisa di tangan Anda di akhir permainan dihitung seperti joker. Dalam permainan jaringan, setiap pemain memerlukan versi Romi terbaru.
+    </p>
+    <UL>
+        <li><B>Joker ganda: </B>menggantikan dua kartu: dua angka berurutan dalam deret (5, joker, 8: ia adalah 6 dan 7), atau dua warna yang kurang dalam kelompok angka yang sama. Ia tidak pernah diletakkan sebelum 2 atau sesudah 12, kecuali sesudah 12 di ujung deret dengan aturan 12–13–1, di mana ia adalah 13 dan 1. Saat membuka, ia dihitung sebagai dua angka yang digantikannya.</li>
+        <li><B>Joker ganti warna: </B>hanya dalam deret. Ia menggantikan satu angka, dan deret berlanjut dengan warna lain setelahnya: 3 dan 4 dari satu warna, joker (angka 5), lalu 6 dari warna lain.</li>
+        <li><B>Joker cermin: </B>diletakkan di tengah, dan kedua sisinya saling mencerminkan, dengan paling sedikit dua kartu di tiap sisi: 4 5 joker 5 4 dalam satu warna, atau kelompok angka 3 dengan tiap warna muncul dua kali, dalam urutan cermin. Kartu ditambahkan atau diambil di kedua sisi sekaligus. Joker biasa boleh berhadapan dengan kartu dan mengambil nilainya; joker spesial hanya berhadapan dengan joker sejenis. Nilainya 0 saat membuka. Joker ini diletakkan dengan menyeretnya ke papan, di tengah kelompoknya, atau dengan mengetuknya tepat setelah kartu-kartu kelompok yang sedang Anda susun pada giliran ini (4 5, lalu joker cermin); jika diketuk pada saat lain, joker ini tetap di tangan Anda.</li>
+    </UL></li>
+    <li><p>
+        <B>Joker beku (pemain): </B>Mati secara default: setelah Anda membuka, Anda boleh memindahkan joker yang sudah ada di meja ke kelompok lain, asalkan setiap kelompok sah di akhir giliran Anda. Jika aktif, joker yang sudah ada di meja di awal giliran Anda hanya dapat diambil kembali dengan kartu yang diwakilinya. Sampai saat itu, joker tersebut tetap mewakili kartu yang sama, dalam kelompok minimal 3 kartu, dan hanya berpindah bersama seluruh kelompoknya. Kartu yang mengambilnya kembali kemudian tetap di meja sampai akhir giliran Anda. Hal yang sama berlaku untuk Joker ganda dan Joker ganti warna di ujung deret; Joker cermin tidak pernah meninggalkan meja, dan kelompoknya tetap berbentuk sama: deret tetap dalam warna yang sama, kelompok satu angka tetap dengan angka itu. Pengaturan <B>Joker beku (Romi)</B> berlaku sama untuk Romi (aktif secara default), kecuali dalam permainan jaringan, di mana Romi mengikuti pengaturan pemain. Dalam permainan jaringan, setiap pemain memerlukan versi Romi terbaru.
     </p></li>
     <li><p>
-        <B>Batas waktu dan penalti: </B>Dari 0 (tanpa batas) hingga 5 menit per giliran. Saat waktu habis dengan sakelar <B>Penalti batas waktu</B> menyala, papan kembali ke keadaan di awal giliran Anda — kecuali pada level <B>Pemula</B> dalam permainan solo. Pada level <B>Ahli</B>, Anda juga mengambil dua kartu alih-alih satu.
+        <B>Pembukaan: </B>Poin yang diperlukan untuk membuka: <B>25</B>, <B>30</B>, <B>50</B>, atau <B>Tanpa minimum</B> (kelompok apa pun berisi minimal 3 kartu dari rak sudah membuka).
+    </p></li>
+    <li><p>
+        <B>Tunggu satu giliran setelah membuka: </B>Pada giliran Anda membuka, Anda hanya boleh meletakkan kelompok dari rak Anda sendiri; kartu di papan (dan menambah ke kelompok lain) baru bisa dipakai pada giliran berikutnya. Pemain komputer mengikuti aturan yang sama.
+    </p></li>
+    <li><p>
+        <B>Batas waktu dan penalti: </B>Dari 0 (tanpa batas) hingga 5 menit per giliran. Saat waktu habis dengan sakelar <B>Penalti batas waktu</B> menyala, papan kembali ke keadaan di awal giliran Anda. Dalam permainan solo, hal ini juga terjadi setiap kali beberapa pemain manusia berbagi perangkat, tetapi tidak pernah pada level <B>Pemula</B>. Dalam permainan solo, Anda juga mengambil satu kartu, atau dua pada level <B>Ahli</B>.
     </p></li>
     <li><p>
         <B>Pemenang memulai: </B>Jika aktif, pemenang permainan sebelumnya bermain lebih dulu di permainan berikutnya.
@@ -262,10 +280,10 @@
     </p></li>
     <li><p>
         Jika seorang pemain keluar dan tidak kembali, meja tidak lagi tertahan pada gilirannya:
-        setelah tenggang waktu sambung ulangnya habis, dua giliran berikutnya dimainkan sebagai
-        pengambilan kartu biasa, lalu komputer mengambil alih tempatnya. Pemain yang kembali dalam
-        dua giliran itu tetap memegang tempatnya; yang kembali lebih lambat mengambilnya kembali
-        dari komputer.
+        setelah tenggang waktu sambung ulangnya habis, atau segera jika ia keluar dari permainan
+        alih-alih kehilangan sambungan, dua giliran berikutnya dimainkan sebagai pengambilan kartu
+        biasa, lalu komputer mengambil alih tempatnya. Pemain yang kembali dalam dua giliran itu
+        tetap memegang tempatnya; yang kembali lebih lambat mengambilnya kembali dari komputer.
     </p></li>
 </UL>
 

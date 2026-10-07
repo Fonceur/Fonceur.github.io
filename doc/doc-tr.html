@@ -10,9 +10,10 @@
 </CENTER>
 <p style="margin:2%">
     <B>Romi</B>, bilgisayara karşı 3 farklı seviyede <B>Rummy Tile (RummyCube, Rummikub, Okey)</B>
-    oynamanızı sağlar. Oyun iki set 52 kart ve iki <img src="iconeFrime.gif"> joker ile oynanır. İki joker, <B>Ayarlar</B> &rarr; <B>Oyun</B> altındaki varsayılan <B>Joker</B> ayarıdır (<B>Normal</B>, <B>Yok</B> veya <B>Herkes için</B>).
+    oynamanızı sağlar. Oyun iki set 52 kart ve iki <img src="iconeFrime.gif"> joker ile oynanır. İki joker, <B>Ayarlar</B> &rarr; <B>Oyun</B> &rarr; <B>Jokerler</B> altındaki varsayılan <B>Joker</B> ayarıdır (<B>Normal</B>, <B>Yok</B>, <B>Herkes için</B> veya <B>Özel jokerler (Twist)</B>).
     Bu oyunun amacı, aynı renkte ardışık kartlar veya farklı renklerde aynı sayısal
     değere sahip kartlar içeren 3 veya daha fazla karttan oluşan gruplar oluşturmaktır.
+    Her grup en az bir gerçek kart içermelidir: özel jokerler dahil, yalnızca jokerlerden oluşan bir grup olmaz.
 </p>
 <p style="margin:2%" class="demo-intro">
     Önce nasıl oynandığını görmek ister misiniz? Romi'nin Romi'ye karşı oynamasını izlemek için sağ üstteki <B>Demo</B> düğmesine dokunun. Durdurup kendi oyununuza dönmek için istediğiniz zaman demo şeridine dokunun.
@@ -28,7 +29,7 @@
     <li><p>
         Oyuncu, yalnızca rafındaki kartları kullanarak en az bir 3 veya daha fazla kartlık
         grup oynayarak oyununu açar. Bu kartların değerlerinin toplamı (25, 30 veya 50)
-        veya daha fazla olmalıdır.
+        veya daha fazla olmalıdır — ya da <B>Minimum yok</B> açılışıyla herhangi bir grup.
     </p></li>
     <li><p>
         Oyuncu oyunu açtıktan sonra, rafındaki kartlarla grupları tamamlamak için masadaki
@@ -61,7 +62,7 @@
         simgesi bir bilgisayar simgesiyle değiştirilir.
     </p></li>
     <li><p>
-        Lütfen (25, 30 veya 50) puan veya daha fazla değerinde kendi kart gruplarınızla
+        Lütfen (25, 30 veya 50) puan veya daha fazla değerinde kendi kart gruplarınızla (ya da <B>Minimum yok</B> açılışıyla herhangi bir grupla)
         oyunu açmadan önce masadaki kartları (size ait olmayanları) taşıyamayacağınızı
         unutmayın.
     </p></li>
@@ -79,6 +80,7 @@
     <li><p>
         Sıranızı oynamaya başlamadan önceki haline masayı geri yükleyebilirsiniz, kum saati
         simgesine tıklayarak masayı geri yükleme seçeneğini alırsınız.
+        Bazı gruplarınız geçersiz olduğunda <B>Geri yükle</B> (masanın turunuzun başındaki hali), <B>Değiştir</B> (oynamaya devam) ve, geri alınacak bir şey varsa, <B>Geçersizleri geri al</B> (bu turda sehpanızdan koyduğunuz ve geçersiz bir grupta bulunan kartlar sehpaya geri döner; hâlâ geçersiz olanlar vurgulu kalır) arasında seçim yaparsınız.
     </p></li>
     <li><p>
         Romi puanlarınızı görebilir ve/veya puanlarınızı sıfırlayabilirsiniz,
@@ -146,6 +148,8 @@
     <li><p>
         <B>Doğrula: </B><img src="valider.gif"> Masaya oynanan kart gruplarının geçerli
         olup olmadığını kontrol eder.
+        Ayrıca turunuzun bitmesini neyin engelleyeceğini de gösterir: geri aldığınız ve hâlâ rafınızda duran bir joker; <B>Dondurulmuş jokerler</B> açıkken, artık aynı kartı temsil etmeyen masadaki bir joker; <B>Açtıktan sonra bir tur bekle</B> açıkken, açtığınız turda diğer gruplara eklenen kartlar.
+        Başkasının ev sahipliği yaptığı çok oyunculu bir oyunda yalnızca gruplar kontrol edilir: turunuzun bitip bitemeyeceğine ev sahibinin cihazı karar verir.
     </p></li>
     <li><p>
         <B>Bilgi: </B><img src="baseline_menu_black_18.png"> Romi belgelerini görebilir, istatistiklerinizi
@@ -190,16 +194,30 @@
         <B>Oyun seviyesi: </B><B>Ayarlar</B> &rarr; <B>Oyun</B> altında <B>Başlangıç</B>, <B>Orta</B> veya <B>Uzman</B> seçin. Seviye, Romi'nin gruplarını ne kadar ustaca kurduğunu, masadan kart çaldığını ve bozduğu grupları yeniden kurduğunu belirler.
     </p></li>
     <li><p>
-        <B>Romi kuralı: </B><B>Standart</B> veya <B>12–13–1</B>. 12–13–1 ile, bir serinin sonunda papazdan sonra as da gelebilir (örneğin 11-12-13-1) ve masa bir sütun daha kazanır. Seri orada biter: o astan sonra 2 gelmez ve bir seri hem asla başlayıp hem asla bitemez (1-2-…-13-1).
+        <B>Romi kuralı: </B><B>Standart</B> veya <B>12–13–1</B>. 12–13–1 ile, bir serinin sonunda papazdan sonra as da gelebilir (örneğin 11-12-13-1) ve masa bir sütun daha kazanır. Seri orada biter: o astan sonra 2 gelmez.
     </p></li>
     <li><p>
-        <B>Joker: </B><B>Normal</B> (destede iki joker), <B>Yok</B> (joker yok) veya <B>Herkes için</B> (destede joker yok, ama her oyuncu elinde bir jokerle başlar).
+        <B>Joker: </B><B>Normal</B> (destede iki joker), <B>Yok</B> (joker yok) veya <B>Herkes için</B> (destede joker yok, ama her oyuncu elinde bir jokerle başlar). Oyun bittiğinde hâlâ elinizde olan bir joker, aleyhinize 30 puan sayılır.
     </p></li>
     <li><p>
-        <B>Açılış: </B>Açılış için gereken puan: <B>25</B>, <B>30</B> veya <B>50</B>.
+        <B>Özel jokerler (Twist): </B><B>Joker</B> ayarının dördüncü seçeneği: <B>Normal</B> seçeneğinin jokerleri, artı her deste için bir Çift joker, bir Renk değiştiren joker ve bir Ayna joker, <I>Rummikub with a Twist</I> oyunundaki gibi. Çift joker, normal bir joker gibi masadan geri alınabilir: temsil ettiği kartlardan birini üzerine sürükleyin; grubun ikisine de ihtiyacı varsa diğeri de elinizden gelir. Bir serinin ucundaki Renk değiştiren joker de, temsil ettiği ve serinin renginde olan kartla geri alınabilir. Ayna joker masada kalır. Oyun sonunda elinizde kalan özel bir joker, joker gibi sayılır. Ağ üzerinden oyunda her oyuncunun Romi'nin en son sürümüne ihtiyacı vardır.
+    </p>
+    <UL>
+        <li><B>Çift joker: </B>iki kartın yerini tutar: bir serideki ardışık iki sayı (5, joker, 8: 6 ve 7'dir) ya da aynı sayıdan oluşan bir gruptaki eksik iki renk. Asla bir 2'nin önüne veya bir 12'nin arkasına konmaz; yalnızca 12–13–1 kuralıyla bir serinin sonunda 12'nin arkasına konabilir, orada 13 ve 1'dir. Açılışta yerini tuttuğu iki sayı kadar sayılır.</li>
+        <li><B>Renk değiştiren joker: </B>yalnızca serilerde. Bir sayının yerini tutar ve seri ondan sonra başka bir renkle devam eder: bir rengin 3 ve 4'ü, joker (5), sonra başka bir rengin 6'sı.</li>
+        <li><B>Ayna joker: </B>ortada durur ve iki taraf birbirinin aynadaki yansımasıdır, her tarafta en az iki kart bulunur: aynı renkte 4 5 joker 5 4 ya da her rengin iki kez, ayna sırasıyla geçtiği bir 3'ler grubu. Kartlar iki tarafa aynı anda eklenir veya iki taraftan aynı anda çıkarılır. Normal bir joker bir kartın karşısında durabilir ve onun değerini alır; özel bir joker yalnızca kendi türünden bir jokerin karşısında durur. Açılışta değeri 0'dır. Masaya, grubunun ortasına sürüklenerek ya da bu turda kurduğunuz grubun kartlarının hemen ardından üzerine dokunularak konur (4 5, ardından ayna joker); başka bir anda dokunulursa elinizde kalır.</li>
+    </UL></li>
+    <li><p>
+        <B>Dondurulmuş jokerler (oyuncular): </B>Varsayılan olarak kapalı: açtıktan sonra, turunuzun sonunda her grup geçerli olduğu sürece masada zaten bulunan bir jokeri başka bir gruba taşıyabilirsiniz. Açıkken, turunuzun başında masada olan bir joker yalnızca temsil ettiği kartla geri alınabilir. O zamana kadar aynı kartı temsil etmeye devam eder, en az 3 kartlık bir grupta kalır ve yalnızca tüm grubuyla birlikte taşınır. Onu geri alan kart, turunuzun sonuna kadar masada kalır. Aynısı Çift joker ve bir serinin ucundaki Renk değiştiren joker için de geçerlidir; Ayna joker masadan hiç ayrılmaz ve grubu biçimini korur: bir seri aynı renkte kalır, tek bir sayının grubu o sayıyı korur. <B>Dondurulmuş jokerler (Romi)</B> ayarı Romi için de aynısını yapar (varsayılan olarak açık); ağ üzerinden oyunda ise Romi oyuncuların ayarını izler. Ağ üzerinden oyunda her oyuncunun Romi'nin en son sürümüne ihtiyacı vardır.
     </p></li>
     <li><p>
-        <B>Süre sınırı ve ceza: </B>Tur başına 0 (sınırsız) ile 5 dakika arası. <B>Süre aşımı cezası</B> anahtarı açıkken süre dolduğunda masa, turunuzun başındaki durumuna döner — tek kişilik oyunda <B>Başlangıç</B> seviyesi dışında. <B>Uzman</B> seviyesinde ayrıca bir yerine iki kart çekersiniz.
+        <B>Açılış: </B>Açılış için gereken puan: <B>25</B>, <B>30</B>, <B>50</B> veya <B>Minimum yok</B> (raftan en az 3 kartlık herhangi bir grup açar).
+    </p></li>
+    <li><p>
+        <B>Açtıktan sonra bir tur bekle: </B>Açtığınız turda yalnızca kendi rafınızdaki kartlarla gruplar koyabilirsiniz; masadaki kartlar (ve diğer gruplara ekleme) bir sonraki turunuzdan itibaren kullanılabilir. Bilgisayar oyuncuları da aynı kurala uyar.
+    </p></li>
+    <li><p>
+        <B>Süre sınırı ve ceza: </B>Tur başına 0 (sınırsız) ile 5 dakika arası. <B>Süre aşımı cezası</B> anahtarı açıkken süre dolduğunda masa, turunuzun başındaki durumuna döner. Tek kişilik oyunda bu, cihazı birden fazla insan oyuncu paylaştığında da olur, ancak <B>Başlangıç</B> seviyesinde asla olmaz. Tek kişilik oyunda ayrıca bir kart, <B>Uzman</B> seviyesinde ise iki kart çekersiniz.
     </p></li>
     <li><p>
         <B>Kazanan başlar: </B>Açıkken, önceki oyunun kazananı bir sonraki oyunda ilk oynar.
@@ -257,9 +275,10 @@
     </p></li>
     <li><p>
         Bir oyuncu oyundan ayrılıp geri dönmezse, masa artık onun sırasında tıkanıp kalmaz: yeniden
-        bağlanma süresi dolduğunda sonraki iki sırası basit bir kart çekme olarak oynanır, ardından
-        yerini bilgisayar alır. Bu iki sıra içinde dönen oyuncu yerini korur; daha sonra dönen ise
-        yerini bilgisayardan geri alır.
+        bağlanma süresi dolduğunda, ya da bağlantısını kaybetmek yerine oyundan kendisi çıktıysa
+        hemen, sonraki iki sırası basit bir kart çekme olarak oynanır, ardından yerini bilgisayar
+        alır. Bu iki sıra içinde dönen oyuncu yerini korur; daha sonra dönen ise yerini
+        bilgisayardan geri alır.
     </p></li>
 </UL>
 
