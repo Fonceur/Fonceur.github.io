@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Romi · Nouveautés</title>
+<meta name="description" content="Les nouveautés de chaque version de Romi, le jeu de Rami pour Android.">
+<link rel="icon" href="images/romi-icone.png">
+<!-- Genere par tools/publier-notes-version.py dans le depot romi-as : les versions deja publiees ici sont gardees, docs/CHANGELOG_*.md les complete ou les remplace ; ne pas modifier ici. -->
+<script>
+  // Choix explicite (bouton) conserve dans localStorage ; sinon, langue du navigateur.
+  try {
+    var c = localStorage.getItem("lang");
+    if (c === "en") location.replace("changelog.html");
+  } catch (e) {}
+</script>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 2rem 1rem 3rem; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         background: #faf8f4; color: #222; max-width: 40rem; margin-inline: auto; }
+  @media (prefers-color-scheme: dark) { body { background: #1b1b1b; color: #e6e6e6; } a { color: #8ab4f8; } }
+  header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  header img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+  h1 { font-size: 2rem; margin: 0; line-height: 1.1; }
+  .lang { font-size: .9rem; opacity: .8; margin-top: .25rem; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; border-bottom: 1px solid #8884; padding-bottom: .25rem;
+       display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+  h2 .date { font-size: .9rem; font-weight: normal; opacity: .7; }
+  p.lead { margin: 0 0 1rem; opacity: .9; }
+  ul { padding-left: 1.25rem; margin: 0; }
+  li { margin: .25rem 0; }
+  footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+</style>
+</head>
+<body>
+<header>
+  <img src="images/romi-icone.png" alt="">
+  <div>
+    <h1>Nouveautés</h1>
+    <div class="lang"><a href="changelog.html" lang="en" onclick="try{localStorage.setItem('lang','en')}catch(e){}">English</a></div>
+  </div>
+</header>
+<p class="lead">Les notes de version de Romi, de la plus récente à la plus ancienne. <a href="index-fr.html">Retour à la page de Romi</a></p>
+
+<section id="v2.23">
+<h2><span>2.23</span> <time class="date" datetime="2026-10-10">octobre 2026</time></h2>
+<ul>
+  <li>Nouveau choix de Frime : les frimes spéciales de Rummikub with a Twist (double, changement de couleur, miroir)</li>
+  <li>Nouveau réglage, Frimes gelées : une frime sur le jeu ne se reprend que par la carte qu'elle représente</li>
+  <li>Nouveaux choix d'ouverture : Aucun minimum et Attendre un tour après l'ouverture</li>
+  <li>Les salons multijoueurs affichent le réglage Frime de l'hôte</li>
+  <li>La version complète de Romi joue maintenant aux grandes tables de 2 à 8 joueurs</li>
+</ul>
+</section>
+
+<section id="v2.22">
+<h2><span>2.22</span> <time class="date" datetime="2026-09-25">septembre 2026</time></h2>
+<ul>
+  <li>Couleur, Symbole et Fond fonctionnent maintenant sur tous les modèles de tuiles — la première modification crée une palette personnalisée, en demandant avant de remplacer celle que vous aviez enregistrée</li>
+  <li>Salons multijoueurs : les boutons indisponibles disent ce qui manque (votre nom, le NIP, d'autres joueurs)</li>
+  <li>Avec le texte à contraste élevé du système, les boutons inutilisables sont maintenant masqués au lieu de paraître actifs</li>
+</ul>
+</section>
+
+<section id="v2.21">
+<h2><span>2.21</span> <time class="date" datetime="2026-09-21">septembre 2026</time></h2>
+<ul>
+  <li>Nouveau : reprenez une frime du plateau en glissant dessus la carte qu'elle remplace — les lecteurs d'écran ont une action équivalente</li>
+  <li>Corrigé l'ordinateur qui ajoutait une carte à une série au lieu de reprendre la frime</li>
+  <li>Corrigé les tuiles noircies par le texte à contraste élevé du système</li>
+  <li>Corrigé les boutons Défaire et Refaire invisibles en mode sombre</li>
+</ul>
+</section>
+
+<section id="v2.20">
+<h2><span>2.20</span> <time class="date" datetime="2026-09-18">septembre 2026</time></h2>
+<ul>
+  <li>Corrigé un plantage au démarrage après mise à jour et le thème sombre inversé sur Android récent</li>
+  <li>Nouveau : lecture d'écran du plateau et de la palette, avec actions poser/reprendre une carte</li>
+  <li>Corrigé les parties en ligne perdant des cartes à la donne et le compteur adverse qui gonflait</li>
+  <li>Fin de partie en ligne : palmarès de chacun pour cette taille de table, chiffres justes après une nulle, stats solo intactes</li>
+  <li>Parties à proximité maintenant partagées entre plus de versions de Romi</li>
+</ul>
+</section>
+
+<section id="v2.19">
+<h2><span>2.19</span> <time class="date" datetime="2026-09-08">septembre 2026</time></h2>
+<ul>
+  <li>Nouvelle couleur de face des tuiles et police des chiffres, avec un préréglage Nuit</li>
+  <li>Nouveau fond de table Photo : une de vos propres photos comme fond</li>
+  <li>Nouveau retour vibratoire, même si vous jouez sans le son</li>
+  <li>Les tables en ligne de 2 à 4 joueurs sont partagées entre Romi, Romi Lite et Romi Maxi</li>
+  <li>Corrigé les jokers qui partaient ailleurs quand vous les touchiez, et des parties en ligne plus stables</li>
+</ul>
+</section>
+
+<section id="v2.18">
+<h2><span>2.18</span> <time class="date" datetime="2026-09-04">septembre 2026</time></h2>
+<ul>
+  <li>Tuiles personnalisables : couleurs et symboles par sorte, avec préréglages</li>
+  <li>Options de disposition : masquer les boutons, côté du panneau, cartes plus grandes</li>
+  <li>Des joueurs IA comblent les sièges vides en multijoueur</li>
+  <li>Écran de bienvenue, dialogue « Nouveautés » et démo Romi contre Romi</li>
+  <li>Corrections : carte perdue en annulant une pige, ouverture révoquée à tort, gagnant de fin de partie, multijoueur figé quand la pige s'épuise, placement et vol</li>
+</ul>
+</section>
+
+<section id="v2.17">
+<h2><span>2.17</span> <time class="date" datetime="2026-07-15">juillet 2026</time></h2>
+<ul>
+  <li>Amélioration de la stabilité du multijoueur : connexions, reconnexions et gestion du salon</li>
+  <li>Amélioration de la sauvegarde cloud : statistiques synchronisées de façon fiable entre vos appareils</li>
+  <li>Correction des cartes qui disparaissaient du plateau lors de l'annulation d'un coup</li>
+  <li>Correction de plusieurs problèmes de placement et de vol de cartes ; IA experte plus intelligente</li>
+  <li>Amélioration des performances et correction de divers problèmes d'affichage et de statistiques</li>
+</ul>
+</section>
+
+<section id="v2.16">
+<h2><span>2.16</span> <time class="date" datetime="2026-06-20">juin 2026</time></h2>
+<ul>
+  <li>Correction des cartes qui disparaissaient parfois lors de la réorganisation du plateau</li>
+  <li>Correction du joker seul qui disparaissait de votre main lorsqu'il était votre dernière carte</li>
+  <li>Correction d'une ouverture invalide acceptée après avoir repris des cartes sous le seuil de points requis</li>
+  <li>Amélioration des traductions dans les langues prises en charge</li>
+</ul>
+</section>
+
+<section id="v2.15">
+<h2><span>2.15</span> <time class="date" datetime="2026-04-28">avril 2026</time></h2>
+<ul>
+  <li>Correction des cartes qui rebondissaient encore parfois en mode expert</li>
+</ul>
+</section>
+
+<section id="v2.14">
+<h2><span>2.14</span> <time class="date" datetime="2026-05-19">mai 2026</time></h2>
+<ul>
+  <li>Correction des cartes qui rebondissaient lorsqu'elles étaient placées en mode expert</li>
+  <li>Correction d'un plantage qui pouvait survenir lors de la sauvegarde de la partie</li>
+  <li>Correction d'un bug où les frimes pouvaient être perdues lors du placement</li>
+  <li>Correction d'un blocage qui pouvait survenir pendant les tours de l'IA</li>
+</ul>
+</section>
+
+<section id="v2.13">
+<h2><span>2.13</span> <time class="date" datetime="2026-03-21">mars 2026</time></h2>
+<ul>
+  <li>Correction d'un bug où des cartes pouvaient disparaître lors du vol de cartes</li>
+</ul>
+</section>
+
+<section id="v2.12">
+<h2><span>2.12</span> <time class="date" datetime="2026-03-01">mars 2026</time></h2>
+<ul>
+  <li>Correction d'un plantage lors de la sauvegarde de la partie</li>
+  <li>Correction d'un blocage lors du glissement de cartes sur Android 15</li>
+  <li>Correction d'un plantage lors du retour arrière sur Android 8.1</li>
+  <li>Correction de la détection du joker dans les suites bouclées As-Roi</li>
+</ul>
+</section>
+
+<section id="v2.11">
+<h2><span>2.11</span> <time class="date" datetime="2026-02-15">février 2026</time></h2>
+<ul>
+  <li>Ajout de boutons défaire/refaire pendant votre tour</li>
+  <li>Amélioration du placement automatique et de l'organisation de la main</li>
+  <li>Correction de la corruption du plateau lors du déplacement des cartes</li>
+  <li>Correction de plantages et de problèmes de mémoire</li>
+  <li>Correction de la perte des paramètres de langue après mise à jour</li>
+</ul>
+</section>
+
+<section id="v2.10">
+<h2><span>2.10</span> <time class="date" datetime="2026-02-07">février 2026</time></h2>
+<ul>
+  <li>Ajout d'un son de confirmation lors de l'ouverture réussie</li>
+  <li>Réorganisation des écrans de paramètres pour plus de clarté</li>
+  <li>Correction de plantages et blocages liés aux publicités</li>
+</ul>
+</section>
+
+<section id="v2.09">
+<h2><span>2.09</span> <time class="date" datetime="2026-01-31">janvier 2026</time></h2>
+<ul>
+  <li>Ajout d'une option pour voir les cartes des adversaires en fin de partie (désactivée par défaut)</li>
+  <li>Correction de l'écran vide lors de pressions rapides sur le bouton retour</li>
+  <li>Correction de la perte de cartes lors du placement avec un Joker</li>
+  <li>Correction de la perte de cartes lors des opérations de vol par l'IA</li>
+</ul>
+</section>
+
+<section id="v2.08">
+<h2><span>2.08</span> <time class="date" datetime="2026-01-26">janvier 2026</time></h2>
+<ul>
+  <li>Correction de la perte de statistiques lors de la synchronisation cloud depuis un nouvel appareil</li>
+  <li>Correction du placement de cartes ignorant la couleur lors d'une connexion à un Joker</li>
+  <li>Correction d'un problème de placement lors des opérations de vol</li>
+</ul>
+</section>
+
+<section id="v2.07">
+<h2><span>2.07</span> <time class="date" datetime="2026-01-25">janvier 2026</time></h2>
+<ul>
+  <li>Ajout de l'intégration Google Play Games Services avec classements et sauvegardes cloud</li>
+  <li>Refonte des statistiques avec filtrage par catégorie et nombre de joueurs</li>
+  <li>Correction des problèmes de fin de partie en multijoueur</li>
+  <li>Correction du placement automatique entre les suites et les pareilles</li>
+</ul>
+</section>
+
+<section id="v2.06">
+<h2><span>2.06</span> <time class="date" datetime="2026-01-23">janvier 2026</time></h2>
+<ul>
+  <li>Amélioration de l'affichage des statistiques en fin de partie</li>
+  <li>Correction de l'organisation des cartes lors du tri par groupes</li>
+  <li>Correction de la validation du placement des suites sur le plateau</li>
+</ul>
+</section>
+
+<section id="v2.05">
+<h2><span>2.05</span> <time class="date" datetime="2026-01-19">janvier 2026</time></h2>
+<ul>
+  <li>Correction de l'écran blanc au démarrage d'une nouvelle partie</li>
+  <li>Amélioration du placement et de la fusion des suites sur le plateau</li>
+  <li>Performance améliorée pour le vol de cartes</li>
+</ul>
+</section>
+
+<section id="v2.04">
+<h2><span>2.04</span> <time class="date" datetime="2026-01-19">janvier 2026</time></h2>
+<ul>
+  <li>Correction de problèmes d'arrangement des cartes en main</li>
+  <li>Correction de la validation du vol de cartes des suites</li>
+  <li>Amélioration de la découverte des salons multijoueurs</li>
+</ul>
+</section>
+
+<section id="v2.03">
+<h2><span>2.03</span> <time class="date" datetime="2026-01-18">janvier 2026</time></h2>
+<ul>
+  <li>Correction des problèmes de validation lors du vol de joker</li>
+  <li>Amélioration du support des polices d'accessibilité</li>
+</ul>
+</section>
+
+<section id="v2.02">
+<h2><span>2.02</span> <time class="date" datetime="2026-01-16">janvier 2026</time></h2>
+<ul>
+  <li>Amélioration de l'affichage de l'écran de fin de partie</li>
+  <li>Correction du vol de joker au milieu d'une suite</li>
+  <li>Correction de la corruption du plateau lors du vol de cartes</li>
+  <li>Amélioration des performances avec optimisation du rendu des cartes</li>
+</ul>
+</section>
+
+<section id="v2.01">
+<h2><span>2.01</span> <time class="date" datetime="2026-01-10">janvier 2026</time></h2>
+<ul>
+  <li>Ajout du multijoueur en ligne : jouez avec des amis via Internet (expérimental)</li>
+  <li>Ajout de 4 nouvelles langues : tchèque, grec, finnois, russe</li>
+  <li>Correction des interactions tactiles sur les appareils droite-à-gauche</li>
+  <li>Correction des problèmes de vol de cartes lors de la réorganisation des combinaisons</li>
+</ul>
+</section>
+
+<section id="v2.00">
+<h2><span>2.00</span> <time class="date" datetime="2026-01-10">janvier 2026</time></h2>
+<ul>
+  <li>Ajout du multijoueur local : jouez avec 2 à 4 joueurs sur des appareils Android à proximité</li>
+  <li>Ajout de l'option pour que le gagnant commence la prochaine partie</li>
+  <li>Correction des problèmes de vol de cartes lors du vol depuis des combinaisons existantes</li>
+  <li>Amélioration des performances et de l'utilisation de la mémoire</li>
+</ul>
+</section>
+
+<section id="v1.99">
+<h2><span>1.99</span> <time class="date" datetime="2026-01-07">janvier 2026</time></h2>
+<ul>
+  <li>Correction du blocage de l'application après avoir placé des cartes sans assez de points pour ouvrir</li>
+</ul>
+</section>
+
+<section id="v1.98">
+<h2><span>1.98</span> <time class="date" datetime="2026-01-07">janvier 2026</time></h2>
+<ul>
+  <li>Correction du blocage de l'IA dans des boucles infinies pendant son tour</li>
+  <li>Correction de la duplication de cartes lors du vol de cartes par l'IA</li>
+  <li>Correction de l'écrasement incorrect de cartes lors des déplacements</li>
+  <li>Amélioration de la détection et du signalement des erreurs de l'IA</li>
+</ul>
+</section>
+
+<section id="v1.97">
+<h2><span>1.97</span> <time class="date" datetime="2026-01-06">janvier 2026</time></h2>
+<ul>
+  <li>Correction du blocage de l'application lors de la vérification des règles étendues</li>
+  <li>Correction des problèmes de placement de cartes causant des groupes invalides sur le plateau</li>
+  <li>Correction de l'affichage des cartes sélectionnées sur le plateau</li>
+</ul>
+</section>
+
+<section id="v1.96">
+<h2><span>1.96</span> <time class="date" datetime="2026-01-05">janvier 2026</time></h2>
+<ul>
+  <li>Correction de l'IA qui écrasait des cartes existantes lors du placement</li>
+  <li>Correction d'une boucle infinie quand l'IA place des cartes sur un plateau plein</li>
+  <li>Amélioration de l'espacement des cartes sur tablette</li>
+  <li>Correction du décalage du glisser-déposer sur tablette en mode paysage</li>
+</ul>
+</section>
+
+<section id="v1.95">
+<h2><span>1.95</span> <time class="date" datetime="2026-01-02">janvier 2026</time></h2>
+<ul>
+  <li>Correction des cartes placées incorrectement entre les rangées</li>
+  <li>Correction du placement automatique qui étendait les séries avant l'ouverture</li>
+  <li>Correction de l'IA qui créait des ensembles invalides avec des couleurs en double</li>
+</ul>
+</section>
+
+<section id="v1.94">
+<h2><span>1.94</span> <time class="date" datetime="2026-01-02">janvier 2026</time></h2>
+<ul>
+  <li>Correction d'un plantage lors de l'organisation des cartes sur le plateau</li>
+  <li>Ajout de la détection d'erreurs AI avec option de rapport de bogue</li>
+</ul>
+</section>
+
+<section id="v1.93">
+<h2><span>1.93</span> <time class="date" datetime="2026-01-01">janvier 2026</time></h2>
+<ul>
+  <li>Ajout d'une option pour inverser l'ordre des colonnes de triples</li>
+  <li>Amélioration de l'organisation des paramètres</li>
+  <li>Correction des sons de fin de partie coupés</li>
+  <li>Correction du blocage de l'application (ANR)</li>
+</ul>
+</section>
+
+<section id="v1.92">
+<h2><span>1.92</span> <time class="date" datetime="2026-01-01">janvier 2026</time></h2>
+<ul>
+  <li>Correction du crash dans les parties à 4 joueurs avec adversaires IA</li>
+  <li>Correction du placement automatique créant des combinaisons invalides</li>
+  <li>Correction de la réorganisation du plateau créant des séquences invalides</li>
+</ul>
+</section>
+
+<section id="v1.91">
+<h2><span>1.91</span> <time class="date" datetime="2025-12-31">décembre 2025</time></h2>
+<ul>
+  <li>Amélioration de la réactivité tactile pour des interactions plus rapides</li>
+  <li>Correction d'un bug où le jeu pouvait rester bloqué après une partie nulle</li>
+  <li>Correction des séquences de cartes invalides avec les règles étendues</li>
+</ul>
+</section>
+
+<section id="v1.90">
+<h2><span>1.90</span> <time class="date" datetime="2025-12-30">décembre 2025</time></h2>
+<ul>
+  <li>Ajout d'une surbrillance visuelle sur les cartes lors du glisser-déposer</li>
+  <li>Correction de divers bogues</li>
+</ul>
+</section>
+
+<section id="v1.89">
+<h2><span>1.89</span> <time class="date" datetime="2025-12-29">décembre 2025</time></h2>
+<ul>
+  <li>Ajout d'un texte explicatif sur l'écran de fin de partie</li>
+  <li>Amélioration du placement et des animations des cartes</li>
+  <li>Vitesse d'animation réinitialisée; visitez les Paramètres pour l'ajuster</li>
+</ul>
+</section>
+
+<section id="v1.88">
+<h2><span>1.88</span> <time class="date" datetime="2025-12-28">décembre 2025</time></h2>
+<ul>
+  <li>Ajout d'un dialogue de confirmation pour réinitialiser les statistiques</li>
+  <li>Correction du placement par tap après avoir divisé une suite</li>
+</ul>
+</section>
+
+<section id="v1.87">
+<h2><span>1.87</span> <time class="date" datetime="2025-12-28">décembre 2025</time></h2>
+<ul>
+  <li>Amélioration de la précision du glisser-déposer sur tablettes</li>
+  <li>Correction de la taille des cartes animées en mode portrait</li>
+</ul>
+</section>
+
+<section id="v1.86">
+<h2><span>1.86</span> <time class="date" datetime="2025-12-27">décembre 2025</time></h2>
+<ul>
+  <li>Le bouton « Cartes jouées » fonctionne maintenant correctement après l'ouverture</li>
+  <li>Correction du double comptage des victoires du joueur humain</li>
+  <li>Correction du placement automatique des triples et de la réorganisation du plateau</li>
+  <li>Correction d'un plantage potentiel lors de la mise à jour</li>
+  <li>Correction d'un plantage rare lors de l'ordonnancement des cartes</li>
+  <li>Amélioration du glisser-déposer des cartes</li>
+</ul>
+</section>
+
+<section id="v1.85">
+<h2><span>1.85</span> <time class="date" datetime="2025-12-27">décembre 2025</time></h2>
+<ul>
+  <li>Mode portrait - Jouez en orientation portrait</li>
+  <li>Thème clair/sombre/système - Choisissez votre mode d'affichage préféré</li>
+  <li>Mode passe-et-joue - Plusieurs joueurs humains sur le même appareil</li>
+  <li>Glisser-déposer des cartes - Manipulation des cartes plus intuitive</li>
+  <li>5 nouvelles langues : danois, indonésien, polonais, roumain, turc</li>
+  <li>Interface moderne Material 3</li>
+  <li>Animations de cartes plus fluides</li>
+  <li>Meilleur support des encoches d'écran</li>
+  <li>Noms des joueurs affichés dans les messages au lieu des numéros</li>
+  <li>Joueur actuel surligné en rouge</li>
+  <li>Pénalité du chronomètre correctement appliquée à l'expiration du temps</li>
+  <li>Amélioration du placement des jokers et des suites</li>
+</ul>
+</section>
+
+<footer>© Patrick Roy · <a href="index-fr.html">Romi</a></footer>
+</body>
+</html>

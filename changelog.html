@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Romi · What's new</title>
+<meta name="description" content="What&#x27;s new in each version of Romi, the Rummy tile game for Android.">
+<link rel="icon" href="images/romi-icone.png">
+<!-- Genere par tools/publier-notes-version.py dans le depot romi-as : les versions deja publiees ici sont gardees, docs/CHANGELOG_*.md les complete ou les remplace ; ne pas modifier ici. -->
+<script>
+  // Choix explicite (bouton) conserve dans localStorage ; sinon, langue du navigateur.
+  try {
+    var c = localStorage.getItem("lang");
+    if (c === "fr" || (!c && /^fr\b/i.test(navigator.language || ""))) location.replace("changelog-fr.html");
+  } catch (e) {}
+</script>
+<style>
+  :root { color-scheme: light dark; }
+  body { margin: 0; padding: 2rem 1rem 3rem; font: 16px/1.5 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+         background: #faf8f4; color: #222; max-width: 40rem; margin-inline: auto; }
+  @media (prefers-color-scheme: dark) { body { background: #1b1b1b; color: #e6e6e6; } a { color: #8ab4f8; } }
+  header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1rem; }
+  header img { width: 72px; height: 72px; border-radius: 16px; flex: none; }
+  h1 { font-size: 2rem; margin: 0; line-height: 1.1; }
+  .lang { font-size: .9rem; opacity: .8; margin-top: .25rem; }
+  h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; border-bottom: 1px solid #8884; padding-bottom: .25rem;
+       display: flex; justify-content: space-between; align-items: baseline; gap: 1rem; flex-wrap: wrap; }
+  h2 .date { font-size: .9rem; font-weight: normal; opacity: .7; }
+  p.lead { margin: 0 0 1rem; opacity: .9; }
+  ul { padding-left: 1.25rem; margin: 0; }
+  li { margin: .25rem 0; }
+  footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+</style>
+</head>
+<body>
+<header>
+  <img src="images/romi-icone.png" alt="">
+  <div>
+    <h1>What's new</h1>
+    <div class="lang"><a href="changelog-fr.html" lang="fr" onclick="try{localStorage.setItem('lang','fr')}catch(e){}">Français</a></div>
+  </div>
+</header>
+<p class="lead">Release notes for every version of Romi, newest first. <a href="index.html">Back to the Romi page</a></p>
+
+<section id="v2.23">
+<h2><span>2.23</span> <time class="date" datetime="2026-10-10">October 2026</time></h2>
+<ul>
+  <li>New Wild card choice: the special jokers of Rummikub with a Twist (Double, Color-change, Mirror)</li>
+  <li>New setting, Frozen jokers: a joker on the board can only be taken back with the card it stands for</li>
+  <li>New opening options: No minimum and Wait a turn after opening</li>
+  <li>Multiplayer lobbies show the host's Wild card setting</li>
+  <li>The full version of Romi now plays big tables of 2 to 8 players</li>
+</ul>
+</section>
+
+<section id="v2.22">
+<h2><span>2.22</span> <time class="date" datetime="2026-09-25">September 2026</time></h2>
+<ul>
+  <li>Color, Symbol and Background now work on every tile preset — your first edit starts a custom palette, and asks before replacing the one you saved</li>
+  <li>Multiplayer lobbies: unavailable buttons now say what's missing (your name, the PIN, more players)</li>
+  <li>With the system's high-contrast text setting, buttons that can't be used are now hidden instead of looking active</li>
+</ul>
+</section>
+
+<section id="v2.21">
+<h2><span>2.21</span> <time class="date" datetime="2026-09-21">September 2026</time></h2>
+<ul>
+  <li>New: take back a wild card from the board by dragging onto it the card it stands for — screen readers get a matching action</li>
+  <li>Fixed the computer adding a card to a set instead of taking back the wild card</li>
+  <li>Fixed the card tiles going black under the system's high-contrast text setting</li>
+  <li>Fixed the Undo and Redo buttons being invisible in dark mode</li>
+</ul>
+</section>
+
+<section id="v2.20">
+<h2><span>2.20</span> <time class="date" datetime="2026-09-18">September 2026</time></h2>
+<ul>
+  <li>Fixed a start-up crash after an update and the dark theme inverting on the latest Android</li>
+  <li>New screen reader support for the board and your rack, with actions to play or take back a card</li>
+  <li>Fixed online games losing cards at the deal and opponent card counts that kept growing</li>
+  <li>Online end-of-game table: each player's record for that table size, correct numbers after a draw, solo statistics no longer altered</li>
+  <li>Nearby games are now shared between more versions of Romi</li>
+</ul>
+</section>
+
+<section id="v2.19">
+<h2><span>2.19</span> <time class="date" datetime="2026-09-08">September 2026</time></h2>
+<ul>
+  <li>New tile face colour and number font, with a Night preset for dark tiles</li>
+  <li>New Photo background: use one of your own pictures as the table background</li>
+  <li>New vibration feedback, even when you play with the sound off</li>
+  <li>Online tables of 2 to 4 players are now shared between Romi, Romi Lite and Romi Maxi</li>
+  <li>Fixed jokers going astray when tapped, and made online games steadier</li>
+</ul>
+</section>
+
+<section id="v2.18">
+<h2><span>2.18</span> <time class="date" datetime="2026-09-04">September 2026</time></h2>
+<ul>
+  <li>Customize tiles: colors and symbols for each suit, plus presets</li>
+  <li>New layout options: hide buttons, choose the panel side, bigger cards</li>
+  <li>AI players can fill empty seats in multiplayer games</li>
+  <li>New welcome screen, "What's new" dialog and a Romi vs Romi demo</li>
+  <li>Fixes: card lost when undoing a draw, wrongly revoked opening, end-of-game winner, multiplayer freeze when the pile ran out, placement and steals</li>
+</ul>
+</section>
+
+<section id="v2.17">
+<h2><span>2.17</span> <time class="date" datetime="2026-07-15">July 2026</time></h2>
+<ul>
+  <li>Improved multiplayer stability: connections, reconnections, and lobby handling</li>
+  <li>Improved cloud save: game statistics now sync reliably across devices</li>
+  <li>Fixed cards disappearing from the board when undoing a move</li>
+  <li>Fixed several card placement and steal rule issues; smarter expert AI</li>
+  <li>Improved performance and fixed various display and statistics issues</li>
+</ul>
+</section>
+
+<section id="v2.16">
+<h2><span>2.16</span> <time class="date" datetime="2026-06-20">June 2026</time></h2>
+<ul>
+  <li>Fixed cards occasionally disappearing when the board was reorganized</li>
+  <li>Fixed a lone joker vanishing from your hand when it was your last card</li>
+  <li>Fixed an invalid opening being accepted after taking back cards below the required points</li>
+  <li>Improved translations across supported languages</li>
+</ul>
+</section>
+
+<section id="v2.15">
+<h2><span>2.15</span> <time class="date" datetime="2026-04-28">April 2026</time></h2>
+<ul>
+  <li>Fixed cards still occasionally bouncing back in expert mode</li>
+</ul>
+</section>
+
+<section id="v2.14">
+<h2><span>2.14</span> <time class="date" datetime="2026-05-19">May 2026</time></h2>
+<ul>
+  <li>Fixed cards bouncing back when placed in expert mode</li>
+  <li>Fixed a crash that could occur when saving the game</li>
+  <li>Fixed a bug where wild cards could be lost during placement</li>
+  <li>Fixed a freeze that could occur during AI turns</li>
+</ul>
+</section>
+
+<section id="v2.13">
+<h2><span>2.13</span> <time class="date" datetime="2026-03-21">March 2026</time></h2>
+<ul>
+  <li>Fixed a bug where cards could disappear during card theft</li>
+</ul>
+</section>
+
+<section id="v2.12">
+<h2><span>2.12</span> <time class="date" datetime="2026-03-01">March 2026</time></h2>
+<ul>
+  <li>Fixed a crash when saving the game</li>
+  <li>Fixed a freeze when sliding cards on Android 15</li>
+  <li>Fixed a crash when navigating back on Android 8.1</li>
+  <li>Fixed joker detection in King-Ace loops</li>
+</ul>
+</section>
+
+<section id="v2.11">
+<h2><span>2.11</span> <time class="date" datetime="2026-02-15">February 2026</time></h2>
+<ul>
+  <li>Added undo/redo buttons during your turn</li>
+  <li>Improved automatic card placement and hand organization</li>
+  <li>Fixed board corruption caused by shifting cards</li>
+  <li>Fixed crashes and memory issues</li>
+  <li>Fixed language settings lost after app update</li>
+</ul>
+</section>
+
+<section id="v2.10">
+<h2><span>2.10</span> <time class="date" datetime="2026-02-07">February 2026</time></h2>
+<ul>
+  <li>Added sound effect for successful opening</li>
+  <li>Reorganized settings screens for better clarity</li>
+  <li>Fixed crashes and freezes related to ads</li>
+</ul>
+</section>
+
+<section id="v2.09">
+<h2><span>2.09</span> <time class="date" datetime="2026-01-31">January 2026</time></h2>
+<ul>
+  <li>Added option to view opponent's cards at end of game (disabled by default)</li>
+  <li>Fixed blank screen when pressing back button rapidly</li>
+  <li>Fixed card loss during placement with Joker</li>
+  <li>Fixed card loss during AI theft operations</li>
+</ul>
+</section>
+
+<section id="v2.08">
+<h2><span>2.08</span> <time class="date" datetime="2026-01-26">January 2026</time></h2>
+<ul>
+  <li>Fixed cloud save losing statistics when syncing from a new device</li>
+  <li>Fixed card placement ignoring color when connecting to a Joker</li>
+  <li>Fixed card placement issue during theft operations</li>
+</ul>
+</section>
+
+<section id="v2.07">
+<h2><span>2.07</span> <time class="date" datetime="2026-01-25">January 2026</time></h2>
+<ul>
+  <li>Added Google Play Games Services integration with leaderboards and cloud saves</li>
+  <li>Revamped statistics with filtering by category and number of players</li>
+  <li>Fixed multiplayer end-game issues</li>
+  <li>Fixed automatic card placement between sequences and sets</li>
+</ul>
+</section>
+
+<section id="v2.06">
+<h2><span>2.06</span> <time class="date" datetime="2026-01-23">January 2026</time></h2>
+<ul>
+  <li>Improved end-game statistics display</li>
+  <li>Fixed card organization when sorting by groups</li>
+  <li>Fixed sequence placement validation on the board</li>
+</ul>
+</section>
+
+<section id="v2.05">
+<h2><span>2.05</span> <time class="date" datetime="2026-01-19">January 2026</time></h2>
+<ul>
+  <li>Fixed white screen when starting a new game</li>
+  <li>Improved sequence placement and merging on the board</li>
+  <li>Enhanced card theft performance</li>
+</ul>
+</section>
+
+<section id="v2.04">
+<h2><span>2.04</span> <time class="date" datetime="2026-01-19">January 2026</time></h2>
+<ul>
+  <li>Fixed card ordering issues when arranging cards in hand</li>
+  <li>Fixed card theft validation from sequences</li>
+  <li>Improved multiplayer lobby discovery</li>
+</ul>
+</section>
+
+<section id="v2.03">
+<h2><span>2.03</span> <time class="date" datetime="2026-01-18">January 2026</time></h2>
+<ul>
+  <li>Fixed joker theft validation issues</li>
+  <li>Improved accessibility font support</li>
+</ul>
+</section>
+
+<section id="v2.02">
+<h2><span>2.02</span> <time class="date" datetime="2026-01-16">January 2026</time></h2>
+<ul>
+  <li>Improved end-game screen display</li>
+  <li>Fixed joker theft from the middle of a sequence</li>
+  <li>Fixed board corruption when stealing cards</li>
+  <li>Improved performance with card rendering optimizations</li>
+</ul>
+</section>
+
+<section id="v2.01">
+<h2><span>2.01</span> <time class="date" datetime="2026-01-10">January 2026</time></h2>
+<ul>
+  <li>Added online multiplayer: play with friends over the internet (experimental)</li>
+  <li>Added 4 new languages: Czech, Greek, Finnish, Russian</li>
+  <li>Fixed touch interactions on right-to-left devices</li>
+  <li>Fixed card theft issues when reorganizing melds</li>
+</ul>
+</section>
+
+<section id="v2.00">
+<h2><span>2.00</span> <time class="date" datetime="2026-01-10">January 2026</time></h2>
+<ul>
+  <li>Added local multiplayer: play with 2-4 players on nearby Android devices</li>
+  <li>Added option for the winner to start the next game</li>
+  <li>Fixed card theft issues when stealing from existing melds</li>
+  <li>Improved performance and memory usage</li>
+</ul>
+</section>
+
+<section id="v1.99">
+<h2><span>1.99</span> <time class="date" datetime="2026-01-07">January 2026</time></h2>
+<ul>
+  <li>Fixed app becoming unresponsive after placing cards without enough points to open</li>
+</ul>
+</section>
+
+<section id="v1.98">
+<h2><span>1.98</span> <time class="date" datetime="2026-01-07">January 2026</time></h2>
+<ul>
+  <li>Fixed AI getting stuck in infinite loops during its turn</li>
+  <li>Fixed card duplication issues during AI card theft</li>
+  <li>Fixed cards being incorrectly overwritten during card movements</li>
+  <li>Improved AI error detection and reporting</li>
+</ul>
+</section>
+
+<section id="v1.97">
+<h2><span>1.97</span> <time class="date" datetime="2026-01-06">January 2026</time></h2>
+<ul>
+  <li>Fixed app freezing when checking extended rules</li>
+  <li>Fixed card placement issues causing invalid groups on the board</li>
+  <li>Fixed display of selected cards on the board</li>
+</ul>
+</section>
+
+<section id="v1.96">
+<h2><span>1.96</span> <time class="date" datetime="2026-01-05">January 2026</time></h2>
+<ul>
+  <li>Fixed AI incorrectly overwriting existing cards during placement</li>
+  <li>Fixed infinite loop when AI places cards on full board</li>
+  <li>Improved card spacing on tablets</li>
+  <li>Fixed drag and drop offset on tablets in landscape mode</li>
+</ul>
+</section>
+
+<section id="v1.95">
+<h2><span>1.95</span> <time class="date" datetime="2026-01-02">January 2026</time></h2>
+<ul>
+  <li>Fixed cards being incorrectly placed across row boundaries</li>
+  <li>Fixed auto-place extending board sequences before opening</li>
+  <li>Fixed AI creating invalid sets with duplicate suits</li>
+</ul>
+</section>
+
+<section id="v1.94">
+<h2><span>1.94</span> <time class="date" datetime="2026-01-02">January 2026</time></h2>
+<ul>
+  <li>Fixed crash when organizing cards on the board</li>
+  <li>Added AI error detection with bug report option</li>
+</ul>
+</section>
+
+<section id="v1.93">
+<h2><span>1.93</span> <time class="date" datetime="2026-01-01">January 2026</time></h2>
+<ul>
+  <li>Added option to reverse triple column order</li>
+  <li>Improved settings layout organization</li>
+  <li>Fixed end-of-game sounds being cut off</li>
+  <li>Fixed app freezing (ANR)</li>
+</ul>
+</section>
+
+<section id="v1.92">
+<h2><span>1.92</span> <time class="date" datetime="2026-01-01">January 2026</time></h2>
+<ul>
+  <li>Fixed crash in 4-player games with AI opponents</li>
+  <li>Fixed auto-placement creating invalid card combinations</li>
+  <li>Fixed board reorganization creating invalid sequences</li>
+</ul>
+</section>
+
+<section id="v1.91">
+<h2><span>1.91</span> <time class="date" datetime="2025-12-31">December 2025</time></h2>
+<ul>
+  <li>Improved touch responsiveness for faster card interactions</li>
+  <li>Fixed a bug where the game could get stuck after a draw</li>
+  <li>Fixed invalid card sequences with extended rules</li>
+</ul>
+</section>
+
+<section id="v1.90">
+<h2><span>1.90</span> <time class="date" datetime="2025-12-30">December 2025</time></h2>
+<ul>
+  <li>Added visual highlight on selected cards during drag-and-drop</li>
+  <li>Fixed various bugs</li>
+</ul>
+</section>
+
+<section id="v1.89">
+<h2><span>1.89</span> <time class="date" datetime="2025-12-29">December 2025</time></h2>
+<ul>
+  <li>Added explanatory text on the end game screen</li>
+  <li>Improved card placement and animations</li>
+  <li>Animation speed reset; visit Settings to adjust</li>
+</ul>
+</section>
+
+<section id="v1.88">
+<h2><span>1.88</span> <time class="date" datetime="2025-12-28">December 2025</time></h2>
+<ul>
+  <li>Added confirmation dialog when resetting statistics</li>
+  <li>Fixed card placement by tap after splitting a sequence</li>
+</ul>
+</section>
+
+<section id="v1.87">
+<h2><span>1.87</span> <time class="date" datetime="2025-12-28">December 2025</time></h2>
+<ul>
+  <li>Improved drag-and-drop accuracy on tablets</li>
+  <li>Fixed card animation size in portrait mode</li>
+</ul>
+</section>
+
+<section id="v1.86">
+<h2><span>1.86</span> <time class="date" datetime="2025-12-27">December 2025</time></h2>
+<ul>
+  <li>"Played Cards" button now works correctly after opening</li>
+  <li>Fixed double counting of human player victories</li>
+  <li>Fixed automatic placement of triples and board reorganization</li>
+  <li>Fixed potential crash on app update</li>
+  <li>Fixed rare crash during card ordering</li>
+  <li>Improved drag-and-drop experience</li>
+</ul>
+</section>
+
+<section id="v1.85">
+<h2><span>1.85</span> <time class="date" datetime="2025-12-27">December 2025</time></h2>
+<ul>
+  <li>Portrait mode support - Play in portrait orientation</li>
+  <li>Dark/Light/System theme - Choose your preferred display mode</li>
+  <li>Pass-and-play multiplayer - Multiple human players on the same device</li>
+  <li>Drag-and-drop cards - More intuitive card manipulation</li>
+  <li>5 new languages: Danish, Indonesian, Polish, Romanian, Turkish</li>
+  <li>Modern Material 3 interface</li>
+  <li>Smoother card animations</li>
+  <li>Better support for phones with notches</li>
+  <li>Player names shown in messages instead of numbers</li>
+  <li>Current player highlighted in red</li>
+  <li>Timer penalty correctly applied when time expires</li>
+  <li>Improved card placement for jokers and sequences</li>
+</ul>
+</section>
+
+<footer>© Patrick Roy · <a href="index.html">Romi</a></footer>
+</body>
+</html>
