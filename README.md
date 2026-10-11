@@ -2,11 +2,12 @@
 
 GitHub Pages user site for the Romi and Tromi apps, served at https://fonceur.github.io/.
 
-- `index.html` / `index-fr.html` — landing page linked from the Google Play and Amazon Appstore listings (store links, rules in 18 languages, a footer link to the Tromi page). English by default; a French browser is redirected to the French page unless a toggle choice is stored in `localStorage`.
+- `index.html` / `index-fr.html` — landing page linked from the Google Play and Amazon Appstore listings (store links, rules in 18 languages, release-notes link, a footer link to the Tromi page). English by default; a French browser is redirected to the French page unless a toggle choice is stored in `localStorage`.
 - `images/` — launcher icon and a downscaled board screenshot (`docs/images/anglais/Screenshot_20251227_210141.png` in the Romi repo).
 - `app-ads.txt` — authorized sellers for AdMob and Amazon Publisher Services; both crawlers fetch it at the domain root.
 - `romi-privacy.html` / `romi-privacy-fr.html` — the Romi privacy policy (all editions, one document), linked from every store listing.
 - `doc/` — the in-app rules documentation, a verbatim copy of `romi/src/main/assets/doc*.html` and its images from the Romi repo. Refreshed by `tools/publier-site.sh` in the Romi repo (run by its `ship` skill); do not edit here.
+- `changelog.html` / `changelog-fr.html` — the Romi release notes, every version since 1.85 newest first, maintained by `tools/publier-notes-version.py` in the Romi repo (run by its `/changelog` command and `ship` skill) from the English and French Google Play blocks of its `docs/CHANGELOG_*.md`. **These pages are the archive:** the script reads back the versions already here and only adds or replaces those it has a changelog file for, so versions whose changelog was pruned from the Romi repo (1.85-2.19) live only here and in git history. Do not edit here, except to drop a version: delete its `<section>` from both pages. A version with no `v<version>` tag yet is labelled "Upcoming update" until the script is re-run after tagging.
 
 - `tromi/index.html` / `tromi/index-fr.html` — the Tromi landing page, served at https://fonceur.github.io/tromi/ (store link, features, release-notes link, data sources). Same language redirect as the Romi page; both read the same `localStorage` key, so a toggle choice on one carries over to the other.
 - `tromi/changelog.html` / `tromi/changelog-fr.html` — the Tromi release notes, every version newest first, generated from `docs/CHANGELOG_*.md` (English and French sections) in the Tromi repo by `tools/publish_changelog_page.py` (run by its `/changelog` skill); do not edit here. A version with no `v<version>` tag yet is labelled "Upcoming update" until the script is re-run after tagging.
