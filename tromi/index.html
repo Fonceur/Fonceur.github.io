@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tromi</title>
-<meta name="description" content="Real-time gas prices and EV charging stations in Québec for Android, free and ad-free.">
+<meta name="description" content="Real-time gas prices and EV charging stations in Québec for iPhone, iPad and Android, free and ad-free.">
 <!-- Link previews (Slack, Messages, WhatsApp…): crawlers need absolute URLs. -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fonceur.github.io/tromi/">
 <meta property="og:title" content="Tromi — gas prices and EV chargers in Québec">
-<meta property="og:description" content="Real-time gas prices and EV charging stations in Québec for Android, free and ad-free.">
+<meta property="og:description" content="Real-time gas prices and EV charging stations in Québec for iPhone, iPad and Android, free and ad-free.">
 <meta property="og:image" content="https://fonceur.github.io/tromi/images/og-en.png">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="500">
@@ -24,6 +24,19 @@
     var c = localStorage.getItem("lang");
     if (c === "fr" || (!c && /^fr\b/i.test(navigator.language || ""))) location.replace("index-fr.html");
   } catch (e) {}
+  // Plateforme : choix explicite (bascule) conserve dans localStorage ; sinon, appareil detecte
+  // (un iPad se presente comme un Mac, mais tactile). Ordinateur : les deux.
+  (function () {
+    var p = null;
+    try { p = localStorage.getItem("platform"); } catch (e) {}
+    if (p !== "ios" && p !== "android" && p !== "both") {
+      var ua = navigator.userAgent || "";
+      p = /Android/i.test(ua) ? "android"
+        : /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1) ? "ios"
+        : "both";
+    }
+    document.documentElement.setAttribute("data-platform", p);
+  })();
 </script>
 <style>
   :root { color-scheme: light dark; }
@@ -36,13 +49,27 @@
   .lang { font-size: .9rem; opacity: .8; margin-top: .25rem; }
   h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; border-bottom: 1px solid #8884; padding-bottom: .25rem; }
   p.lead { margin: 0 0 1rem; opacity: .9; }
-  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin: 1.5rem 0 0; }
+  /* Without JavaScript, no switch: both platforms show. */
+  .switch { display: none; width: fit-content; margin: 1.5rem auto 0; padding: 3px; gap: 2px; border-radius: 999px; background: #8882; }
+  html[data-platform] .switch { display: flex; }
+  .switch button { font: inherit; font-size: .9rem; color: inherit; background: none; border: 0; border-radius: 999px; padding: .3rem 1rem; cursor: pointer; }
+  .switch button[aria-pressed="true"] { background: #fff; box-shadow: 0 1px 3px #0003; font-weight: 600; }
+  @media (prefers-color-scheme: dark) { .switch button[aria-pressed="true"] { background: #3a3a3a; } }
+  html[data-platform="ios"] .android, html[data-platform="android"] .ios,
+  html[data-platform="ios"] .set-label, html[data-platform="android"] .set-label { display: none; }
+  .set { margin-top: 1.5rem; }
+  .set-label { margin: 0 0 .5rem; font-size: .9rem; font-weight: 600; opacity: .7; }
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
   figure { margin: 0; }
   figure img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 12px #0003; }
   figcaption { font-size: .85rem; opacity: .7; margin-top: .4rem; text-align: center; }
+  .badges { display: flex; flex-wrap: wrap; gap: .75rem; margin: .75rem 0 .5rem; }
+  .badges a { display: block; line-height: 0; }
+  .badges img { height: 48px; width: auto; }
   ul { padding-left: 1.25rem; margin: 0; }
   li { margin: .25rem 0; }
   footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+  footer p { margin: 0 0 .5rem; }
 </style>
 </head>
 <body>
@@ -53,41 +80,73 @@
     <div class="lang"><a href="index-fr.html" lang="fr" onclick="try{localStorage.setItem('lang','fr')}catch(e){}">Français</a></div>
   </div>
 </header>
-<p class="lead">Real-time gas prices and EV charging stations in Québec for Android, completely free and ad-free.</p>
+<p class="lead">Real-time gas prices and EV charging stations in Québec for iPhone, iPad and Android, completely free and ad-free.</p>
 
-<div class="shots">
-  <figure>
-    <img src="images/en-01_map.jpg" width="480" height="1066" alt="Map of Québec City with gas prices in cents per litre, colour-coded from cheapest (green) to most expensive (red), and EV charger pins.">
-    <figcaption>Prices on the map</figcaption>
-  </figure>
-  <figure>
-    <img src="images/en-02_station_detail.jpg" width="480" height="1066" alt="Station detail for Costco Québec: address, distance, regular and premium prices, and a Directions button.">
-    <figcaption>Station detail</figcaption>
-  </figure>
-  <figure>
-    <img src="images/en-05_trip_map.jpg" width="480" height="1066" alt="A Québec City to Montréal trip on the map, with suggested gas stations along the route.">
-    <figcaption>Multi-stop trip</figcaption>
-  </figure>
+<div class="switch" role="group" aria-label="Platform">
+  <button type="button" value="ios">iPhone</button>
+  <button type="button" value="android">Android</button>
+  <button type="button" value="both">Both</button>
+</div>
+
+<div class="set ios">
+  <p class="set-label">iPhone</p>
+  <div class="shots">
+    <figure>
+      <img src="images/ios-en-01_map.jpg" width="480" height="1043" alt="Map of Québec City and Lévis with gas prices in cents per litre, colour-coded from cheapest (green) to most expensive (red).">
+      <figcaption>Prices on the map</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ios-en-02_station_detail.jpg" width="480" height="1043" alt="Station detail for an Ultramar in Québec City: address, distance, regular, super and diesel prices, amenities, a 30-day price history and a Navigate button.">
+      <figcaption>Station detail</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ios-en-05_trip_map.jpg" width="480" height="1043" alt="A Québec City to Montréal trip on the map by way of Trois-Rivières, with groups of suggested stops along the route.">
+      <figcaption>Multi-stop trip</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="set android">
+  <p class="set-label">Android</p>
+  <div class="shots">
+    <figure>
+      <img src="images/en-01_map.jpg" width="480" height="1066" alt="Map of Québec City with gas prices in cents per litre, colour-coded from cheapest (green) to most expensive (red), and EV charger pins.">
+      <figcaption>Prices on the map</figcaption>
+    </figure>
+    <figure>
+      <img src="images/en-02_station_detail.jpg" width="480" height="1066" alt="Station detail for Costco Québec: address, distance, regular and premium prices, and a Directions button.">
+      <figcaption>Station detail</figcaption>
+    </figure>
+    <figure>
+      <img src="images/en-05_trip_map.jpg" width="480" height="1066" alt="A Québec City to Montréal trip on the map, with suggested gas stations along the route.">
+      <figcaption>Multi-stop trip</figcaption>
+    </figure>
+  </div>
 </div>
 
 <h2>Get the app</h2>
-<ul>
-  <li>Google Play: <a href="https://play.google.com/store/apps/details?id=ca.romi.tromi">Tromi</a> (free, ad-free)</li>
-</ul>
+<div class="badges">
+  <a class="ios" href="https://apps.apple.com/ca/app/id6819031038"><img src="images/badge-app-store-en.svg" width="144" height="48" alt="Download on the App Store"></a>
+  <a class="android" href="https://play.google.com/store/apps/details?id=ca.romi.tromi"><img src="images/badge-google-play-en.png" width="161" height="48" alt="Get it on Google Play"></a>
+</div>
+<p>Free, with no ads and no account.</p>
 
 <h2>Features</h2>
 <ul>
   <li>Real-time prices for over 2,300 Québec gas stations (regular, premium, diesel), with 30-day history and regional averages</li>
-  <li>Over 17,000 EV chargers from Circuit électrique and Open Charge Map, filtered by level and connector</li>
-  <li>Multi-stop trip planner with suggestions along the way (cheap gas, chargers, rest areas, attractions, parks), then hand-off to Google Maps or Waze</li>
+  <li>Over 19,000 EV chargers from Circuit électrique and Open Charge Map, filtered by level and connector</li>
+  <li>Multi-stop trip planner with suggestions along the way (cheap gas, chargers, rest areas, attractions, parks); on Android, hand the trip off to Google Maps or Waze</li>
   <li>Québec's official scenic routes, STQ ferry schedules, highway rest areas, over 4,800 tourist attractions and 49 parks</li>
   <li>Price alerts and a home-screen price widget</li>
-  <li>Android Auto: nearby stations and your active trip on the car screen</li>
-  <li>Light or dark mode, 5 languages (French, English, Spanish, Italian, Portuguese), TalkBack support</li>
+  <li>CarPlay and Android Auto: nearby stations and your active trip on the car screen</li>
+  <li>Light or dark mode, 5 languages (French, English, Spanish, Italian, Portuguese), VoiceOver and TalkBack support</li>
 </ul>
 
 <h2>What's new</h2>
-<p><a href="changelog.html">Release notes</a> for every version</p>
+<ul>
+  <li class="ios"><a href="changelog-ios.html">iPhone and iPad release notes</a>, every version</li>
+  <li class="android"><a href="changelog.html">Android release notes</a>, every version</li>
+</ul>
 
 <h2>Data sources</h2>
 <ul>
@@ -109,6 +168,23 @@
 <h2>Support</h2>
 <p>Questions or problems? Use the contact link on the app's Google Play listing.</p>
 
-<footer>© Patrick Roy · Also by the same developer: <a href="../index.html">Romi</a>, a Rummy tile game</footer>
+<footer>
+  <p>© Patrick Roy · Also by the same developer: <a href="../index.html">Romi</a>, a Rummy tile game</p>
+  <p>Apple, the Apple logo, iPhone and iPad are trademarks of Apple Inc., registered in the U.S. and other countries. App Store is a service mark of Apple Inc. Google Play and the Google Play logo are trademarks of Google LLC.</p>
+</footer>
+<script>
+  (function () {
+    var root = document.documentElement, buttons = document.querySelectorAll(".switch button");
+    function show(p) {
+      root.setAttribute("data-platform", p);
+      for (var i = 0; i < buttons.length; i++) buttons[i].setAttribute("aria-pressed", String(buttons[i].value === p));
+    }
+    for (var i = 0; i < buttons.length; i++) buttons[i].addEventListener("click", function () {
+      show(this.value);
+      try { localStorage.setItem("platform", this.value); } catch (e) {}
+    });
+    show(root.getAttribute("data-platform"));
+  })();
+</script>
 </body>
 </html>

@@ -4,12 +4,12 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Tromi</title>
-<meta name="description" content="Les prix d'essence en temps réel et les bornes de recharge VÉ au Québec, pour Android, gratuitement et sans publicité.">
+<meta name="description" content="Les prix d'essence en temps réel et les bornes de recharge VÉ au Québec, sur iPhone, iPad et Android, gratuitement et sans publicité.">
 <!-- Aperçus de liens (Slack, Messages, WhatsApp…) : les robots exigent des URL absolues. -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://fonceur.github.io/tromi/index-fr.html">
 <meta property="og:title" content="Tromi — prix d'essence et bornes VÉ au Québec">
-<meta property="og:description" content="Les prix d'essence en temps réel et les bornes de recharge VÉ au Québec, pour Android, gratuitement et sans publicité.">
+<meta property="og:description" content="Les prix d'essence en temps réel et les bornes de recharge VÉ au Québec, sur iPhone, iPad et Android, gratuitement et sans publicité.">
 <meta property="og:image" content="https://fonceur.github.io/tromi/images/og-fr.png">
 <meta property="og:image:width" content="1024">
 <meta property="og:image:height" content="500">
@@ -24,6 +24,19 @@
     var c = localStorage.getItem("lang");
     if (c === "en") location.replace("index.html");
   } catch (e) {}
+  // Plateforme : choix explicite (bascule) conserve dans localStorage ; sinon, appareil detecte
+  // (un iPad se presente comme un Mac, mais tactile). Ordinateur : les deux.
+  (function () {
+    var p = null;
+    try { p = localStorage.getItem("platform"); } catch (e) {}
+    if (p !== "ios" && p !== "android" && p !== "both") {
+      var ua = navigator.userAgent || "";
+      p = /Android/i.test(ua) ? "android"
+        : /iPhone|iPad|iPod/.test(ua) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1) ? "ios"
+        : "both";
+    }
+    document.documentElement.setAttribute("data-platform", p);
+  })();
 </script>
 <style>
   :root { color-scheme: light dark; }
@@ -36,13 +49,27 @@
   .lang { font-size: .9rem; opacity: .8; margin-top: .25rem; }
   h2 { font-size: 1.2rem; margin: 2rem 0 .5rem; border-bottom: 1px solid #8884; padding-bottom: .25rem; }
   p.lead { margin: 0 0 1rem; opacity: .9; }
-  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; margin: 1.5rem 0 0; }
+  /* Sans JavaScript, pas de bascule : les deux plateformes s'affichent. */
+  .switch { display: none; width: fit-content; margin: 1.5rem auto 0; padding: 3px; gap: 2px; border-radius: 999px; background: #8882; }
+  html[data-platform] .switch { display: flex; }
+  .switch button { font: inherit; font-size: .9rem; color: inherit; background: none; border: 0; border-radius: 999px; padding: .3rem 1rem; cursor: pointer; }
+  .switch button[aria-pressed="true"] { background: #fff; box-shadow: 0 1px 3px #0003; font-weight: 600; }
+  @media (prefers-color-scheme: dark) { .switch button[aria-pressed="true"] { background: #3a3a3a; } }
+  html[data-platform="ios"] .android, html[data-platform="android"] .ios,
+  html[data-platform="ios"] .set-label, html[data-platform="android"] .set-label { display: none; }
+  .set { margin-top: 1.5rem; }
+  .set-label { margin: 0 0 .5rem; font-size: .9rem; font-weight: 600; opacity: .7; }
+  .shots { display: grid; grid-template-columns: repeat(3, 1fr); gap: .75rem; }
   figure { margin: 0; }
   figure img { display: block; width: 100%; height: auto; border-radius: 8px; box-shadow: 0 2px 12px #0003; }
   figcaption { font-size: .85rem; opacity: .7; margin-top: .4rem; text-align: center; }
+  .badges { display: flex; flex-wrap: wrap; gap: .75rem; margin: .75rem 0 .5rem; }
+  .badges a { display: block; line-height: 0; }
+  .badges img { height: 48px; width: auto; }
   ul { padding-left: 1.25rem; margin: 0; }
   li { margin: .25rem 0; }
   footer { margin-top: 3rem; font-size: .85rem; opacity: .7; }
+  footer p { margin: 0 0 .5rem; }
 </style>
 </head>
 <body>
@@ -53,41 +80,73 @@
     <div class="lang"><a href="index.html" lang="en" onclick="try{localStorage.setItem('lang','en')}catch(e){}">English</a></div>
   </div>
 </header>
-<p class="lead">Trop mis à ce prix là? Pas avec Tromi. Les prix d'essence en temps réel et les bornes de recharge VÉ au Québec, pour Android, gratuitement et sans publicité.</p>
+<p class="lead">Trop mis à ce prix là? Pas avec Tromi. Les prix d'essence en temps réel et les bornes de recharge VÉ au Québec, sur iPhone, iPad et Android, gratuitement et sans publicité.</p>
 
-<div class="shots">
-  <figure>
-    <img src="images/fr-01_map.jpg" width="480" height="1066" alt="Carte de Québec avec les prix d'essence en cents le litre, du moins cher (vert) au plus cher (rouge).">
-    <figcaption>Les prix sur la carte</figcaption>
-  </figure>
-  <figure>
-    <img src="images/fr-02_station_detail.jpg" width="480" height="1066" alt="Fiche d'une station Couche-Tard : adresse, distance, services, prix du régulier et du super, et bouton Itinéraire.">
-    <figcaption>Fiche d'une station</figcaption>
-  </figure>
-  <figure>
-    <img src="images/fr-05_trip_map.jpg" width="480" height="1066" alt="Un trajet de Québec à Montréal sur la carte, avec des stations suggérées en chemin.">
-    <figcaption>Trajet multi-arrêts</figcaption>
-  </figure>
+<div class="switch" role="group" aria-label="Plateforme">
+  <button type="button" value="ios">iPhone</button>
+  <button type="button" value="android">Android</button>
+  <button type="button" value="both">Les deux</button>
+</div>
+
+<div class="set ios">
+  <p class="set-label">iPhone</p>
+  <div class="shots">
+    <figure>
+      <img src="images/ios-fr-01_map.jpg" width="480" height="1043" alt="Carte de Québec et de Lévis avec les prix d'essence en cents le litre, du moins cher (vert) au plus cher (rouge).">
+      <figcaption>Les prix sur la carte</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ios-fr-02_station_detail.jpg" width="480" height="1043" alt="Fiche d'une station Ultramar à Québec : adresse, distance, prix du régulier, du super et du diesel, services, historique des prix sur 30 jours et bouton Itinéraire.">
+      <figcaption>Fiche d'une station</figcaption>
+    </figure>
+    <figure>
+      <img src="images/ios-fr-05_trip_map.jpg" width="480" height="1043" alt="Un trajet de Québec à Montréal en passant par Trois-Rivières, avec des groupes d'arrêts suggérés le long de la route.">
+      <figcaption>Trajet multi-arrêts</figcaption>
+    </figure>
+  </div>
+</div>
+
+<div class="set android">
+  <p class="set-label">Android</p>
+  <div class="shots">
+    <figure>
+      <img src="images/fr-01_map.jpg" width="480" height="1066" alt="Carte de Québec avec les prix d'essence en cents le litre, du moins cher (vert) au plus cher (rouge).">
+      <figcaption>Les prix sur la carte</figcaption>
+    </figure>
+    <figure>
+      <img src="images/fr-02_station_detail.jpg" width="480" height="1066" alt="Fiche d'une station Couche-Tard : adresse, distance, services, prix du régulier et du super, et bouton Itinéraire.">
+      <figcaption>Fiche d'une station</figcaption>
+    </figure>
+    <figure>
+      <img src="images/fr-05_trip_map.jpg" width="480" height="1066" alt="Un trajet de Québec à Montréal sur la carte, avec des stations suggérées en chemin.">
+      <figcaption>Trajet multi-arrêts</figcaption>
+    </figure>
+  </div>
 </div>
 
 <h2>Obtenir l'application</h2>
-<ul>
-  <li>Google Play : <a href="https://play.google.com/store/apps/details?id=ca.romi.tromi">Tromi</a> (gratuit, sans publicité)</li>
-</ul>
+<div class="badges">
+  <a class="ios" href="https://apps.apple.com/ca/app/id6819031038?l=fr-CA"><img src="images/badge-app-store-fr.svg" width="152" height="48" alt="Télécharger dans l'App Store"></a>
+  <a class="android" href="https://play.google.com/store/apps/details?id=ca.romi.tromi&amp;hl=fr"><img src="images/badge-google-play-fr.png" width="162" height="48" alt="Disponible sur Google Play"></a>
+</div>
+<p>Gratuite, sans publicité et sans compte.</p>
 
 <h2>Fonctionnalités</h2>
 <ul>
   <li>Prix en temps réel pour plus de 2 300 stations au Québec (ordinaire, super, diesel), historique sur 30 jours et moyennes régionales</li>
-  <li>Plus de 17 000 bornes du Circuit électrique et d'Open Charge Map, filtrées par niveau et type de connecteur</li>
-  <li>Planificateur de trajet multi-arrêts, avec suggestions en chemin (essence moins chère, bornes, haltes, attraits, parcs) et passage à Google Maps ou Waze</li>
+  <li>Plus de 19 000 bornes du Circuit électrique et d'Open Charge Map, filtrées par niveau et type de connecteur</li>
+  <li>Planificateur de trajet multi-arrêts, avec suggestions en chemin (essence moins chère, bornes, haltes, attraits, parcs); sur Android, passage du trajet à Google Maps ou Waze</li>
   <li>Routes touristiques officielles du Québec, horaires des traversiers de la STQ, haltes routières, plus de 4 800 attraits touristiques et 49 parcs</li>
   <li>Alertes de prix et widget d'écran d'accueil</li>
-  <li>Android Auto : stations à proximité et trajet actif sur l'écran de la voiture</li>
-  <li>Mode clair ou sombre, 5 langues (français, anglais, espagnol, italien, portugais), compatible TalkBack</li>
+  <li>CarPlay et Android Auto : stations à proximité et trajet actif sur l'écran de la voiture</li>
+  <li>Mode clair ou sombre, 5 langues (français, anglais, espagnol, italien, portugais), compatible VoiceOver et TalkBack</li>
 </ul>
 
 <h2>Nouveautés</h2>
-<p><a href="changelog-fr.html">Notes de version</a> de chaque mise à jour</p>
+<ul>
+  <li class="ios"><a href="changelog-ios-fr.html">Notes de version iPhone et iPad</a> de chaque mise à jour</li>
+  <li class="android"><a href="changelog-fr.html">Notes de version Android</a> de chaque mise à jour</li>
+</ul>
 
 <h2>Sources de données</h2>
 <ul>
@@ -109,6 +168,23 @@
 <h2>Soutien</h2>
 <p>Une question ou un problème? Utilisez le lien de contact de la fiche de l'application sur Google Play.</p>
 
-<footer>© Patrick Roy · Du même développeur : <a href="../index-fr.html">Romi</a>, un jeu de Rami</footer>
+<footer>
+  <p>© Patrick Roy · Du même développeur : <a href="../index-fr.html">Romi</a>, un jeu de Rami</p>
+  <p>Apple, le logo Apple, iPhone et iPad sont des marques d'Apple Inc., déposées aux États-Unis et dans d'autres pays. App Store est une marque de service d'Apple Inc. Google Play et le logo Google Play sont des marques de Google LLC.</p>
+</footer>
+<script>
+  (function () {
+    var root = document.documentElement, buttons = document.querySelectorAll(".switch button");
+    function show(p) {
+      root.setAttribute("data-platform", p);
+      for (var i = 0; i < buttons.length; i++) buttons[i].setAttribute("aria-pressed", String(buttons[i].value === p));
+    }
+    for (var i = 0; i < buttons.length; i++) buttons[i].addEventListener("click", function () {
+      show(this.value);
+      try { localStorage.setItem("platform", this.value); } catch (e) {}
+    });
+    show(root.getAttribute("data-platform"));
+  })();
+</script>
 </body>
 </html>
