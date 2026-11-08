@@ -41,7 +41,7 @@
 <nav><a href="index-fr.html">Tromi</a> · <a href="privacy.html" lang="en">English version</a></nav>
 <h1>Tromi – Politique de confidentialité</h1>
 
-<p class="meta"><strong>Dernière mise à jour :</strong> 7 novembre 2026</p>
+<p class="meta"><strong>Dernière mise à jour :</strong> 8 novembre 2026</p>
 
 <p>Patrick Roy (« nous ») exploite l'application mobile Tromi pour Android, iPhone et iPad (« l'Application »). La présente politique de confidentialité explique à quels renseignements l'Application accède, comment ils sont utilisés et les choix qui s'offrent à vous. Elle couvre les deux versions de l'Application; lorsqu'elles diffèrent, la différence est précisée.</p>
 
@@ -57,6 +57,7 @@
   <li>Trier les stations par proximité</li>
   <li>Afficher les stations à proximité dans Android Auto ou CarPlay</li>
   <li>Commencer un nouveau trajet dans le planificateur d'itinéraire à partir de l'endroit où vous êtes</li>
+  <li>Ouvrir le graphique régional de l'écran Prix de l'essence sur votre région (sur Android à partir de la version 1.0.9)</li>
 </ul>
 
 <p>Les données de localisation sont traitées sur votre appareil et ne sont <strong>pas</strong> transmises à nos serveurs. Elles ne quittent votre appareil que par le planificateur d'itinéraire, comme le décrit la section Requêtes réseau ci-dessous : un nouveau trajet commence à votre position actuelle, dont les coordonnées sont envoyées à OpenStreetMap Nominatim pour obtenir un nom de lieu lisible, et les coordonnées des arrêts de votre trajet sont envoyées à OpenRouteService lorsque vous touchez « Calculer l'itinéraire » (ou « Recalculer »). Si vous refusez l'autorisation de localisation, l'Application utilise plutôt un code postal par défaut, que vous pouvez configurer dans les Paramètres.</p>
@@ -72,7 +73,8 @@
   <tr><td>Le Circuit électrique</td><td>Emplacement des bornes VÉ</td><td>En-têtes HTTP standard seulement</td></tr>
   <tr><td>Open Charge Map</td><td>Emplacement des bornes VÉ</td><td>Rectangle géographique (pas votre position exacte); la requête comporte aussi une clé d'API qui authentifie l'application, pas vous</td></tr>
   <tr><td>OpenStreetMap (fichier hebdomadaire sur GitHub Pages)</td><td>Services des stations-service et points d'entrée des parcs (emplacements des accueils et centres d'interprétation), sur Android à partir de la version 1.0.9 et sur iPhone et iPad à partir de la version 1.0.1</td><td>En-têtes HTTP standard seulement</td></tr>
-  <tr><td>Historique des prix de Tromi (fichier sur GitHub Pages)</td><td>Les prix des 30 derniers jours de Régie essence Québec, téléchargés une fois pour remplir l'historique des prix d'une nouvelle installation, sur Android à partir de la version 1.0.9</td><td>En-têtes HTTP standard seulement</td></tr>
+  <tr><td>Historique des prix de Tromi (fichier sur GitHub Pages)</td><td>Les prix des 30 derniers jours de Régie essence Québec, téléchargés une fois pour remplir l'historique des prix d'une nouvelle installation, sur Android à partir de la version 1.0.9 et sur iPhone et iPad à partir de la version 1.0.2; sur iPhone et iPad, téléchargés de nouveau, au plus une fois par semaine, tant que moins de la moitié des 30 derniers jours ont des prix</td><td>En-têtes HTTP standard seulement</td></tr>
+  <tr><td>Moyennes régionales de Tromi (fichier sur GitHub Pages)</td><td>Prix moyens quotidiens par région de la Régie, calculés par Tromi à partir des prix de Régie essence Québec, pour le graphique régional de l'écran Prix de l'essence, téléchargés à l'ouverture de cet écran, au plus toutes les 12 heures, sur Android à partir de la version 1.0.9. Votre région est choisie sur votre appareil : chaque installation demande le même fichier pour toute la province</td><td>En-têtes HTTP standard seulement</td></tr>
   <tr><td>OpenStreetMap (API Overpass)</td><td>Services des stations-service et points d'entrée des parcs (accueils et centres d'interprétation), sur Android avant la version 1.0.9 et sur iPhone et iPad avant la version 1.0.1</td><td>Rectangle géographique (pas votre position exacte)</td></tr>
   <tr><td>Société des traversiers du Québec</td><td>Horaires des traversiers (GTFS)</td><td>En-têtes HTTP standard seulement</td></tr>
   <tr><td>Transports et Mobilité durable Québec</td><td>Haltes routières</td><td>En-têtes HTTP standard seulement</td></tr>
@@ -109,10 +111,11 @@
   <li>Contours des parcs mis en cache, récupérés au besoin</li>
   <li>Points d'entrée des parcs mis en cache (emplacements des accueils et centres d'interprétation tirés d'OpenStreetMap) et, sur Android à partir de la version 1.0.9 et sur iPhone et iPad à partir de la version 1.0.1, le plus récent fichier OpenStreetMap, dans le dossier de cache de l'Application</li>
   <li>Descriptions Wikipédia des parcs mises en cache (extrait de l'article et adresse URL)</li>
-  <li>Instantanés de l'historique des prix (30 jours; sur Android à partir de la version 1.0.9, ceux d'une nouvelle installation sont remplis à partir du fichier d'historique des prix de Tromi)</li>
+  <li>Instantanés de l'historique des prix (30 jours; sur Android à partir de la version 1.0.9 et sur iPhone et iPad à partir de la version 1.0.2, ceux d'une nouvelle installation sont remplis à partir du fichier d'historique des prix de Tromi, et sur iPhone et iPad, les trous d'un mois dont moins de la moitié des jours ont des prix le sont aussi)</li>
   <li>Trajets à plusieurs arrêts enregistrés (arrêts, tracé routier calculé, distance et durée de chaque tronçon, ainsi que les lieux que vous gardez sur le trajet sans les intégrer à l'itinéraire)</li>
   <li>Configuration des alertes de prix</li>
   <li>Données en cache du graphique des prix de l'essence de Statistique Canada</li>
+  <li>Sur Android à partir de la version 1.0.9, le plus récent fichier des moyennes régionales de Tromi, dans le dossier de cache de l'Application</li>
   <li>La dernière lecture du quota d'OpenRouteService (le budget quotidien de requêtes partagé, affiché dans le planificateur d'itinéraire)</li>
   <li>La station choisie pour chaque widget de prix de l'écran d'accueil</li>
 </ul>
