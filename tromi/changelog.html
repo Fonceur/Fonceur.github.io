@@ -53,8 +53,19 @@
 </header>
 <p class="lead">Release notes for every version of Tromi for Android, newest first. <a href="index.html">Back to the Tromi page</a> · <a href="changelog-ios.html">iPhone and iPad release notes</a></p>
 
+<section id="v1.09">
+<h2><span>1.0.9</span> <span class="date">Upcoming update</span></h2>
+<ul>
+  <li>Gas Prices: a new chart shows Tromi's daily average for your region over the last 30 days, with all of Québec dashed, for the fuel chosen in the map filters — pick any other region from the list</li>
+  <li>A new install now starts with the last 30 days of prices, so station charts and the 7-day change work from day one</li>
+  <li>Station amenities (car wash, convenience store, air pump) and park entry points now come from a weekly OpenStreetMap file instead of an overloaded server, so they work again where they had stopped updating</li>
+  <li>Station details now name the source of the prices: Régie essence Québec, Régie de l'énergie</li>
+  <li>Fixed: saving or recomputing a trip no longer removes the places saved on it; park entry points no longer vanish after a parks refresh; the outlines of the two largest parks now stay saved for offline use; the app's data, the map's tile cache included, stays out of Android backups; TalkBack reads chart points as prices, not days</li>
+</ul>
+</section>
+
 <section id="v1.08">
-<h2><span>1.0.8</span> <span class="date">Upcoming update</span></h2>
+<h2><span>1.0.8</span> <time class="date" datetime="2026-10-29">October 2026</time></h2>
 <ul>
   <li>Trip planner: routing moves to OpenRouteService's new server before the old one shuts down in November, raising the shared daily quota from 200 to 2,000 calls — and Recompute is now offered only when the trip has changed since its route was computed, so trips saved before this update show their route dashed until you recompute once</li>
   <li>EV Incentives: a new card on home-charging rewards — some businesses pay 3¢ to 15¢ per kWh you charge at home on a connected charger — and the Écorecharge card now notes that only connected chargers have qualified for the $600 grant since April 1, 2026</li>
