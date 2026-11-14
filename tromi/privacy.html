@@ -41,7 +41,7 @@
 <nav><a href="index.html">Tromi</a> · <a href="privacy-fr.html" lang="fr">Version française</a></nav>
 <h1>Tromi – Privacy Policy</h1>
 
-<p class="meta"><strong>Last updated:</strong> November 8, 2026</p>
+<p class="meta"><strong>Last updated:</strong> November 13, 2026</p>
 
 <p>Patrick Roy ("we", "us", or "our") operates the Tromi mobile application for Android, iPhone and iPad ("the App"). This Privacy Policy explains what information the App accesses, how it is used, and your choices. It covers both versions of the App; where they differ, the difference is noted.</p>
 
@@ -73,7 +73,7 @@
   <tr><td>Le Circuit électrique</td><td>EV charger locations</td><td>Standard HTTP headers only</td></tr>
   <tr><td>Open Charge Map</td><td>EV charger locations</td><td>Geographic bounding box (not your exact location); the request also carries an API key that authenticates the app, not you</td></tr>
   <tr><td>OpenStreetMap (weekly file on GitHub Pages)</td><td>Station amenities and park entry points (welcome/visitor-center locations), on Android from version 1.0.9 and on iPhone and iPad from version 1.0.1</td><td>Standard HTTP headers only</td></tr>
-  <tr><td>Tromi price history (file on GitHub Pages)</td><td>The last 30 days of Régie essence Québec prices, downloaded once to fill in a new install's price history, on Android from version 1.0.9 and on iPhone and iPad from version 1.0.2; on iPhone and iPad, downloaded again, at most once a week, while fewer than half of the last 30 days have prices</td><td>Standard HTTP headers only</td></tr>
+  <tr><td>Tromi price history (file on GitHub Pages)</td><td>The last 30 days of Régie essence Québec prices, downloaded once to fill in a new install's price history, on Android from version 1.0.9 and on iPhone and iPad from version 1.0.2; on iPhone and iPad, downloaded again, at most once a week, while fewer than half of the last 30 days have prices, and when the App is opened after more than 12 hours without a price update</td><td>Standard HTTP headers only</td></tr>
   <tr><td>Tromi regional averages (file on GitHub Pages)</td><td>Daily average prices by Régie region, calculated by Tromi from Régie essence Québec prices, for the regional chart on the Gas Prices screen, downloaded when you open that screen, at most every 12 hours, on Android from version 1.0.9. Your region is chosen on your device: every install requests the same province-wide file</td><td>Standard HTTP headers only</td></tr>
   <tr><td>OpenStreetMap (Overpass API)</td><td>Station amenities and park entry points (welcome/visitor-center nodes), on Android before version 1.0.9 and on iPhone and iPad before version 1.0.1</td><td>Geographic bounding box (not your exact location)</td></tr>
   <tr><td>Société des traversiers du Québec</td><td>Ferry schedules (GTFS)</td><td>Standard HTTP headers only</td></tr>
@@ -111,7 +111,7 @@
   <li>Cached park boundary polygons fetched on demand</li>
   <li>Cached park entry points (welcome/visitor-center locations from OpenStreetMap) and, on Android from version 1.0.9 and on iPhone and iPad from version 1.0.1, the latest OpenStreetMap file, in the App's cache folder</li>
   <li>Cached Wikipedia park descriptions (article snippet + URL)</li>
-  <li>Price history snapshots (30 days; on Android from version 1.0.9 and on iPhone and iPad from version 1.0.2, a new install's are filled in from the Tromi price history file, and on iPhone and iPad so are the gaps of a month with prices on fewer than half of its days)</li>
+  <li>Price history snapshots (30 days; on Android from version 1.0.9 and on iPhone and iPad from version 1.0.2, a new install's are filled in from the Tromi price history file, and on iPhone and iPad so are the gaps of a month with prices on fewer than half of its days and any gap of more than 12 hours between two price updates)</li>
   <li>Saved multi-stop trip plans (stops + computed road polyline + per-leg distance/duration, plus any non-routed places you keep on the trip)</li>
   <li>Price alert configurations</li>
   <li>Cached Statistics Canada gas-price chart data</li>
